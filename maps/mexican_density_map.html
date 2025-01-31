@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_856cd3a587574fccf3e272bdb1ec191b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+<div style="position: fixed; 
+            bottom: 50px; right: 50px; width: 200px;
+            border:2px solid grey; z-index:9999; font-size:14px;
+            background-color:white;
+            padding: 10px;
+            border-radius: 5px;">
+    <p>Heat Map: Mexican Restaurant Density</p>
+    <p><span style="color:gold;">●</span> High-rated Mexican (≥4.5)</p>
+</div>
+    
+            <div class="folium-map" id="map_856cd3a587574fccf3e272bdb1ec191b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_856cd3a587574fccf3e272bdb1ec191b = L.map(
+                "map_856cd3a587574fccf3e272bdb1ec191b",
+                {
+                    center: [52.3676, 4.9041],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ed5d62824c2592e533bb6bc8ccb89954 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_856cd3a587574fccf3e272bdb1ec191b);
+        
+    
+            var heat_map_01b453b487678771dcd55c09727c94c3 = L.heatLayer(
+                [[52.3819715, 4.8577292], [52.3752423, 4.8478251], [52.3844893, 4.8551686], [52.3722892, 4.8630971999999995], [52.3604129, 4.8311869], [52.3681906, 4.876049399999999], [52.3788725, 4.856559], [52.367065, 4.868071], [52.3638878, 4.88486], [52.3663751, 4.8685199], [52.371777599999994, 4.873349], [52.363419799999996, 4.885508199999999], [52.3782813, 4.8815861], [52.3709193, 4.8873576], [52.3768074, 4.8821277], [52.3763911, 4.8947388], [52.3670896, 4.871251], [52.391382099999994, 4.90416], [52.367453999999995, 4.8663498], [52.360625399999996, 4.8676978], [52.3587303, 4.8598623], [52.363886, 4.9352747], [52.3621628, 4.9282819], [52.3650258, 4.8863192], [52.3771853, 4.8842137], [52.3562924, 4.8969892], [52.3673149, 4.8681182], [52.356253699999996, 4.9003806999999995], [52.3762445, 4.8990423], [52.3613219, 4.8990735], [52.3647123, 4.8980583], [52.3692913, 4.8930466], [52.3557352, 4.8948373], [52.384977199999994, 4.9251429], [52.3686253, 4.8658402], [52.357731099999995, 4.805233299999999], [52.366996699999994, 4.9392366], [52.355698999999994, 4.903528], [52.3524574, 4.8869186], [52.354314699999996, 4.9221154], [52.3697859, 4.8890872], [52.366759699999996, 4.925196], [52.390366799999995, 4.878425], [52.3521231, 4.8013841], [52.354951299999996, 4.8931691], [52.374302199999995, 4.8921636], [52.3660742, 4.8997138], [52.357627199999996, 4.8911185999999995], [52.3722646, 4.8943848999999995], [52.362352699999995, 4.9108398], [52.3805781, 4.8907431], [52.376388899999995, 4.8947221999999995], [52.3666224, 4.9021167], [52.376691099999995, 4.902021599999999], [52.378754099999995, 4.8839722], [52.359992299999995, 4.9259213], [52.3753841, 4.8939229], [52.3943221, 4.9110188], [52.3377042, 4.8938989], [52.3374211, 4.8713103], [52.372254299999994, 4.8490037], [52.4017647, 4.8910171], [52.3371595, 4.8692253999999995], [52.364385899999995, 4.897919], [52.340553899999996, 4.8727659], [52.367759199999995, 4.9024414], [52.3912231, 4.9121014], [52.3653955, 4.8737544], [52.3349233, 4.9340076], [52.376691099999995, 4.902021599999999]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 15}
+            ).addTo(map_856cd3a587574fccf3e272bdb1ec191b);
+        
+    
+            var circle_marker_81e939cd438a2c860d2a60481147b85a = L.circleMarker(
+                [52.3819715, 4.8577292],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_856cd3a587574fccf3e272bdb1ec191b);
+        
+    
+        var popup_f718fad348af5b9987dc72543c4bb3a6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_de90b482e9c8bb71cb7eb1c630921cba = $(`<div id="html_de90b482e9c8bb71cb7eb1c630921cba" style="width: 100.0%; height: 100.0%;">                 <b>LUPE</b><br>                 Rating: 4.8<br>                 Address: Willem de Zwijgerlaan 333, 1055 RB Amsterdam<br>                 </div>`)[0];
+                popup_f718fad348af5b9987dc72543c4bb3a6.setContent(html_de90b482e9c8bb71cb7eb1c630921cba);
+            
+        
+
+        circle_marker_81e939cd438a2c860d2a60481147b85a.bindPopup(popup_f718fad348af5b9987dc72543c4bb3a6)
+        ;
+
+        
+    
+    
+            var circle_marker_e6dfcc0b34c8636e3f6f239b201f4a71 = L.circleMarker(
+                [52.3844893, 4.8551686],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_856cd3a587574fccf3e272bdb1ec191b);
+        
+    
+        var popup_91ba9589c6b6754087419d968d87bca7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ab0542664aac5036f271113330c45420 = $(`<div id="html_ab0542664aac5036f271113330c45420" style="width: 100.0%; height: 100.0%;">                 <b>TACO LINDO West</b><br>                 Rating: 4.9<br>                 Address: Haarlemmerweg 509, 1055 PL Amsterdam<br>                 </div>`)[0];
+                popup_91ba9589c6b6754087419d968d87bca7.setContent(html_ab0542664aac5036f271113330c45420);
+            
+        
+
+        circle_marker_e6dfcc0b34c8636e3f6f239b201f4a71.bindPopup(popup_91ba9589c6b6754087419d968d87bca7)
+        ;
+
+        
+    
+    
+            var circle_marker_27bd370ed2e1acc3c1aea81d8a0d8075 = L.circleMarker(
+                [52.3604129, 4.8311869],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_856cd3a587574fccf3e272bdb1ec191b);
+        
+    
+        var popup_c01cd9e4d8daf2a554d9841242aeb9fb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8c27a8dd59fc8621be43143df5fe79ab = $(`<div id="html_8c27a8dd59fc8621be43143df5fe79ab" style="width: 100.0%; height: 100.0%;">                 <b>Tres amigos</b><br>                 Rating: 4.5<br>                 Address: Jacob Geelstraat 46, 1065 VT Amsterdam<br>                 </div>`)[0];
+                popup_c01cd9e4d8daf2a554d9841242aeb9fb.setContent(html_8c27a8dd59fc8621be43143df5fe79ab);
+            
+        
+
+        circle_marker_27bd370ed2e1acc3c1aea81d8a0d8075.bindPopup(popup_c01cd9e4d8daf2a554d9841242aeb9fb)
+        ;
+
+        
+    
+    
+            var circle_marker_60ceda2bf229749576d05829a3ae3cef = L.circleMarker(
+                [52.3681906, 4.876049399999999],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_856cd3a587574fccf3e272bdb1ec191b);
+        
+    
+        var popup_8181e434d981403e37be6acbbc768c82 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c0781029e0d96938b34a97a46714a811 = $(`<div id="html_c0781029e0d96938b34a97a46714a811" style="width: 100.0%; height: 100.0%;">                 <b>Mexibite</b><br>                 Rating: 4.5<br>                 Address: Kinkerstraat 1a, 1053 DB Amsterdam<br>                 </div>`)[0];
+                popup_8181e434d981403e37be6acbbc768c82.setContent(html_c0781029e0d96938b34a97a46714a811);
+            
+        
+
+        circle_marker_60ceda2bf229749576d05829a3ae3cef.bindPopup(popup_8181e434d981403e37be6acbbc768c82)
+        ;
+
+        
+    
+    
+            var circle_marker_06e440ea2f85441025db1c86fc162e35 = L.circleMarker(
+                [52.3788725, 4.856559],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_856cd3a587574fccf3e272bdb1ec191b);
+        
+    
+        var popup_21d7c64c82406e4db537c21657262cc6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_324944d636f06dc7ebf23a6000750a56 = $(`<div id="html_324944d636f06dc7ebf23a6000750a56" style="width: 100.0%; height: 100.0%;">                 <b>MasMais Marisqueria</b><br>                 Rating: 4.6<br>                 Address: Admiraal de Ruijterweg 273A, 1055 LV Amsterdam<br>                 </div>`)[0];
+                popup_21d7c64c82406e4db537c21657262cc6.setContent(html_324944d636f06dc7ebf23a6000750a56);
+            
+        
+
+        circle_marker_06e440ea2f85441025db1c86fc162e35.bindPopup(popup_21d7c64c82406e4db537c21657262cc6)
+        ;
+
+        
+    
+    
+            var circle_marker_d9cc8fbcf0acfa9656af3f7305783f5d = L.circleMarker(
+                [52.3638878, 4.88486],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_856cd3a587574fccf3e272bdb1ec191b);
+        
+    
+        var popup_246eba9bd0debdc201e72c12d42c3141 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f760c4c6c1fd6beb57409be6e903103c = $(`<div id="html_f760c4c6c1fd6beb57409be6e903103c" style="width: 100.0%; height: 100.0%;">                 <b>El Vino</b><br>                 Rating: 4.5<br>                 Address: Lange Leidsedwarsstraat 51, 1017 NG Amsterdam<br>                 </div>`)[0];
+                popup_246eba9bd0debdc201e72c12d42c3141.setContent(html_f760c4c6c1fd6beb57409be6e903103c);
+            
+        
+
+        circle_marker_d9cc8fbcf0acfa9656af3f7305783f5d.bindPopup(popup_246eba9bd0debdc201e72c12d42c3141)
+        ;
+
+        
+    
+    
+            var circle_marker_76c9a415b24b49bad72be0f8d948498a = L.circleMarker(
+                [52.3782813, 4.8815861],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_856cd3a587574fccf3e272bdb1ec191b);
+        
+    
+        var popup_08148d79852cf933e3148a858e760981 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_deb02bb5fb5c448a48692eee59198cf5 = $(`<div id="html_deb02bb5fb5c448a48692eee59198cf5" style="width: 100.0%; height: 100.0%;">                 <b>Madre</b><br>                 Rating: 4.5<br>                 Address: Westerstraat 186, 1015 MR Amsterdam<br>                 </div>`)[0];
+                popup_08148d79852cf933e3148a858e760981.setContent(html_deb02bb5fb5c448a48692eee59198cf5);
+            
+        
+
+        circle_marker_76c9a415b24b49bad72be0f8d948498a.bindPopup(popup_08148d79852cf933e3148a858e760981)
+        ;
+
+        
+    
+    
+            var circle_marker_be24038c51b5062dc666aea97201d749 = L.circleMarker(
+                [52.3709193, 4.8873576],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_856cd3a587574fccf3e272bdb1ec191b);
+        
+    
+        var popup_0ba9fac8ef4e07fa6abf04459adf9e03 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bcd4759d15da00ed872f104d1d218e7c = $(`<div id="html_bcd4759d15da00ed872f104d1d218e7c" style="width: 100.0%; height: 100.0%;">                 <b>La Condesa Taqueria</b><br>                 Rating: 4.7<br>                 Address: Herengracht 287h, 1016 BL Amsterdam<br>                 </div>`)[0];
+                popup_0ba9fac8ef4e07fa6abf04459adf9e03.setContent(html_bcd4759d15da00ed872f104d1d218e7c);
+            
+        
+
+        circle_marker_be24038c51b5062dc666aea97201d749.bindPopup(popup_0ba9fac8ef4e07fa6abf04459adf9e03)
+        ;
+
+        
+    
+    
+            var circle_marker_04974cd58dd9e06a24d341bb090d3ae6 = L.circleMarker(
+                [52.3768074, 4.8821277],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_856cd3a587574fccf3e272bdb1ec191b);
+        
+    
+        var popup_8c0d1f22d04b58c768ce1c6de0b8e366 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_80df7d7392d1a4ba22f05d7d147a265d = $(`<div id="html_80df7d7392d1a4ba22f05d7d147a265d" style="width: 100.0%; height: 100.0%;">                 <b>Rosario Cocina Mexicana</b><br>                 Rating: 4.5<br>                 Address: Tweede Egelantiersdwarsstraat 9 H, 1015 SB Amsterdam<br>                 </div>`)[0];
+                popup_8c0d1f22d04b58c768ce1c6de0b8e366.setContent(html_80df7d7392d1a4ba22f05d7d147a265d);
+            
+        
+
+        circle_marker_04974cd58dd9e06a24d341bb090d3ae6.bindPopup(popup_8c0d1f22d04b58c768ce1c6de0b8e366)
+        ;
+
+        
+    
+    
+            var circle_marker_1eea5162039eddb9c37d2ced962fd111 = L.circleMarker(
+                [52.3763911, 4.8947388],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_856cd3a587574fccf3e272bdb1ec191b);
+        
+    
+        var popup_b006651de3938b1f29caadd18cc70aa9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_98e2dc14536b2cb3587d81283fc36b7b = $(`<div id="html_98e2dc14536b2cb3587d81283fc36b7b" style="width: 100.0%; height: 100.0%;">                 <b>Sombrero Mexico Restaurant</b><br>                 Rating: 4.6<br>                 Address: Nieuwezijds Kolk 14, 1012 PV Amsterdam<br>                 </div>`)[0];
+                popup_b006651de3938b1f29caadd18cc70aa9.setContent(html_98e2dc14536b2cb3587d81283fc36b7b);
+            
+        
+
+        circle_marker_1eea5162039eddb9c37d2ced962fd111.bindPopup(popup_b006651de3938b1f29caadd18cc70aa9)
+        ;
+
+        
+    
+    
+            var circle_marker_c11205c2473ed2c7407320cbabd9a121 = L.circleMarker(
+                [52.391382099999994, 4.90416],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_856cd3a587574fccf3e272bdb1ec191b);
+        
+    
+        var popup_a2b5e3b93c135d0302d6fc11f4a3ca06 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_11ddaa00cc24f1db74b4846862ea60f6 = $(`<div id="html_11ddaa00cc24f1db74b4846862ea60f6" style="width: 100.0%; height: 100.0%;">                 <b>Bacalar</b><br>                 Rating: 4.7<br>                 Address: Chrysantenstraat 4, 1031 HT Amsterdam<br>                 </div>`)[0];
+                popup_a2b5e3b93c135d0302d6fc11f4a3ca06.setContent(html_11ddaa00cc24f1db74b4846862ea60f6);
+            
+        
+
+        circle_marker_c11205c2473ed2c7407320cbabd9a121.bindPopup(popup_a2b5e3b93c135d0302d6fc11f4a3ca06)
+        ;
+
+        
+    
+    
+            var circle_marker_1f4d3a84c1bb44b068ad27e41ac84009 = L.circleMarker(
+                [52.367453999999995, 4.8663498],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_856cd3a587574fccf3e272bdb1ec191b);
+        
+    
+        var popup_e8712db0e71216aff35c1409012de655 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a0bd885a10ec6d3329073eedac4201d8 = $(`<div id="html_a0bd885a10ec6d3329073eedac4201d8" style="width: 100.0%; height: 100.0%;">                 <b>Tacos La Sinaloense</b><br>                 Rating: 5.0<br>                 Address: Ten Katestraat 10, 1053 CE Amsterdam<br>                 </div>`)[0];
+                popup_e8712db0e71216aff35c1409012de655.setContent(html_a0bd885a10ec6d3329073eedac4201d8);
+            
+        
+
+        circle_marker_1f4d3a84c1bb44b068ad27e41ac84009.bindPopup(popup_e8712db0e71216aff35c1409012de655)
+        ;
+
+        
+    
+    
+            var circle_marker_9716af8151e43f85ce1f7e4eb6a7fbe6 = L.circleMarker(
+                [52.3587303, 4.8598623],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_856cd3a587574fccf3e272bdb1ec191b);
+        
+    
+        var popup_405b6c9d9b2bc438f6fd239f6b23f601 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cc67a3c7acfe30f1852239e547759bdb = $(`<div id="html_cc67a3c7acfe30f1852239e547759bdb" style="width: 100.0%; height: 100.0%;">                 <b>Don Burrito</b><br>                 Rating: 4.5<br>                 Address: Overtoom 443, 1054 KG Amsterdam<br>                 </div>`)[0];
+                popup_405b6c9d9b2bc438f6fd239f6b23f601.setContent(html_cc67a3c7acfe30f1852239e547759bdb);
+            
+        
+
+        circle_marker_9716af8151e43f85ce1f7e4eb6a7fbe6.bindPopup(popup_405b6c9d9b2bc438f6fd239f6b23f601)
+        ;
+
+        
+    
+    
+            var circle_marker_8143bfaea3a27e3387ab73c4fef7c82c = L.circleMarker(
+                [52.3686253, 4.8658402],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_856cd3a587574fccf3e272bdb1ec191b);
+        
+    
+        var popup_68d4b0e443683be62331b356696b3245 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_519125cc4ebc1008358c36a5e172e6d6 = $(`<div id="html_519125cc4ebc1008358c36a5e172e6d6" style="width: 100.0%; height: 100.0%;">                 <b>Parakeet</b><br>                 Rating: 4.8<br>                 Address: Douwes Dekkerstraat 22H, 1053 SX Amsterdam<br>                 </div>`)[0];
+                popup_68d4b0e443683be62331b356696b3245.setContent(html_519125cc4ebc1008358c36a5e172e6d6);
+            
+        
+
+        circle_marker_8143bfaea3a27e3387ab73c4fef7c82c.bindPopup(popup_68d4b0e443683be62331b356696b3245)
+        ;
+
+        
+    
+    
+            var circle_marker_da350bd9ae3c6c211b1051277573dd0a = L.circleMarker(
+                [52.366996699999994, 4.9392366],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_856cd3a587574fccf3e272bdb1ec191b);
+        
+    
+        var popup_e5a0162c00b471addfae9e85c68e537d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fe873b4037e70200dd5e043fcc866f02 = $(`<div id="html_fe873b4037e70200dd5e043fcc866f02" style="width: 100.0%; height: 100.0%;">                 <b>Restaurant Cancun Amsterdam</b><br>                 Rating: 4.5<br>                 Address: Veelaan 15, 1019 AP Amsterdam<br>                 </div>`)[0];
+                popup_e5a0162c00b471addfae9e85c68e537d.setContent(html_fe873b4037e70200dd5e043fcc866f02);
+            
+        
+
+        circle_marker_da350bd9ae3c6c211b1051277573dd0a.bindPopup(popup_e5a0162c00b471addfae9e85c68e537d)
+        ;
+
+        
+    
+    
+            var circle_marker_b2b973e45d786abbe08ff000a24e76be = L.circleMarker(
+                [52.354314699999996, 4.9221154],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_856cd3a587574fccf3e272bdb1ec191b);
+        
+    
+        var popup_15f7079ad9dd6de600877c2741927ab9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_73079f0ee50a361fb95e6555eb16e2de = $(`<div id="html_73079f0ee50a361fb95e6555eb16e2de" style="width: 100.0%; height: 100.0%;">                 <b>Tomatillo</b><br>                 Rating: 4.6<br>                 Address: Majubastraat 4, 1092 KG Amsterdam<br>                 </div>`)[0];
+                popup_15f7079ad9dd6de600877c2741927ab9.setContent(html_73079f0ee50a361fb95e6555eb16e2de);
+            
+        
+
+        circle_marker_b2b973e45d786abbe08ff000a24e76be.bindPopup(popup_15f7079ad9dd6de600877c2741927ab9)
+        ;
+
+        
+    
+    
+            var circle_marker_c17c3214640ef3c7cc2d4cc1efec3a83 = L.circleMarker(
+                [52.390366799999995, 4.878425],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_856cd3a587574fccf3e272bdb1ec191b);
+        
+    
+        var popup_cd22fb02af631558bf37050f4a114762 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9ae1bc871b0cfc89afc777f96a6da0eb = $(`<div id="html_9ae1bc871b0cfc89afc777f96a6da0eb" style="width: 100.0%; height: 100.0%;">                 <b>Tabeya Expat Shop Amsterdam</b><br>                 Rating: 4.5<br>                 Address: Spaarndammerstraat 107, 1013 TD Amsterdam<br>                 </div>`)[0];
+                popup_cd22fb02af631558bf37050f4a114762.setContent(html_9ae1bc871b0cfc89afc777f96a6da0eb);
+            
+        
+
+        circle_marker_c17c3214640ef3c7cc2d4cc1efec3a83.bindPopup(popup_cd22fb02af631558bf37050f4a114762)
+        ;
+
+        
+    
+    
+            var circle_marker_4446fbad58f0cd73b112b03de9e9fe5d = L.circleMarker(
+                [52.354951299999996, 4.8931691],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_856cd3a587574fccf3e272bdb1ec191b);
+        
+    
+        var popup_51420a8e205a29f4f86fe2778358b7e5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_12ac2060a97de781b92a775b784a5d79 = $(`<div id="html_12ac2060a97de781b92a775b784a5d79" style="width: 100.0%; height: 100.0%;">                 <b>Tjin's Toko</b><br>                 Rating: 4.5<br>                 Address: Eerste van der Helststraat 64, 1072 NZ Amsterdam<br>                 </div>`)[0];
+                popup_51420a8e205a29f4f86fe2778358b7e5.setContent(html_12ac2060a97de781b92a775b784a5d79);
+            
+        
+
+        circle_marker_4446fbad58f0cd73b112b03de9e9fe5d.bindPopup(popup_51420a8e205a29f4f86fe2778358b7e5)
+        ;
+
+        
+    
+    
+            var circle_marker_c5a65cf7e8bc657eeaab5ff69521940d = L.circleMarker(
+                [52.3805781, 4.8907431],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_856cd3a587574fccf3e272bdb1ec191b);
+        
+    
+        var popup_50286e36a04f1b485cbf7e8a75971798 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8bc461e9604f1bf7d5b9d68964dbcb6c = $(`<div id="html_8bc461e9604f1bf7d5b9d68964dbcb6c" style="width: 100.0%; height: 100.0%;">                 <b>Salsa Shop</b><br>                 Rating: 4.7<br>                 Address: Haarlemmerstraat 97, 1013 EM Amsterdam<br>                 </div>`)[0];
+                popup_50286e36a04f1b485cbf7e8a75971798.setContent(html_8bc461e9604f1bf7d5b9d68964dbcb6c);
+            
+        
+
+        circle_marker_c5a65cf7e8bc657eeaab5ff69521940d.bindPopup(popup_50286e36a04f1b485cbf7e8a75971798)
+        ;
+
+        
+    
+    
+            var circle_marker_b217a827889660c188a88ad93743f109 = L.circleMarker(
+                [52.378754099999995, 4.8839722],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_856cd3a587574fccf3e272bdb1ec191b);
+        
+    
+        var popup_801f247a821c6b3b5bf24729befaff06 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_79da180a68339c08e81891e977c675f4 = $(`<div id="html_79da180a68339c08e81891e977c675f4" style="width: 100.0%; height: 100.0%;">                 <b>Sins of Sal</b><br>                 Rating: 4.8<br>                 Address: Westerstraat 86, 1015 MN Amsterdam<br>                 </div>`)[0];
+                popup_801f247a821c6b3b5bf24729befaff06.setContent(html_79da180a68339c08e81891e977c675f4);
+            
+        
+
+        circle_marker_b217a827889660c188a88ad93743f109.bindPopup(popup_801f247a821c6b3b5bf24729befaff06)
+        ;
+
+        
+    
+    
+            var circle_marker_b501ab1783f73d4cd564dca5df86973c = L.circleMarker(
+                [52.359992299999995, 4.9259213],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_856cd3a587574fccf3e272bdb1ec191b);
+        
+    
+        var popup_979cf9952955708b0d8b42e07a6ada86 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7f91241c874f1c45453d2ff6a234ab21 = $(`<div id="html_7f91241c874f1c45453d2ff6a234ab21" style="width: 100.0%; height: 100.0%;">                 <b>Tres amigos</b><br>                 Rating: 4.8<br>                 Address: Wijttenbachstraat 10, 1093 JB Amsterdam<br>                 </div>`)[0];
+                popup_979cf9952955708b0d8b42e07a6ada86.setContent(html_7f91241c874f1c45453d2ff6a234ab21);
+            
+        
+
+        circle_marker_b501ab1783f73d4cd564dca5df86973c.bindPopup(popup_979cf9952955708b0d8b42e07a6ada86)
+        ;
+
+        
+    
+    
+            var circle_marker_b08ad25b6731fddd326d1ff3ad1b59d3 = L.circleMarker(
+                [52.3753841, 4.8939229],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_856cd3a587574fccf3e272bdb1ec191b);
+        
+    
+        var popup_1bc1d08ea221d6ae8ed83785ae9c8c3a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b58500a86685b76b5f0006317f10f492 = $(`<div id="html_b58500a86685b76b5f0006317f10f492" style="width: 100.0%; height: 100.0%;">                 <b>Cuddle Pub</b><br>                 Rating: 4.6<br>                 Address: Nieuwe Nieuwstraat 20, 1012 NH Amsterdam<br>                 </div>`)[0];
+                popup_1bc1d08ea221d6ae8ed83785ae9c8c3a.setContent(html_b58500a86685b76b5f0006317f10f492);
+            
+        
+
+        circle_marker_b08ad25b6731fddd326d1ff3ad1b59d3.bindPopup(popup_1bc1d08ea221d6ae8ed83785ae9c8c3a)
+        ;
+
+        
+    
+    
+            var circle_marker_01a0a1ba83156afc92253c8e150bd363 = L.circleMarker(
+                [52.3943221, 4.9110188],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_856cd3a587574fccf3e272bdb1ec191b);
+        
+    
+        var popup_cbaf2eac7fac2717277ebe659127f6f0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b3047404b2019daa0f20f83b8a8986d7 = $(`<div id="html_b3047404b2019daa0f20f83b8a8986d7" style="width: 100.0%; height: 100.0%;">                 <b>Cosmo Tacos</b><br>                 Rating: 4.6<br>                 Address: Korte Papaverweg 17, 1032 KA Amsterdam<br>                 </div>`)[0];
+                popup_cbaf2eac7fac2717277ebe659127f6f0.setContent(html_b3047404b2019daa0f20f83b8a8986d7);
+            
+        
+
+        circle_marker_01a0a1ba83156afc92253c8e150bd363.bindPopup(popup_cbaf2eac7fac2717277ebe659127f6f0)
+        ;
+
+        
+    
+    
+            var circle_marker_7bfde390ca7cba7234170c695ceb33fc = L.circleMarker(
+                [52.3377042, 4.8938989],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_856cd3a587574fccf3e272bdb1ec191b);
+        
+    
+        var popup_56dcc7f58659466d0199685043ecdbe1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e901e349ddd75c86f139e50358fb21ad = $(`<div id="html_e901e349ddd75c86f139e50358fb21ad" style="width: 100.0%; height: 100.0%;">                 <b>Aubergini Restaurant</b><br>                 Rating: 4.6<br>                 Address: Hogelandplein 1C, 1079 RZ Amsterdam<br>                 </div>`)[0];
+                popup_56dcc7f58659466d0199685043ecdbe1.setContent(html_e901e349ddd75c86f139e50358fb21ad);
+            
+        
+
+        circle_marker_7bfde390ca7cba7234170c695ceb33fc.bindPopup(popup_56dcc7f58659466d0199685043ecdbe1)
+        ;
+
+        
+    
+</script>
+</html>

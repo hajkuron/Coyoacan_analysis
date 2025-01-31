@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8cb36bf91038faeaba594da19cb28c95 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; top: 10px; right: 10px; width: 200px; 
+            background-color: white; padding: 10px; border-radius: 5px; 
+            box-shadow: 0 0 10px rgba(0,0,0,0.3); z-index: 1000;">
+    <h4>Filters</h4>
+    <label for="price-min">Min Price (€):</label><br>
+    <input type="range" id="price-min" min="0" max="100000" value="0" 
+           oninput="updateMarkers()"><br>
+    <span id="price-min-value">0</span>€<br>
+    
+    <label for="price-max">Max Price (€):</label><br>
+    <input type="range" id="price-max" min="0" max="100000" value="100000" 
+           oninput="updateMarkers()"><br>
+    <span id="price-max-value">100000</span>€<br>
+    
+    <label for="size-min">Min Size (m²):</label><br>
+    <input type="range" id="size-min" min="0" max="1000" value="0" 
+           oninput="updateMarkers()"><br>
+    <span id="size-min-value">0</span>m²<br>
+    
+    <label for="size-max">Max Size (m²):</label><br>
+    <input type="range" id="size-max" min="0" max="1000" value="1000" 
+           oninput="updateMarkers()"><br>
+    <span id="size-max-value">1000</span>m²
+</div>
+
+<script>
+function updateMarkers() {
+    var priceMin = document.getElementById('price-min').value;
+    var priceMax = document.getElementById('price-max').value;
+    var sizeMin = document.getElementById('size-min').value;
+    var sizeMax = document.getElementById('size-max').value;
+    
+    document.getElementById('price-min-value').textContent = priceMin;
+    document.getElementById('price-max-value').textContent = priceMax;
+    document.getElementById('size-min-value').textContent = sizeMin;
+    document.getElementById('size-max-value').textContent = sizeMax;
+    
+    var markers = document.getElementsByClassName('leaflet-marker-icon');
+    for (var i = 0; i < markers.length; i++) {
+        var marker = markers[i];
+        var price = marker.getAttribute('data-price');
+        var size = marker.getAttribute('data-size');
+        
+        if (price >= priceMin && price <= priceMax && 
+            size >= sizeMin && size <= sizeMax) {
+            marker.style.display = 'block';
+        } else {
+            marker.style.display = 'none';
+        }
+    }
+}
+</script>
+    
+            <div class="folium-map" id="map_8cb36bf91038faeaba594da19cb28c95" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8cb36bf91038faeaba594da19cb28c95 = L.map(
+                "map_8cb36bf91038faeaba594da19cb28c95",
+                {
+                    center: [52.3676, 4.9041],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_81cdf62286ad6f0e130a01934c42e0bf = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_8cb36bf91038faeaba594da19cb28c95);
+        
+    
+            var marker_072c422f92733845a2fbad2f6d26e313 = L.marker(
+                [52.350704, 4.8539292],
+                {"html": "\u003cdiv data-price=\"21000.0\" data-size=\"50.0\"\u003e\u003c/div\u003e"}
+            ).addTo(map_8cb36bf91038faeaba594da19cb28c95);
+        
+    
+            var icon_72e5a4b667a507af1aa5f4f64f04a506 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_072c422f92733845a2fbad2f6d26e313.setIcon(icon_72e5a4b667a507af1aa5f4f64f04a506);
+        
+    
+        var popup_15bce10a5fa8cce21e2c06b0cdaadc30 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b0212bcb886bb4c3add5c65f48e169ac = $(`<div id="html_b0212bcb886bb4c3add5c65f48e169ac" style="width: 100.0%; height: 100.0%;">                 <b>Qazaq Coffee</b><br>                 Location: Zeilstraat 45H, Amsterdam<br>                 Yearly Rent: €21,000<br>                 Size: 50 m²             </div>`)[0];
+                popup_15bce10a5fa8cce21e2c06b0cdaadc30.setContent(html_b0212bcb886bb4c3add5c65f48e169ac);
+            
+        
+
+        marker_072c422f92733845a2fbad2f6d26e313.bindPopup(popup_15bce10a5fa8cce21e2c06b0cdaadc30)
+        ;
+
+        
+    
+    
+            marker_072c422f92733845a2fbad2f6d26e313.bindTooltip(
+                `<div>
+                     Qazaq Coffee
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6119af4c88d8195b2ec6ea4c1017210a = L.marker(
+                [52.3531592, 4.852562],
+                {"html": "\u003cdiv data-price=\"39384.0\" data-size=\"320.0\"\u003e\u003c/div\u003e"}
+            ).addTo(map_8cb36bf91038faeaba594da19cb28c95);
+        
+    
+            var icon_710909cdcd72bb9624f09eb50e62c795 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6119af4c88d8195b2ec6ea4c1017210a.setIcon(icon_710909cdcd72bb9624f09eb50e62c795);
+        
+    
+        var popup_a4b9d42b5048806183f876744429d5e0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eddc8d969b5ec36a4dfa34e3d4ebbae6 = $(`<div id="html_eddc8d969b5ec36a4dfa34e3d4ebbae6" style="width: 100.0%; height: 100.0%;">                 <b>Oslo Beers</b><br>                 Location: Sloterkade 1a, Amsterdam<br>                 Yearly Rent: €39,384<br>                 Size: 320 m²             </div>`)[0];
+                popup_a4b9d42b5048806183f876744429d5e0.setContent(html_eddc8d969b5ec36a4dfa34e3d4ebbae6);
+            
+        
+
+        marker_6119af4c88d8195b2ec6ea4c1017210a.bindPopup(popup_a4b9d42b5048806183f876744429d5e0)
+        ;
+
+        
+    
+    
+            marker_6119af4c88d8195b2ec6ea4c1017210a.bindTooltip(
+                `<div>
+                     Oslo Beers
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_008c267f3b972e270f4fbee8f2b9ad9d = L.marker(
+                [52.3546341, 4.9324462],
+                {"html": "\u003cdiv data-price=\"20040.0\" data-size=\"80.0\"\u003e\u003c/div\u003e"}
+            ).addTo(map_8cb36bf91038faeaba594da19cb28c95);
+        
+    
+            var icon_991e7afe7fef59e5dedb3a4e0f27163a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_008c267f3b972e270f4fbee8f2b9ad9d.setIcon(icon_991e7afe7fef59e5dedb3a4e0f27163a);
+        
+    
+        var popup_e3abea1ce48ae4df5752166eb14433df = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9cd688bf3c25bf8b854d1c4ab72c1299 = $(`<div id="html_9cd688bf3c25bf8b854d1c4ab72c1299" style="width: 100.0%; height: 100.0%;">                 <b>Restaurant on the Hogeweg</b><br>                 Location: Hogeweg 40H, Amsterdam<br>                 Yearly Rent: €20,040<br>                 Size: 80 m²             </div>`)[0];
+                popup_e3abea1ce48ae4df5752166eb14433df.setContent(html_9cd688bf3c25bf8b854d1c4ab72c1299);
+            
+        
+
+        marker_008c267f3b972e270f4fbee8f2b9ad9d.bindPopup(popup_e3abea1ce48ae4df5752166eb14433df)
+        ;
+
+        
+    
+    
+            marker_008c267f3b972e270f4fbee8f2b9ad9d.bindTooltip(
+                `<div>
+                     Restaurant on the Hogeweg
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_809484b09b1a6045a7dab3c3e529c734 = L.marker(
+                [52.3515354, 4.8915441],
+                {"html": "\u003cdiv data-price=\"49200.0\" data-size=\"100.0\"\u003e\u003c/div\u003e"}
+            ).addTo(map_8cb36bf91038faeaba594da19cb28c95);
+        
+    
+            var icon_211b308385d54d060a95743d0418a6da = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_809484b09b1a6045a7dab3c3e529c734.setIcon(icon_211b308385d54d060a95743d0418a6da);
+        
+    
+        var popup_57610278c15ef3774faf0c3619dba1da = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6fe53e25326d5143541cd157af42c01e = $(`<div id="html_6fe53e25326d5143541cd157af42c01e" style="width: 100.0%; height: 100.0%;">                 <b>Eatery/restaurant in de Pijp</b><br>                 Location: Ferdinand Bolstraat 149, Amsterdam<br>                 Yearly Rent: €49,200<br>                 Size: 100 m²             </div>`)[0];
+                popup_57610278c15ef3774faf0c3619dba1da.setContent(html_6fe53e25326d5143541cd157af42c01e);
+            
+        
+
+        marker_809484b09b1a6045a7dab3c3e529c734.bindPopup(popup_57610278c15ef3774faf0c3619dba1da)
+        ;
+
+        
+    
+    
+            marker_809484b09b1a6045a7dab3c3e529c734.bindTooltip(
+                `<div>
+                     Eatery/restaurant in de Pijp
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_912fc1e6ec50985f73638c83a9b089dd = L.marker(
+                [52.3553428, 4.9377539],
+                {"html": "\u003cdiv data-price=\"22619.0\" data-size=\"101.0\"\u003e\u003c/div\u003e"}
+            ).addTo(map_8cb36bf91038faeaba594da19cb28c95);
+        
+    
+            var icon_c823dd97044ce27f258eca085f819945 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_912fc1e6ec50985f73638c83a9b089dd.setIcon(icon_c823dd97044ce27f258eca085f819945);
+        
+    
+        var popup_c76346d0ec516f35dc99b98d32ae8301 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e214e7b70d96670ef04bc8d7626207c2 = $(`<div id="html_e214e7b70d96670ef04bc8d7626207c2" style="width: 100.0%; height: 100.0%;">                 <b>Corner location Amsterdam-East</b><br>                 Location: Copernicusstraat 49, Amsterdam<br>                 Yearly Rent: €22,619<br>                 Size: 101 m²             </div>`)[0];
+                popup_c76346d0ec516f35dc99b98d32ae8301.setContent(html_e214e7b70d96670ef04bc8d7626207c2);
+            
+        
+
+        marker_912fc1e6ec50985f73638c83a9b089dd.bindPopup(popup_c76346d0ec516f35dc99b98d32ae8301)
+        ;
+
+        
+    
+    
+            marker_912fc1e6ec50985f73638c83a9b089dd.bindTooltip(
+                `<div>
+                     Corner location Amsterdam-East
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4fa504df874601147d13c2753db3e43d = L.marker(
+                [52.3657213, 4.9396806],
+                {"html": "\u003cdiv data-price=\"13279.0\" data-size=\"65.0\"\u003e\u003c/div\u003e"}
+            ).addTo(map_8cb36bf91038faeaba594da19cb28c95);
+        
+    
+            var icon_df857d20ace30e4b0afde43a741dacf3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4fa504df874601147d13c2753db3e43d.setIcon(icon_df857d20ace30e4b0afde43a741dacf3);
+        
+    
+        var popup_4dde04213ef9f9cdd120f453cb94047b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d9f4b388c86a74b765dcc371084fc325 = $(`<div id="html_d9f4b388c86a74b765dcc371084fc325" style="width: 100.0%; height: 100.0%;">                 <b>Café Peep</b><br>                 Location: Molukkenstraat 11G, Amsterdam<br>                 Yearly Rent: €13,279<br>                 Size: 65 m²             </div>`)[0];
+                popup_4dde04213ef9f9cdd120f453cb94047b.setContent(html_d9f4b388c86a74b765dcc371084fc325);
+            
+        
+
+        marker_4fa504df874601147d13c2753db3e43d.bindPopup(popup_4dde04213ef9f9cdd120f453cb94047b)
+        ;
+
+        
+    
+    
+            marker_4fa504df874601147d13c2753db3e43d.bindTooltip(
+                `<div>
+                     Café Peep
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0645e5d0ef7debdc11e8ac9fa4efc924 = L.marker(
+                [52.3892324, 4.8799225],
+                {"html": "\u003cdiv data-price=\"18000.0\" data-size=\"45.0\"\u003e\u003c/div\u003e"}
+            ).addTo(map_8cb36bf91038faeaba594da19cb28c95);
+        
+    
+            var icon_70338286a5e79fe9ee70c95514cf96c7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0645e5d0ef7debdc11e8ac9fa4efc924.setIcon(icon_70338286a5e79fe9ee70c95514cf96c7);
+        
+    
+        var popup_11aec0181fa3ca94c0ae1a1366d2fb95 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_716fe801d880956ebb68cafefe3243ee = $(`<div id="html_716fe801d880956ebb68cafefe3243ee" style="width: 100.0%; height: 100.0%;">                 <b>Catering business near Westerpark</b><br>                 Location: Van Noordtstraat 26, Amsterdam<br>                 Yearly Rent: €18,000<br>                 Size: 45 m²             </div>`)[0];
+                popup_11aec0181fa3ca94c0ae1a1366d2fb95.setContent(html_716fe801d880956ebb68cafefe3243ee);
+            
+        
+
+        marker_0645e5d0ef7debdc11e8ac9fa4efc924.bindPopup(popup_11aec0181fa3ca94c0ae1a1366d2fb95)
+        ;
+
+        
+    
+    
+            marker_0645e5d0ef7debdc11e8ac9fa4efc924.bindTooltip(
+                `<div>
+                     Catering business near Westerpark
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_697f5e6a283baca6c5364f44fbef5268 = L.marker(
+                [52.368848, 4.8593055],
+                {"html": "\u003cdiv data-price=\"42500.0\" data-size=\"386.0\"\u003e\u003c/div\u003e"}
+            ).addTo(map_8cb36bf91038faeaba594da19cb28c95);
+        
+    
+            var icon_5cc9790f7fd30a9fd5ea03d046ff7ca6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_697f5e6a283baca6c5364f44fbef5268.setIcon(icon_5cc9790f7fd30a9fd5ea03d046ff7ca6);
+        
+    
+        var popup_0a7d55548524f92c4acdce9a50af0af1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e7837c92fdbc09c2e825dea5923ab207 = $(`<div id="html_e7837c92fdbc09c2e825dea5923ab207" style="width: 100.0%; height: 100.0%;">                 <b>Neighbor de With</b><br>                 Location: Witte de Withstraat 102H, Amsterdam<br>                 Yearly Rent: €42,500<br>                 Size: 386 m²             </div>`)[0];
+                popup_0a7d55548524f92c4acdce9a50af0af1.setContent(html_e7837c92fdbc09c2e825dea5923ab207);
+            
+        
+
+        marker_697f5e6a283baca6c5364f44fbef5268.bindPopup(popup_0a7d55548524f92c4acdce9a50af0af1)
+        ;
+
+        
+    
+    
+            marker_697f5e6a283baca6c5364f44fbef5268.bindTooltip(
+                `<div>
+                     Neighbor de With
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8093c77b83670629202f34c9efd7ab96 = L.marker(
+                [52.388943, 4.8794998],
+                {"html": "\u003cdiv data-price=\"26976.0\" data-size=\"135.0\"\u003e\u003c/div\u003e"}
+            ).addTo(map_8cb36bf91038faeaba594da19cb28c95);
+        
+    
+            var icon_5a541311eee74416d3ddb9f7114c0ba2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8093c77b83670629202f34c9efd7ab96.setIcon(icon_5a541311eee74416d3ddb9f7114c0ba2);
+        
+    
+        var popup_682941c02fecf2a571c08d0cc4106c68 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5a21c967cb61a09d6026f8fbba6fe76b = $(`<div id="html_5a21c967cb61a09d6026f8fbba6fe76b" style="width: 100.0%; height: 100.0%;">                 <b>Restaurant & wine bar Spaarndammerstraat</b><br>                 Location: Spaarndammerstraat 49, Amsterdam<br>                 Yearly Rent: €26,976<br>                 Size: 135 m²             </div>`)[0];
+                popup_682941c02fecf2a571c08d0cc4106c68.setContent(html_5a21c967cb61a09d6026f8fbba6fe76b);
+            
+        
+
+        marker_8093c77b83670629202f34c9efd7ab96.bindPopup(popup_682941c02fecf2a571c08d0cc4106c68)
+        ;
+
+        
+    
+    
+            marker_8093c77b83670629202f34c9efd7ab96.bindTooltip(
+                `<div>
+                     Restaurant & wine bar Spaarndammerstraat
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7830a1abe476e627013356d9872033bd = L.marker(
+                [52.3786229, 4.8505239],
+                {"html": "\u003cdiv data-price=\"22800.0\" data-size=\"85.0\"\u003e\u003c/div\u003e"}
+            ).addTo(map_8cb36bf91038faeaba594da19cb28c95);
+        
+    
+            var icon_d151be341dd938d83ac89853a66568fb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7830a1abe476e627013356d9872033bd.setIcon(icon_d151be341dd938d83ac89853a66568fb);
+        
+    
+        var popup_1551b11e9929f7c2515e4b1d55e71e5d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9bb643cb390b3dd171ef34cd1894acd3 = $(`<div id="html_9bb643cb390b3dd171ef34cd1894acd3" style="width: 100.0%; height: 100.0%;">                 <b>Cafe 't Lommertje</b><br>                 Location: Bos en Lommerweg 259, Amsterdam<br>                 Yearly Rent: €22,800<br>                 Size: 85 m²             </div>`)[0];
+                popup_1551b11e9929f7c2515e4b1d55e71e5d.setContent(html_9bb643cb390b3dd171ef34cd1894acd3);
+            
+        
+
+        marker_7830a1abe476e627013356d9872033bd.bindPopup(popup_1551b11e9929f7c2515e4b1d55e71e5d)
+        ;
+
+        
+    
+    
+            marker_7830a1abe476e627013356d9872033bd.bindTooltip(
+                `<div>
+                     Cafe 't Lommertje
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cc82c4fb5881e78e7797a5ee31a4f767 = L.marker(
+                [52.370407, 4.8935883],
+                {"html": "\u003cdiv data-price=\"38976.0\" data-size=\"95.0\"\u003e\u003c/div\u003e"}
+            ).addTo(map_8cb36bf91038faeaba594da19cb28c95);
+        
+    
+            var icon_e3da924133cadb37544a765d47f0d017 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_cc82c4fb5881e78e7797a5ee31a4f767.setIcon(icon_e3da924133cadb37544a765d47f0d017);
+        
+    
+        var popup_4954bd7910e80a754f4b67ae32b64cc3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a9221fdd41f1f0062b9ca4e25398a881 = $(`<div id="html_a9221fdd41f1f0062b9ca4e25398a881" style="width: 100.0%; height: 100.0%;">                 <b>Italian restaurant</b><br>                 Location: Nes 59, Amsterdam<br>                 Yearly Rent: €38,976<br>                 Size: 95 m²             </div>`)[0];
+                popup_4954bd7910e80a754f4b67ae32b64cc3.setContent(html_a9221fdd41f1f0062b9ca4e25398a881);
+            
+        
+
+        marker_cc82c4fb5881e78e7797a5ee31a4f767.bindPopup(popup_4954bd7910e80a754f4b67ae32b64cc3)
+        ;
+
+        
+    
+    
+            marker_cc82c4fb5881e78e7797a5ee31a4f767.bindTooltip(
+                `<div>
+                     Italian restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dbdf889c635bf5a8c6aa15a925e3cc8f = L.marker(
+                [52.3698689, 4.8661628],
+                {"html": "\u003cdiv data-price=\"28092.0\" data-size=\"100.0\"\u003e\u003c/div\u003e"}
+            ).addTo(map_8cb36bf91038faeaba594da19cb28c95);
+        
+    
+            var icon_a438d8a6c8f71f50b405186a779c3225 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_dbdf889c635bf5a8c6aa15a925e3cc8f.setIcon(icon_a438d8a6c8f71f50b405186a779c3225);
+        
+    
+        var popup_003f64eaf8d0f5c4d6859866673116a5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4532847f561416527123dc96f88c2816 = $(`<div id="html_4532847f561416527123dc96f88c2816" style="width: 100.0%; height: 100.0%;">                 <b>Modern sushi restaurant</b><br>                 Location: De Clercqstraat 113, Amsterdam<br>                 Yearly Rent: €28,092<br>                 Size: 100 m²             </div>`)[0];
+                popup_003f64eaf8d0f5c4d6859866673116a5.setContent(html_4532847f561416527123dc96f88c2816);
+            
+        
+
+        marker_dbdf889c635bf5a8c6aa15a925e3cc8f.bindPopup(popup_003f64eaf8d0f5c4d6859866673116a5)
+        ;
+
+        
+    
+    
+            marker_dbdf889c635bf5a8c6aa15a925e3cc8f.bindTooltip(
+                `<div>
+                     Modern sushi restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6b5c5ce0e7a6c5f17fc50caf730cd3ff = L.marker(
+                [52.36802, 4.887774],
+                {"html": "\u003cdiv data-price=\"47939.0\" data-size=\"150.0\"\u003e\u003c/div\u003e"}
+            ).addTo(map_8cb36bf91038faeaba594da19cb28c95);
+        
+    
+            var icon_b3c1fee76a2e44273084acfd69f0ba27 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6b5c5ce0e7a6c5f17fc50caf730cd3ff.setIcon(icon_b3c1fee76a2e44273084acfd69f0ba27);
+        
+    
+        var popup_4758902242b0803a40dc89a8e01d6dea = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b32ff82866152c234b74fba892a9116b = $(`<div id="html_b32ff82866152c234b74fba892a9116b" style="width: 100.0%; height: 100.0%;">                 <b>Renowned restaurant Beulingstraat</b><br>                 Location: Beulingstraat 7, Amsterdam<br>                 Yearly Rent: €47,939<br>                 Size: 150 m²             </div>`)[0];
+                popup_4758902242b0803a40dc89a8e01d6dea.setContent(html_b32ff82866152c234b74fba892a9116b);
+            
+        
+
+        marker_6b5c5ce0e7a6c5f17fc50caf730cd3ff.bindPopup(popup_4758902242b0803a40dc89a8e01d6dea)
+        ;
+
+        
+    
+    
+            marker_6b5c5ce0e7a6c5f17fc50caf730cd3ff.bindTooltip(
+                `<div>
+                     Renowned restaurant Beulingstraat
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_87037fefa195b1a8bdbef235fceb1b20 = L.marker(
+                [52.3981186, 4.9371083],
+                {"html": "\u003cdiv data-price=\"36168.0\" data-size=\"90.0\"\u003e\u003c/div\u003e"}
+            ).addTo(map_8cb36bf91038faeaba594da19cb28c95);
+        
+    
+            var icon_e28e16b180868ab282d6874cc7e5732d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_87037fefa195b1a8bdbef235fceb1b20.setIcon(icon_e28e16b180868ab282d6874cc7e5732d);
+        
+    
+        var popup_0038a0eed09a009e964b9234458fd6f7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_73ae2e33ab4cc1d639b22e4488aee265 = $(`<div id="html_73ae2e33ab4cc1d639b22e4488aee265" style="width: 100.0%; height: 100.0%;">                 <b>Takeaway Buikslotermeerplein</b><br>                 Location: Buikslotermeerplein 162, Amsterdam<br>                 Yearly Rent: €36,168<br>                 Size: 90 m²             </div>`)[0];
+                popup_0038a0eed09a009e964b9234458fd6f7.setContent(html_73ae2e33ab4cc1d639b22e4488aee265);
+            
+        
+
+        marker_87037fefa195b1a8bdbef235fceb1b20.bindPopup(popup_0038a0eed09a009e964b9234458fd6f7)
+        ;
+
+        
+    
+    
+            marker_87037fefa195b1a8bdbef235fceb1b20.bindTooltip(
+                `<div>
+                     Takeaway Buikslotermeerplein
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_582e66aa6b52ceb2ff1b6661b3fd3221 = L.marker(
+                [52.3640253, 4.9269422],
+                {"html": "\u003cdiv data-price=\"34200.0\" data-size=\"80.0\"\u003e\u003c/div\u003e"}
+            ).addTo(map_8cb36bf91038faeaba594da19cb28c95);
+        
+    
+            var icon_31f94bd2c1018cddb387dbe7490359e0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_582e66aa6b52ceb2ff1b6661b3fd3221.setIcon(icon_31f94bd2c1018cddb387dbe7490359e0);
+        
+    
+        var popup_51d8cf46b239d6ac3120dc0768a286a6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ca8bfb3493c3a05d8b1d6a35cb5db38b = $(`<div id="html_ca8bfb3493c3a05d8b1d6a35cb5db38b" style="width: 100.0%; height: 100.0%;">                 <b>Lunchroom Dappermarkt</b><br>                 Location: Commelinstraat 67, Amsterdam<br>                 Yearly Rent: €34,200<br>                 Size: 80 m²             </div>`)[0];
+                popup_51d8cf46b239d6ac3120dc0768a286a6.setContent(html_ca8bfb3493c3a05d8b1d6a35cb5db38b);
+            
+        
+
+        marker_582e66aa6b52ceb2ff1b6661b3fd3221.bindPopup(popup_51d8cf46b239d6ac3120dc0768a286a6)
+        ;
+
+        
+    
+    
+            marker_582e66aa6b52ceb2ff1b6661b3fd3221.bindTooltip(
+                `<div>
+                     Lunchroom Dappermarkt
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dc40e5eaa4db66561a6cd94137453c5c = L.marker(
+                [52.3345761, 4.9209826],
+                {"html": "\u003cdiv data-price=\"285.0\" data-size=\"191.0\"\u003e\u003c/div\u003e"}
+            ).addTo(map_8cb36bf91038faeaba594da19cb28c95);
+        
+    
+            var icon_54546df8ea89f4c10bff92d8c8d7722b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_dc40e5eaa4db66561a6cd94137453c5c.setIcon(icon_54546df8ea89f4c10bff92d8c8d7722b);
+        
+    
+        var popup_b84fd7a9c10d9fb29500d49e83b27334 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dcc5eceb6a6a7b2aef91ce80295944d4 = $(`<div id="html_dcc5eceb6a6a7b2aef91ce80295944d4" style="width: 100.0%; height: 100.0%;">                 <b>KBF Warehouse Overamstel</b><br>                 Location: Daniel Goedkoopstraat 12, Amsterdam<br>                 Yearly Rent: €285<br>                 Size: 191 m²             </div>`)[0];
+                popup_b84fd7a9c10d9fb29500d49e83b27334.setContent(html_dcc5eceb6a6a7b2aef91ce80295944d4);
+            
+        
+
+        marker_dc40e5eaa4db66561a6cd94137453c5c.bindPopup(popup_b84fd7a9c10d9fb29500d49e83b27334)
+        ;
+
+        
+    
+    
+            marker_dc40e5eaa4db66561a6cd94137453c5c.bindTooltip(
+                `<div>
+                     KBF Warehouse Overamstel
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_baa28257aac772eb28525451003670f6 = L.marker(
+                [52.3699296, 4.8701872],
+                {"html": "\u003cdiv data-price=\"40000.0\" data-size=\"186.0\"\u003e\u003c/div\u003e"}
+            ).addTo(map_8cb36bf91038faeaba594da19cb28c95);
+        
+    
+            var icon_23ac9113c4a35233c0c6ed619edf3453 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_baa28257aac772eb28525451003670f6.setIcon(icon_23ac9113c4a35233c0c6ed619edf3453);
+        
+    
+        var popup_3d12314bf783bdace566dc5ceb4e08da = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3a296bf03b33812a95342ad354c1359e = $(`<div id="html_3a296bf03b33812a95342ad354c1359e" style="width: 100.0%; height: 100.0%;">                 <b>Restaurant Oud West</b><br>                 Location: Bilderdijkstraat 74, Amsterdam<br>                 Yearly Rent: €40,000<br>                 Size: 186 m²             </div>`)[0];
+                popup_3d12314bf783bdace566dc5ceb4e08da.setContent(html_3a296bf03b33812a95342ad354c1359e);
+            
+        
+
+        marker_baa28257aac772eb28525451003670f6.bindPopup(popup_3d12314bf783bdace566dc5ceb4e08da)
+        ;
+
+        
+    
+    
+            marker_baa28257aac772eb28525451003670f6.bindTooltip(
+                `<div>
+                     Restaurant Oud West
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4140ef90d682e922e42d92ff42c36428 = L.marker(
+                [52.3514773, 4.9358929],
+                {"html": "\u003cdiv data-price=\"26400.0\" data-size=\"52.0\"\u003e\u003c/div\u003e"}
+            ).addTo(map_8cb36bf91038faeaba594da19cb28c95);
+        
+    
+            var icon_c65dad832162c9bc56868caccd017db7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4140ef90d682e922e42d92ff42c36428.setIcon(icon_c65dad832162c9bc56868caccd017db7);
+        
+    
+        var popup_514c0dc9aaf371f210174276c33639c0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c2df6ba05016f15e21d53a0a71a33c3d = $(`<div id="html_c2df6ba05016f15e21d53a0a71a33c3d" style="width: 100.0%; height: 100.0%;">                 <b>Snack bar Watergraafsmeer</b><br>                 Location: Wethouder Frankeweg 11 h, Amsterdam<br>                 Yearly Rent: €26,400<br>                 Size: 52 m²             </div>`)[0];
+                popup_514c0dc9aaf371f210174276c33639c0.setContent(html_c2df6ba05016f15e21d53a0a71a33c3d);
+            
+        
+
+        marker_4140ef90d682e922e42d92ff42c36428.bindPopup(popup_514c0dc9aaf371f210174276c33639c0)
+        ;
+
+        
+    
+    
+            marker_4140ef90d682e922e42d92ff42c36428.bindTooltip(
+                `<div>
+                     Snack bar Watergraafsmeer
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_de75d2d4979a027566adf8d0d2815253 = L.marker(
+                [52.3774711, 4.859499],
+                {"html": "\u003cdiv data-price=\"27813.0\" data-size=\"180.0\"\u003e\u003c/div\u003e"}
+            ).addTo(map_8cb36bf91038faeaba594da19cb28c95);
+        
+    
+            var icon_1a9cb9c92f2697d59d70b71ba0c6fd2c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_de75d2d4979a027566adf8d0d2815253.setIcon(icon_1a9cb9c92f2697d59d70b71ba0c6fd2c);
+        
+    
+        var popup_c437a171cc5e82e180e5b908c2e5e2fe = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_808af147b2e19b9dd655312971450e51 = $(`<div id="html_808af147b2e19b9dd655312971450e51" style="width: 100.0%; height: 100.0%;">                 <b>Restaurant Amsterdam West</b><br>                 Location: Gerard Callenburgstraat 1, Amsterdam<br>                 Yearly Rent: €27,813<br>                 Size: 180 m²             </div>`)[0];
+                popup_c437a171cc5e82e180e5b908c2e5e2fe.setContent(html_808af147b2e19b9dd655312971450e51);
+            
+        
+
+        marker_de75d2d4979a027566adf8d0d2815253.bindPopup(popup_c437a171cc5e82e180e5b908c2e5e2fe)
+        ;
+
+        
+    
+    
+            marker_de75d2d4979a027566adf8d0d2815253.bindTooltip(
+                `<div>
+                     Restaurant Amsterdam West
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_817a590329abba822c0f9754a7f3ec53 = L.marker(
+                [52.363267, 4.919213],
+                {"html": "\u003cdiv data-price=\"26894.0\" data-size=\"132.0\"\u003e\u003c/div\u003e"}
+            ).addTo(map_8cb36bf91038faeaba594da19cb28c95);
+        
+    
+            var icon_98435ccb1c67aa78b829ff0abb21f0a2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_817a590329abba822c0f9754a7f3ec53.setIcon(icon_98435ccb1c67aa78b829ff0abb21f0a2);
+        
+    
+        var popup_015d4c8f3a9268d3e3ae058c433cc602 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0c4868bf9625db0cb0bf98d418111e22 = $(`<div id="html_0c4868bf9625db0cb0bf98d418111e22" style="width: 100.0%; height: 100.0%;">                 <b>Fine-dining Alexanderplein</b><br>                 Location: Alexanderplein 6, Amsterdam<br>                 Yearly Rent: €26,894<br>                 Size: 132 m²             </div>`)[0];
+                popup_015d4c8f3a9268d3e3ae058c433cc602.setContent(html_0c4868bf9625db0cb0bf98d418111e22);
+            
+        
+
+        marker_817a590329abba822c0f9754a7f3ec53.bindPopup(popup_015d4c8f3a9268d3e3ae058c433cc602)
+        ;
+
+        
+    
+    
+            marker_817a590329abba822c0f9754a7f3ec53.bindTooltip(
+                `<div>
+                     Fine-dining Alexanderplein
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>

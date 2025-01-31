@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7ea9c5825785015e5dfffceb5cf7d6a9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_7ea9c5825785015e5dfffceb5cf7d6a9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7ea9c5825785015e5dfffceb5cf7d6a9 = L.map(
+                "map_7ea9c5825785015e5dfffceb5cf7d6a9",
+                {
+                    center: [52.3676, 4.9041],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_799b525d93941682400bd6fb2d639f06 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_7ea9c5825785015e5dfffceb5cf7d6a9);
+        
+    
+            var polygon_33be89d4e5ca9d52671311601f110dbb = L.polygon(
+                [[52.3702, 4.8854], [52.3745, 4.8899], [52.375, 4.9023], [52.3735, 4.915], [52.3685, 4.9188], [52.3635, 4.915], [52.362, 4.9023], [52.3635, 4.8899], [52.3702, 4.8854]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fff600ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_7ea9c5825785015e5dfffceb5cf7d6a9);
+        
+    
+        var popup_a09e2a55607438fde360d40da308b4b0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d2d78780eed70736195c3be5e3af4fef = $(`<div id="html_d2d78780eed70736195c3be5e3af4fef" style="width: 100.0%; height: 100.0%;">                 <b>Centrum</b><br>                 Average Monthly Rent per m²: €48.88<br>                 Average Monthly Rent: €4702.97<br>                 Average Size: 99 m²<br>                 Number of Locations: 3.0             </div>`)[0];
+                popup_a09e2a55607438fde360d40da308b4b0.setContent(html_d2d78780eed70736195c3be5e3af4fef);
+            
+        
+
+        polygon_33be89d4e5ca9d52671311601f110dbb.bindPopup(popup_a09e2a55607438fde360d40da308b4b0)
+        ;
+
+        
+    
+    
+            var polygon_84bdc70365d29abca298fe6a499e418f = L.polygon(
+                [[52.35, 4.85], [52.355, 4.86], [52.355, 4.88], [52.35, 4.89], [52.345, 4.88], [52.345, 4.86], [52.35, 4.85]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#acd600ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_7ea9c5825785015e5dfffceb5cf7d6a9);
+        
+    
+        var popup_52e97dfb25fb0fdf690dc41f9d56fe94 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8db51bddb8cb4ac7846a4587f7fd93f6 = $(`<div id="html_8db51bddb8cb4ac7846a4587f7fd93f6" style="width: 100.0%; height: 100.0%;">                 <b>Zuid</b><br>                 Average Monthly Rent per m²: €35.00<br>                 Average Monthly Rent: €1750.00<br>                 Average Size: 125 m²<br>                 Number of Locations: 1.0             </div>`)[0];
+                popup_52e97dfb25fb0fdf690dc41f9d56fe94.setContent(html_8db51bddb8cb4ac7846a4587f7fd93f6);
+            
+        
+
+        polygon_84bdc70365d29abca298fe6a499e418f.bindPopup(popup_52e97dfb25fb0fdf690dc41f9d56fe94)
+        ;
+
+        
+    
+    
+            var circle_marker_b7f237db05f8a90204a4d120e58afc05 = L.circleMarker(
+                [52.3614727, 4.8924177],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7ea9c5825785015e5dfffceb5cf7d6a9);
+        
+    
+        var popup_84b95a94dd999d801d29b0c8aa750d82 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0fcd6c76c5e47c7dc7ce643f038826af = $(`<div id="html_0fcd6c76c5e47c7dc7ce643f038826af" style="width: 100.0%; height: 100.0%;">                 <b>Basement restaurant</b><br>                 Address: Noorderstraat 19 H, Amsterdam<br>                 Neighborhood: Unknown<br>                 Size: 192 m²<br>                 Monthly Rent per m²: €26.70<br>                 Monthly Rent: €5126.33             </div>`)[0];
+                popup_84b95a94dd999d801d29b0c8aa750d82.setContent(html_0fcd6c76c5e47c7dc7ce643f038826af);
+            
+        
+
+        circle_marker_b7f237db05f8a90204a4d120e58afc05.bindPopup(popup_84b95a94dd999d801d29b0c8aa750d82)
+        ;
+
+        
+    
+    
+            var circle_marker_e8be561d8d22c202c9e2b2503a61369e = L.circleMarker(
+                [52.350704, 4.8539292],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7ea9c5825785015e5dfffceb5cf7d6a9);
+        
+    
+        var popup_7545900c0777f88cf2abe7d41cbe83ce = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9b4d9d8934fc223ad8aa14caf5536e9d = $(`<div id="html_9b4d9d8934fc223ad8aa14caf5536e9d" style="width: 100.0%; height: 100.0%;">                 <b>Qazaq Coffee</b><br>                 Address: Zeilstraat 45H, Amsterdam<br>                 Neighborhood: Zuid<br>                 Size: 50 m²<br>                 Monthly Rent per m²: €35.00<br>                 Monthly Rent: €1750.00             </div>`)[0];
+                popup_7545900c0777f88cf2abe7d41cbe83ce.setContent(html_9b4d9d8934fc223ad8aa14caf5536e9d);
+            
+        
+
+        circle_marker_e8be561d8d22c202c9e2b2503a61369e.bindPopup(popup_7545900c0777f88cf2abe7d41cbe83ce)
+        ;
+
+        
+    
+    
+            var circle_marker_820ab92677551d1b65c1bc904b438b57 = L.circleMarker(
+                [52.3531592, 4.852562],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7ea9c5825785015e5dfffceb5cf7d6a9);
+        
+    
+        var popup_ad053aaabb8995909f0a79346c822b18 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6f6ef0201e4dd072f42452d91b0645df = $(`<div id="html_6f6ef0201e4dd072f42452d91b0645df" style="width: 100.0%; height: 100.0%;">                 <b>Oslo Beers</b><br>                 Address: Sloterkade 1a, Amsterdam<br>                 Neighborhood: Unknown<br>                 Size: 320 m²<br>                 Monthly Rent per m²: €10.26<br>                 Monthly Rent: €3282.00             </div>`)[0];
+                popup_ad053aaabb8995909f0a79346c822b18.setContent(html_6f6ef0201e4dd072f42452d91b0645df);
+            
+        
+
+        circle_marker_820ab92677551d1b65c1bc904b438b57.bindPopup(popup_ad053aaabb8995909f0a79346c822b18)
+        ;
+
+        
+    
+    
+            var circle_marker_9359c478626dac09a995b024c50a5fdd = L.circleMarker(
+                [52.3693969, 4.8514434],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7ea9c5825785015e5dfffceb5cf7d6a9);
+        
+    
+        var popup_20e933d0cabd4398262467251f5380b2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ab32924c72d7dc0c8dc6df924261cd4b = $(`<div id="html_ab32924c72d7dc0c8dc6df924261cd4b" style="width: 100.0%; height: 100.0%;">                 <b>BAR.LUSCONI</b><br>                 Address: Mercatorplein 2b, Amsterdam<br>                 Neighborhood: Unknown<br>                 Size: 200 m²<br>                 Monthly Rent per m²: €37.50<br>                 Monthly Rent: €7500.00             </div>`)[0];
+                popup_20e933d0cabd4398262467251f5380b2.setContent(html_ab32924c72d7dc0c8dc6df924261cd4b);
+            
+        
+
+        circle_marker_9359c478626dac09a995b024c50a5fdd.bindPopup(popup_20e933d0cabd4398262467251f5380b2)
+        ;
+
+        
+    
+    
+            var circle_marker_464c945100679384c8534d84febe3f3f = L.circleMarker(
+                [52.3443399, 4.9172113],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7ea9c5825785015e5dfffceb5cf7d6a9);
+        
+    
+        var popup_9175d5a5ba5eb4399f4c50b9ca2def80 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7c87b2c3d42057837203db9699a3ef6d = $(`<div id="html_7c87b2c3d42057837203db9699a3ef6d" style="width: 100.0%; height: 100.0%;">                 <b>Grand-Cafe near the Amstel</b><br>                 Address: Amstelplein 4, Amsterdam<br>                 Neighborhood: Unknown<br>                 Size: 200 m²<br>                 Monthly Rent per m²: €31.50<br>                 Monthly Rent: €6300.00             </div>`)[0];
+                popup_9175d5a5ba5eb4399f4c50b9ca2def80.setContent(html_7c87b2c3d42057837203db9699a3ef6d);
+            
+        
+
+        circle_marker_464c945100679384c8534d84febe3f3f.bindPopup(popup_9175d5a5ba5eb4399f4c50b9ca2def80)
+        ;
+
+        
+    
+    
+            var circle_marker_7fa397f3119025e3882680a1276d646d = L.circleMarker(
+                [52.3546341, 4.9324462],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7ea9c5825785015e5dfffceb5cf7d6a9);
+        
+    
+        var popup_9353e9924996949b96d9a795f0e16d2b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fab887dd975ee5b50da57e99372154e9 = $(`<div id="html_fab887dd975ee5b50da57e99372154e9" style="width: 100.0%; height: 100.0%;">                 <b>Restaurant on the Hogeweg</b><br>                 Address: Hogeweg 40H, Amsterdam<br>                 Neighborhood: Unknown<br>                 Size: 80 m²<br>                 Monthly Rent per m²: €20.88<br>                 Monthly Rent: €1670.00             </div>`)[0];
+                popup_9353e9924996949b96d9a795f0e16d2b.setContent(html_fab887dd975ee5b50da57e99372154e9);
+            
+        
+
+        circle_marker_7fa397f3119025e3882680a1276d646d.bindPopup(popup_9353e9924996949b96d9a795f0e16d2b)
+        ;
+
+        
+    
+    
+            var circle_marker_99cd843ee96d0359a13530410fdbf62f = L.circleMarker(
+                [52.3646084, 4.8981221],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7ea9c5825785015e5dfffceb5cf7d6a9);
+        
+    
+        var popup_78a45b5c7b455f793611c737f745beaa = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0a7c560ead082f59a6ed1fc35ce1fb30 = $(`<div id="html_0a7c560ead082f59a6ed1fc35ce1fb30" style="width: 100.0%; height: 100.0%;">                 <b>Restaurant on the Utrechtsestraat</b><br>                 Address: Utrechtsestraat 33, Amsterdam<br>                 Neighborhood: Centrum<br>                 Size: 80 m²<br>                 Monthly Rent per m²: €85.83<br>                 Monthly Rent: €6866.00             </div>`)[0];
+                popup_78a45b5c7b455f793611c737f745beaa.setContent(html_0a7c560ead082f59a6ed1fc35ce1fb30);
+            
+        
+
+        circle_marker_99cd843ee96d0359a13530410fdbf62f.bindPopup(popup_78a45b5c7b455f793611c737f745beaa)
+        ;
+
+        
+    
+    
+            var circle_marker_fd27b3ca94d79b890be340b325a92e60 = L.circleMarker(
+                [52.3515354, 4.8915441],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7ea9c5825785015e5dfffceb5cf7d6a9);
+        
+    
+        var popup_ed3683ba20eae927aab408d7351fabba = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c7ae8997e6421468f50912ecc28762c0 = $(`<div id="html_c7ae8997e6421468f50912ecc28762c0" style="width: 100.0%; height: 100.0%;">                 <b>Eatery/restaurant in de Pijp</b><br>                 Address: Ferdinand Bolstraat 149, Amsterdam<br>                 Neighborhood: Unknown<br>                 Size: 100 m²<br>                 Monthly Rent per m²: €41.00<br>                 Monthly Rent: €4100.00             </div>`)[0];
+                popup_ed3683ba20eae927aab408d7351fabba.setContent(html_c7ae8997e6421468f50912ecc28762c0);
+            
+        
+
+        circle_marker_fd27b3ca94d79b890be340b325a92e60.bindPopup(popup_ed3683ba20eae927aab408d7351fabba)
+        ;
+
+        
+    
+    
+            var circle_marker_184f91a09a74167ffe1ddfdd344809cb = L.circleMarker(
+                [52.3520305, 4.9130522],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7ea9c5825785015e5dfffceb5cf7d6a9);
+        
+    
+        var popup_0261d193e173b01dc6e168ab922045cb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0897adbb5a7984bc62ba7f22afb7738a = $(`<div id="html_0897adbb5a7984bc62ba7f22afb7738a" style="width: 100.0%; height: 100.0%;">                 <b>Grand Café on Wibautstraat</b><br>                 Address: Wibautstraat 206, Amsterdam<br>                 Neighborhood: Unknown<br>                 Size: 200 m²<br>                 Monthly Rent per m²: €32.24<br>                 Monthly Rent: €6449.00             </div>`)[0];
+                popup_0261d193e173b01dc6e168ab922045cb.setContent(html_0897adbb5a7984bc62ba7f22afb7738a);
+            
+        
+
+        circle_marker_184f91a09a74167ffe1ddfdd344809cb.bindPopup(popup_0261d193e173b01dc6e168ab922045cb)
+        ;
+
+        
+    
+    
+            var circle_marker_2fee278dc5bd917a497747e5e9befabf = L.circleMarker(
+                [52.3553428, 4.9377539],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7ea9c5825785015e5dfffceb5cf7d6a9);
+        
+    
+        var popup_8ad0d9e886425004a3b93a8e3bb42d40 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4780925726160f30a6f8dd15d1d56148 = $(`<div id="html_4780925726160f30a6f8dd15d1d56148" style="width: 100.0%; height: 100.0%;">                 <b>Corner location Amsterdam-East</b><br>                 Address: Copernicusstraat 49, Amsterdam<br>                 Neighborhood: Unknown<br>                 Size: 101 m²<br>                 Monthly Rent per m²: €18.66<br>                 Monthly Rent: €1884.92             </div>`)[0];
+                popup_8ad0d9e886425004a3b93a8e3bb42d40.setContent(html_4780925726160f30a6f8dd15d1d56148);
+            
+        
+
+        circle_marker_2fee278dc5bd917a497747e5e9befabf.bindPopup(popup_8ad0d9e886425004a3b93a8e3bb42d40)
+        ;
+
+        
+    
+    
+            var circle_marker_3a3d856c66c773fdf64ff58ba34bdb48 = L.circleMarker(
+                [52.3657213, 4.9396806],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7ea9c5825785015e5dfffceb5cf7d6a9);
+        
+    
+        var popup_dbb1f0e30920e371dc43f91418f8339f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0a49379436da0460529e8a53b43872ab = $(`<div id="html_0a49379436da0460529e8a53b43872ab" style="width: 100.0%; height: 100.0%;">                 <b>Café Peep</b><br>                 Address: Molukkenstraat 11G, Amsterdam<br>                 Neighborhood: Unknown<br>                 Size: 65 m²<br>                 Monthly Rent per m²: €17.02<br>                 Monthly Rent: €1106.58             </div>`)[0];
+                popup_dbb1f0e30920e371dc43f91418f8339f.setContent(html_0a49379436da0460529e8a53b43872ab);
+            
+        
+
+        circle_marker_3a3d856c66c773fdf64ff58ba34bdb48.bindPopup(popup_dbb1f0e30920e371dc43f91418f8339f)
+        ;
+
+        
+    
+    
+            var circle_marker_9eaa6119f3416bd65e3fe6d413d97055 = L.circleMarker(
+                [52.3892324, 4.8799225],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7ea9c5825785015e5dfffceb5cf7d6a9);
+        
+    
+        var popup_1c0944ac4759b92e7949b84e444b4dff = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_340f63a3e4da96ce1fd944e83b4a410f = $(`<div id="html_340f63a3e4da96ce1fd944e83b4a410f" style="width: 100.0%; height: 100.0%;">                 <b>Catering business near Westerpark</b><br>                 Address: Van Noordtstraat 26, Amsterdam<br>                 Neighborhood: Unknown<br>                 Size: 45 m²<br>                 Monthly Rent per m²: €33.33<br>                 Monthly Rent: €1500.00             </div>`)[0];
+                popup_1c0944ac4759b92e7949b84e444b4dff.setContent(html_340f63a3e4da96ce1fd944e83b4a410f);
+            
+        
+
+        circle_marker_9eaa6119f3416bd65e3fe6d413d97055.bindPopup(popup_1c0944ac4759b92e7949b84e444b4dff)
+        ;
+
+        
+    
+    
+            var circle_marker_60a3070e224ed5ed657f0344a6013ed5 = L.circleMarker(
+                [52.3566019, 4.9111511],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7ea9c5825785015e5dfffceb5cf7d6a9);
+        
+    
+        var popup_9ea428312cd17994802f374e88c5e33c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bec7f45d0624528f2d8877f8f4a64545 = $(`<div id="html_bec7f45d0624528f2d8877f8f4a64545" style="width: 100.0%; height: 100.0%;">                 <b>Corner house Wibautstraat</b><br>                 Address: Wibautstraat 85, Amsterdam<br>                 Neighborhood: Unknown<br>                 Size: 202 m²<br>                 Monthly Rent per m²: €32.18<br>                 Monthly Rent: €6500.00             </div>`)[0];
+                popup_9ea428312cd17994802f374e88c5e33c.setContent(html_bec7f45d0624528f2d8877f8f4a64545);
+            
+        
+
+        circle_marker_60a3070e224ed5ed657f0344a6013ed5.bindPopup(popup_9ea428312cd17994802f374e88c5e33c)
+        ;
+
+        
+    
+    
+            var circle_marker_f401ae871d06b5bac41e9fab17e6f286 = L.circleMarker(
+                [52.370407, 4.8935883],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7ea9c5825785015e5dfffceb5cf7d6a9);
+        
+    
+        var popup_391de8084e9bffe8399df658f2cbfd08 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_62b71ccc564e893367a60f5585f80d89 = $(`<div id="html_62b71ccc564e893367a60f5585f80d89" style="width: 100.0%; height: 100.0%;">                 <b>Italian restaurant</b><br>                 Address: Nes 59, Amsterdam<br>                 Neighborhood: Centrum<br>                 Size: 95 m²<br>                 Monthly Rent per m²: €34.19<br>                 Monthly Rent: €3248.00             </div>`)[0];
+                popup_391de8084e9bffe8399df658f2cbfd08.setContent(html_62b71ccc564e893367a60f5585f80d89);
+            
+        
+
+        circle_marker_f401ae871d06b5bac41e9fab17e6f286.bindPopup(popup_391de8084e9bffe8399df658f2cbfd08)
+        ;
+
+        
+    
+    
+            var circle_marker_57d44d82402e56a2847e67adf42ad5fa = L.circleMarker(
+                [52.3538747, 4.8862567],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7ea9c5825785015e5dfffceb5cf7d6a9);
+        
+    
+        var popup_0b02502adecdc2e35455048d037c22c8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_46ff8ebbbeef3a3fc6c98da848a02398 = $(`<div id="html_46ff8ebbbeef3a3fc6c98da848a02398" style="width: 100.0%; height: 100.0%;">                 <b>Restaurant Hobbemakade</b><br>                 Address: Hobbemakade 64, Amsterdam<br>                 Neighborhood: Unknown<br>                 Size: 227 m²<br>                 Monthly Rent per m²: €21.84<br>                 Monthly Rent: €4958.00             </div>`)[0];
+                popup_0b02502adecdc2e35455048d037c22c8.setContent(html_46ff8ebbbeef3a3fc6c98da848a02398);
+            
+        
+
+        circle_marker_57d44d82402e56a2847e67adf42ad5fa.bindPopup(popup_0b02502adecdc2e35455048d037c22c8)
+        ;
+
+        
+    
+    
+            var circle_marker_dd1861b515122405f303b966040cb0dd = L.circleMarker(
+                [52.36802, 4.887774],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7ea9c5825785015e5dfffceb5cf7d6a9);
+        
+    
+        var popup_7a5539209897de27d62dcede99d70965 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_74955a9c0511b3e6b2efd46520ce07fd = $(`<div id="html_74955a9c0511b3e6b2efd46520ce07fd" style="width: 100.0%; height: 100.0%;">                 <b>Renowned restaurant Beulingstraat</b><br>                 Address: Beulingstraat 7, Amsterdam<br>                 Neighborhood: Centrum<br>                 Size: 150 m²<br>                 Monthly Rent per m²: €26.63<br>                 Monthly Rent: €3994.92             </div>`)[0];
+                popup_7a5539209897de27d62dcede99d70965.setContent(html_74955a9c0511b3e6b2efd46520ce07fd);
+            
+        
+
+        circle_marker_dd1861b515122405f303b966040cb0dd.bindPopup(popup_7a5539209897de27d62dcede99d70965)
+        ;
+
+        
+    
+    
+            var circle_marker_6c864cabbe06252f005fdfb71101a9aa = L.circleMarker(
+                [52.3984526, 4.9049416],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7ea9c5825785015e5dfffceb5cf7d6a9);
+        
+    
+        var popup_c7025eef940483c2923d654c680bfaa6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_34b2509f2ffcd45c683ddf0d7c67328f = $(`<div id="html_34b2509f2ffcd45c683ddf0d7c67328f" style="width: 100.0%; height: 100.0%;">                 <b>MaMa Poppies Amsterdam Noord</b><br>                 Address: Monnikskapstraat 8, Amsterdam<br>                 Neighborhood: Unknown<br>                 Size: 320 m²<br>                 Monthly Rent per m²: €23.44<br>                 Monthly Rent: €7500.00             </div>`)[0];
+                popup_c7025eef940483c2923d654c680bfaa6.setContent(html_34b2509f2ffcd45c683ddf0d7c67328f);
+            
+        
+
+        circle_marker_6c864cabbe06252f005fdfb71101a9aa.bindPopup(popup_c7025eef940483c2923d654c680bfaa6)
+        ;
+
+        
+    
+    
+            var circle_marker_8ed2b71090651851af5f9189833bc7a8 = L.circleMarker(
+                [52.3981186, 4.9371083],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7ea9c5825785015e5dfffceb5cf7d6a9);
+        
+    
+        var popup_bc695e4a6f19676ce366b8e46f9c73f9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7bed2e6b9cc80361f8af1abf50076a99 = $(`<div id="html_7bed2e6b9cc80361f8af1abf50076a99" style="width: 100.0%; height: 100.0%;">                 <b>Takeaway Buikslotermeerplein</b><br>                 Address: Buikslotermeerplein 162, Amsterdam<br>                 Neighborhood: Unknown<br>                 Size: 90 m²<br>                 Monthly Rent per m²: €33.49<br>                 Monthly Rent: €3014.00             </div>`)[0];
+                popup_bc695e4a6f19676ce366b8e46f9c73f9.setContent(html_7bed2e6b9cc80361f8af1abf50076a99);
+            
+        
+
+        circle_marker_8ed2b71090651851af5f9189833bc7a8.bindPopup(popup_bc695e4a6f19676ce366b8e46f9c73f9)
+        ;
+
+        
+    
+    
+            var circle_marker_e1c9dfdf8324e37a2016a5fd05bb23d2 = L.circleMarker(
+                [52.3640253, 4.9269422],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7ea9c5825785015e5dfffceb5cf7d6a9);
+        
+    
+        var popup_ca793efaaf27800cc16a6b438f2423d9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_eed86c62f26d5acb2a87ad613602fff2 = $(`<div id="html_eed86c62f26d5acb2a87ad613602fff2" style="width: 100.0%; height: 100.0%;">                 <b>Lunchroom Dappermarkt</b><br>                 Address: Commelinstraat 67, Amsterdam<br>                 Neighborhood: Unknown<br>                 Size: 80 m²<br>                 Monthly Rent per m²: €35.62<br>                 Monthly Rent: €2850.00             </div>`)[0];
+                popup_ca793efaaf27800cc16a6b438f2423d9.setContent(html_eed86c62f26d5acb2a87ad613602fff2);
+            
+        
+
+        circle_marker_e1c9dfdf8324e37a2016a5fd05bb23d2.bindPopup(popup_ca793efaaf27800cc16a6b438f2423d9)
+        ;
+
+        
+    
+    
+            var circle_marker_87e3aed2ce66b929ff05607d8b032a43 = L.circleMarker(
+                [52.2930196, 4.9475977],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7ea9c5825785015e5dfffceb5cf7d6a9);
+        
+    
+        var popup_ee75ebfcd035565a62b5b9a59253e713 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a28051bcda94706be1452323e6ae450e = $(`<div id="html_a28051bcda94706be1452323e6ae450e" style="width: 100.0%; height: 100.0%;">                 <b>Foodstrip Rijksweg</b><br>                 Address: Tafelbergweg 2 A, Amsterdam<br>                 Neighborhood: Unknown<br>                 Size: 929 m²<br>                 Monthly Rent per m²: €22.43<br>                 Monthly Rent: €20835.00             </div>`)[0];
+                popup_ee75ebfcd035565a62b5b9a59253e713.setContent(html_a28051bcda94706be1452323e6ae450e);
+            
+        
+
+        circle_marker_87e3aed2ce66b929ff05607d8b032a43.bindPopup(popup_ee75ebfcd035565a62b5b9a59253e713)
+        ;
+
+        
+    
+    
+            var circle_marker_e7e04e80792179afe314a162ed532634 = L.circleMarker(
+                [52.3751045, 4.898485],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7ea9c5825785015e5dfffceb5cf7d6a9);
+        
+    
+        var popup_7b84ba1cca84816d59e409dec3764a31 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e5d926073ba66f52b62e5b045f8aea47 = $(`<div id="html_e5d926073ba66f52b62e5b045f8aea47" style="width: 100.0%; height: 100.0%;">                 <b>Restaurant Lange Niezel</b><br>                 Address: Lange Niezel 9, Amsterdam<br>                 Neighborhood: Unknown<br>                 Size: 107 m²<br>                 Monthly Rent per m²: €61.85<br>                 Monthly Rent: €6618.00             </div>`)[0];
+                popup_7b84ba1cca84816d59e409dec3764a31.setContent(html_e5d926073ba66f52b62e5b045f8aea47);
+            
+        
+
+        circle_marker_e7e04e80792179afe314a162ed532634.bindPopup(popup_7b84ba1cca84816d59e409dec3764a31)
+        ;
+
+        
+    
+    
+            var circle_marker_2c4b1a742b537a1fc370c7d9cc1beaee = L.circleMarker(
+                [52.3557602, 4.8924744],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7ea9c5825785015e5dfffceb5cf7d6a9);
+        
+    
+        var popup_5905cbaec1ef17807e7f72c5c9332d4b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_065b964edfa5602fe9ac4169d10d8046 = $(`<div id="html_065b964edfa5602fe9ac4169d10d8046" style="width: 100.0%; height: 100.0%;">                 <b>Best kept secret De Pijp</b><br>                 Address: Gerard Doustraat 98 H, Amsterdam<br>                 Neighborhood: Unknown<br>                 Size: 103 m²<br>                 Monthly Rent per m²: €58.11<br>                 Monthly Rent: €5985.00             </div>`)[0];
+                popup_5905cbaec1ef17807e7f72c5c9332d4b.setContent(html_065b964edfa5602fe9ac4169d10d8046);
+            
+        
+
+        circle_marker_2c4b1a742b537a1fc370c7d9cc1beaee.bindPopup(popup_5905cbaec1ef17807e7f72c5c9332d4b)
+        ;
+
+        
+    
+    
+            var circle_marker_7021e5939192c77b16ab617c29bba247 = L.circleMarker(
+                [52.3576472, 4.8401179],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7ea9c5825785015e5dfffceb5cf7d6a9);
+        
+    
+        var popup_a32fd4a7b560f266aaca6c4f8c6fd659 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b1546437c9f70ef01e18cae67b18bb28 = $(`<div id="html_b1546437c9f70ef01e18cae67b18bb28" style="width: 100.0%; height: 100.0%;">                 <b>WestBeat Amsterdam</b><br>                 Address: Delflandlaan 2 A, Amsterdam<br>                 Neighborhood: Unknown<br>                 Size: 683 m²<br>                 Monthly Rent per m²: €12.45<br>                 Monthly Rent: €8505.00             </div>`)[0];
+                popup_a32fd4a7b560f266aaca6c4f8c6fd659.setContent(html_b1546437c9f70ef01e18cae67b18bb28);
+            
+        
+
+        circle_marker_7021e5939192c77b16ab617c29bba247.bindPopup(popup_a32fd4a7b560f266aaca6c4f8c6fd659)
+        ;
+
+        
+    
+    
+    var color_map_166afaa206aaa5c8d0dc8b7909e254dc = {};
+
+    
+    color_map_166afaa206aaa5c8d0dc8b7909e254dc.color = d3.scale.threshold()
+              .domain([9.175302245250432, 9.328908853977385, 9.482515462704338, 9.636122071431291, 9.789728680158245, 9.943335288885198, 10.09694189761215, 10.250548506339102, 10.404155115066056, 10.557761723793009, 10.711368332519962, 10.864974941246915, 11.018581549973868, 11.172188158700822, 11.325794767427775, 11.479401376154728, 11.63300798488168, 11.786614593608633, 11.940221202335586, 12.093827811062539, 12.247434419789492, 12.401041028516445, 12.554647637243399, 12.708254245970352, 12.861860854697305, 13.015467463424258, 13.169074072151211, 13.322680680878165, 13.476287289605118, 13.629893898332071, 13.783500507059024, 13.937107115785977, 14.090713724512929, 14.244320333239882, 14.397926941966835, 14.551533550693788, 14.705140159420742, 14.858746768147693, 15.012353376874646, 15.165959985601601, 15.319566594328553, 15.473173203055506, 15.626779811782459, 15.780386420509412, 15.933993029236365, 16.08759963796332, 16.241206246690272, 16.394812855417225, 16.548419464144178, 16.70202607287113, 16.855632681598085, 17.009239290325038, 17.162845899051987, 17.316452507778944, 17.470059116505894, 17.623665725232847, 17.7772723339598, 17.930878942686753, 18.084485551413707, 18.23809216014066, 18.391698768867613, 18.545305377594566, 18.69891198632152, 18.852518595048473, 19.006125203775426, 19.15973181250238, 19.313338421229332, 19.466945029956285, 19.62055163868324, 19.774158247410192, 19.927764856137145, 20.081371464864098, 20.23497807359105, 20.388584682318005, 20.542191291044958, 20.69579789977191, 20.849404508498864, 21.003011117225817, 21.15661772595277, 21.310224334679724, 21.463830943406677, 21.61743755213363, 21.771044160860583, 21.924650769587537, 22.078257378314486, 22.23186398704144, 22.385470595768393, 22.53907720449535, 22.692683813222303, 22.846290421949252, 22.999897030676205, 23.15350363940316, 23.307110248130112, 23.460716856857065, 23.614323465584015, 23.767930074310968, 23.92153668303792, 24.075143291764878, 24.22874990049183, 24.38235650921878, 24.535963117945734, 24.689569726672687, 24.84317633539964, 24.996782944126593, 25.150389552853547, 25.3039961615805, 25.457602770307457, 25.611209379034406, 25.76481598776136, 25.918422596488313, 26.072029205215266, 26.225635813942223, 26.379242422669172, 26.532849031396125, 26.68645564012308, 26.840062248850032, 26.993668857576985, 27.147275466303938, 27.300882075030888, 27.454488683757845, 27.608095292484798, 27.76170190121175, 27.915308509938704, 28.068915118665654, 28.22252172739261, 28.37612833611956, 28.529734944846517, 28.683341553573467, 28.83694816230042, 28.990554771027377, 29.144161379754326, 29.297767988481283, 29.451374597208233, 29.604981205935186, 29.75858781466214, 29.912194423389092, 30.065801032116045, 30.219407640843, 30.37301424956995, 30.526620858296905, 30.680227467023858, 30.83383407575081, 30.987440684477765, 31.141047293204714, 31.29465390193167, 31.44826051065862, 31.601867119385577, 31.75547372811253, 31.90908033683948, 32.06268694556644, 32.21629355429339, 32.36990016302035, 32.52350677174729, 32.677113380474246, 32.8307199892012, 32.98432659792815, 33.137933206655106, 33.29153981538206, 33.44514642410901, 33.598753032835965, 33.75235964156292, 33.90596625028987, 34.059572859016825, 34.21317946774377, 34.36678607647073, 34.520392685197685, 34.67399929392464, 34.82760590265159, 34.981212511378544, 35.1348191201055, 35.28842572883245, 35.442032337559404, 35.59563894628636, 35.7492455550133, 35.90285216374026, 36.05645877246721, 36.21006538119417, 36.363671989921116, 36.517278598648076, 36.67088520737502, 36.82449181610198, 36.97809842482893, 37.13170503355589, 37.285311642282835, 37.438918251009795, 37.59252485973674, 37.7461314684637, 37.89973807719065, 38.0533446859176, 38.206951294644554, 38.36055790337151, 38.51416451209846, 38.667771120825414, 38.82137772955237, 38.97498433827933, 39.12859094700627, 39.282197555733234, 39.43580416446018, 39.58941077318713, 39.743017381914086, 39.89662399064104, 40.05023059936799, 40.203837208094946, 40.3574438168219, 40.51105042554885, 40.664657034275805, 40.81826364300276, 40.97187025172971, 41.12547686045666, 41.27908346918362, 41.432690077910564, 41.586296686637525, 41.739903295364485, 41.89350990409143, 42.04711651281838, 42.20072312154534, 42.35432973027228, 42.507936338999244, 42.66154294772619, 42.81514955645315, 42.968756165180096, 43.12236277390706, 43.27596938263402, 43.42957599136096, 43.58318260008791, 43.73678920881487, 43.890395817541815, 44.044002426268776, 44.19760903499572, 44.35121564372268, 44.50482225244963, 44.65842886117659, 44.812035469903535, 44.965642078630495, 45.11924868735744, 45.2728552960844, 45.42646190481135, 45.58006851353831, 45.733675122265254, 45.887281730992214, 46.04088833971916, 46.194494948446106, 46.34810155717307, 46.50170816590003, 46.65531477462697, 46.80892138335392, 46.96252799208088, 47.11613460080784, 47.269741209534786, 47.423347818261746, 47.57695442698869, 47.73056103571564, 47.8841676444426, 48.03777425316956, 48.191380861896505, 48.34498747062345, 48.49859407935041, 48.65220068807737, 48.80580729680432, 48.959413905531264, 49.113020514258224, 49.26662712298517, 49.42023373171213, 49.57384034043908, 49.72744694916604, 49.88105355789298, 50.03466016661994, 50.188266775346904, 50.34187338407385, 50.495479992800796, 50.649086601527756, 50.8026932102547, 50.95629981898166, 51.10990642770861, 51.26351303643557, 51.417119645162515, 51.570726253889475, 51.72433286261642, 51.87793947134338, 52.03154608007033, 52.18515268879729, 52.338759297524234, 52.492365906251194, 52.64597251497814, 52.7995791237051, 52.95318573243205, 53.10679234115899, 53.26039894988595, 53.414005558612914, 53.56761216733986, 53.721218776066806, 53.874825384793766, 54.02843199352073, 54.18203860224767, 54.33564521097463, 54.48925181970158, 54.642858428428525, 54.796465037155485, 54.950071645882446, 55.10367825460939, 55.25728486333634, 55.4108914720633, 55.56449808079026, 55.718104689517205, 55.87171129824415, 56.02531790697111, 56.17892451569806, 56.33253112442502, 56.48613773315196, 56.639744341878924, 56.79335095060587, 56.94695755933283, 57.10056416805979, 57.25417077678674, 57.40777738551368, 57.56138399424064, 57.71499060296759, 57.86859721169455, 58.022203820421495, 58.175810429148456, 58.3294170378754, 58.48302364660236, 58.63663025532931, 58.79023686405627, 58.943843472783215, 59.097450081510175, 59.25105669023712, 59.40466329896408, 59.55826990769103, 59.71187651641799, 59.865483125144934, 60.01908973387188, 60.17269634259884, 60.3263029513258, 60.47990956005275, 60.63351616877969, 60.78712277750665, 60.94072938623361, 61.09433599496056, 61.24794260368752, 61.401549212414466, 61.55515582114141, 61.70876242986837, 61.86236903859533, 62.01597564732228, 62.169582256049225, 62.323188864776185, 62.476795473503145, 62.63040208223009, 62.78400869095704, 62.937615299684, 63.091221908410944, 63.244828517137904, 63.39843512586485, 63.55204173459181, 63.70564834331876, 63.85925495204572, 64.01286156077268, 64.16646816949962, 64.32007477822657, 64.47368138695353, 64.62728799568048, 64.78089460440744, 64.93450121313438, 65.08810782186134, 65.24171443058829, 65.39532103931525, 65.5489276480422, 65.70253425676916, 65.8561408654961, 66.00974747422306, 66.16335408295001, 66.31696069167697, 66.47056730040391, 66.62417390913087, 66.77778051785782, 66.93138712658477, 67.08499373531173, 67.23860034403869, 67.39220695276563, 67.54581356149258, 67.69942017021954, 67.8530267789465, 68.00663338767345, 68.16023999640039, 68.31384660512735, 68.4674532138543, 68.62105982258126, 68.77466643130822, 68.92827304003517, 69.08187964876211, 69.23548625748907, 69.38909286621603, 69.54269947494298, 69.69630608366992, 69.84991269239688, 70.00351930112383, 70.15712590985079, 70.31073251857774, 70.4643391273047, 70.61794573603164, 70.7715523447586, 70.92515895348555, 71.07876556221251, 71.23237217093946, 71.38597877966642, 71.53958538839336, 71.69319199712032, 71.84679860584727, 72.00040521457423, 72.15401182330118, 72.30761843202812, 72.46122504075508, 72.61483164948204, 72.76843825820899, 72.92204486693595, 73.0756514756629, 73.22925808438985, 73.3828646931168, 73.53647130184376, 73.69007791057071, 73.84368451929767, 73.99729112802461, 74.15089773675157, 74.30450434547853, 74.45811095420548, 74.61171756293243, 74.76532417165939, 74.91893078038633, 75.0725373891133, 75.22614399784024, 75.3797506065672, 75.53335721529415, 75.6869638240211, 75.84057043274807, 75.99417704147501, 76.14778365020196, 76.3013902589289, 76.45499686765586, 76.60860347638283, 76.76221008510977, 76.91581669383673, 77.06942330256368, 77.22302991129064, 77.3766365200176, 77.53024312874453, 77.68384973747149, 77.83745634619844, 77.9910629549254, 78.14466956365236, 78.2982761723793, 78.45188278110626, 78.60548938983321, 78.75909599856017, 78.91270260728712, 79.06630921601406, 79.21991582474102, 79.37352243346797, 79.52712904219493, 79.68073565092189, 79.83434225964884, 79.9879488683758, 80.14155547710274, 80.29516208582969, 80.44876869455665, 80.6023753032836, 80.75598191201055, 80.9095885207375, 81.06319512946446, 81.21680173819142, 81.37040834691837, 81.52401495564533, 81.67762156437226, 81.83122817309922, 81.98483478182618, 82.13844139055313, 82.29204799928009, 82.44565460800703, 82.59926121673399, 82.75286782546095, 82.9064744341879, 83.06008104291485, 83.21368765164179, 83.36729426036875, 83.52090086909571, 83.67450747782266, 83.82811408654962, 83.98172069527656, 84.13532730400352, 84.28893391273049, 84.44254052145742, 84.59614713018438, 84.74975373891132, 84.90336034763828, 85.05696695636524, 85.21057356509219, 85.36418017381915, 85.5177867825461, 85.67139339127306, 85.825])
+              .range(['#008000ff', '#018100ff', '#028100ff', '#038200ff', '#048200ff', '#058300ff', '#068300ff', '#078400ff', '#088400ff', '#098500ff', '#0a8500ff', '#0b8600ff', '#0c8600ff', '#0d8700ff', '#0e8700ff', '#0f8800ff', '#108800ff', '#118900ff', '#128900ff', '#138a00ff', '#148a00ff', '#158b00ff', '#168b00ff', '#178c00ff', '#188c00ff', '#198d00ff', '#1a8d00ff', '#1b8e00ff', '#1c8e00ff', '#1d8f00ff', '#1e8f00ff', '#1f9000ff', '#209000ff', '#219100ff', '#229100ff', '#239200ff', '#249200ff', '#259300ff', '#269300ff', '#289400ff', '#299400ff', '#2a9500ff', '#2b9500ff', '#2c9600ff', '#2d9600ff', '#2e9700ff', '#2f9800ff', '#309800ff', '#319900ff', '#329900ff', '#339a00ff', '#349a00ff', '#359b00ff', '#369b00ff', '#379c00ff', '#389c00ff', '#399d00ff', '#3a9d00ff', '#3b9e00ff', '#3c9e00ff', '#3d9f00ff', '#3e9f00ff', '#3fa000ff', '#40a000ff', '#41a100ff', '#42a100ff', '#43a200ff', '#44a200ff', '#45a300ff', '#46a300ff', '#47a400ff', '#48a400ff', '#49a500ff', '#4aa500ff', '#4ba600ff', '#4ca600ff', '#4da700ff', '#4fa700ff', '#50a800ff', '#51a800ff', '#52a900ff', '#53a900ff', '#54aa00ff', '#55aa00ff', '#56ab00ff', '#57ab00ff', '#58ac00ff', '#59ac00ff', '#5aad00ff', '#5bad00ff', '#5cae00ff', '#5daf00ff', '#5eaf00ff', '#5fb000ff', '#60b000ff', '#61b100ff', '#62b100ff', '#63b200ff', '#64b200ff', '#65b300ff', '#66b300ff', '#67b400ff', '#68b400ff', '#69b500ff', '#6ab500ff', '#6bb600ff', '#6cb600ff', '#6db700ff', '#6eb700ff', '#6fb800ff', '#70b800ff', '#71b900ff', '#72b900ff', '#73ba00ff', '#74ba00ff', '#75bb00ff', '#77bb00ff', '#78bc00ff', '#79bc00ff', '#7abd00ff', '#7bbd00ff', '#7cbe00ff', '#7dbe00ff', '#7ebf00ff', '#7fbf00ff', '#80c000ff', '#81c000ff', '#82c100ff', '#83c100ff', '#84c200ff', '#85c200ff', '#86c300ff', '#87c300ff', '#88c400ff', '#89c400ff', '#8ac500ff', '#8bc500ff', '#8cc600ff', '#8dc700ff', '#8ec700ff', '#8fc800ff', '#90c800ff', '#91c900ff', '#92c900ff', '#93ca00ff', '#94ca00ff', '#95cb00ff', '#96cb00ff', '#97cc00ff', '#98cc00ff', '#99cd00ff', '#9acd00ff', '#9bce00ff', '#9cce00ff', '#9ecf00ff', '#9fcf00ff', '#a0d000ff', '#a1d000ff', '#a2d100ff', '#a3d100ff', '#a4d200ff', '#a5d200ff', '#a6d300ff', '#a7d300ff', '#a8d400ff', '#a9d400ff', '#aad500ff', '#abd500ff', '#acd600ff', '#add600ff', '#aed700ff', '#afd700ff', '#b0d800ff', '#b1d800ff', '#b2d900ff', '#b3d900ff', '#b4da00ff', '#b5da00ff', '#b6db00ff', '#b7db00ff', '#b8dc00ff', '#b9dc00ff', '#badd00ff', '#bbde00ff', '#bcde00ff', '#bddf00ff', '#bedf00ff', '#bfe000ff', '#c0e000ff', '#c1e100ff', '#c2e100ff', '#c3e200ff', '#c5e200ff', '#c6e300ff', '#c7e300ff', '#c8e400ff', '#c9e400ff', '#cae500ff', '#cbe500ff', '#cce600ff', '#cde600ff', '#cee700ff', '#cfe700ff', '#d0e800ff', '#d1e800ff', '#d2e900ff', '#d3e900ff', '#d4ea00ff', '#d5ea00ff', '#d6eb00ff', '#d7eb00ff', '#d8ec00ff', '#d9ec00ff', '#daed00ff', '#dbed00ff', '#dcee00ff', '#ddee00ff', '#deef00ff', '#dfef00ff', '#e0f000ff', '#e1f000ff', '#e2f100ff', '#e3f100ff', '#e4f200ff', '#e5f200ff', '#e6f300ff', '#e7f300ff', '#e8f400ff', '#e9f500ff', '#eaf500ff', '#ebf600ff', '#edf600ff', '#eef700ff', '#eff700ff', '#f0f800ff', '#f1f800ff', '#f2f900ff', '#f3f900ff', '#f4fa00ff', '#f5fa00ff', '#f6fb00ff', '#f7fb00ff', '#f8fc00ff', '#f9fc00ff', '#fafd00ff', '#fbfd00ff', '#fcfe00ff', '#fdfe00ff', '#feff00ff', '#ffff00ff', '#ffff00ff', '#fffe00ff', '#fffd00ff', '#fffc00ff', '#fffb00ff', '#fffa00ff', '#fff900ff', '#fff800ff', '#fff700ff', '#fff600ff', '#fff500ff', '#fff400ff', '#fff300ff', '#fff200ff', '#fff100ff', '#fff000ff', '#ffef00ff', '#ffee00ff', '#ffed00ff', '#ffeb00ff', '#ffea00ff', '#ffe900ff', '#ffe800ff', '#ffe700ff', '#ffe600ff', '#ffe500ff', '#ffe400ff', '#ffe300ff', '#ffe200ff', '#ffe100ff', '#ffe000ff', '#ffdf00ff', '#ffde00ff', '#ffdd00ff', '#ffdc00ff', '#ffdb00ff', '#ffda00ff', '#ffd900ff', '#ffd800ff', '#ffd700ff', '#ffd600ff', '#ffd500ff', '#ffd400ff', '#ffd300ff', '#ffd200ff', '#ffd100ff', '#ffd000ff', '#ffcf00ff', '#ffce00ff', '#ffcd00ff', '#ffcc00ff', '#ffcb00ff', '#ffca00ff', '#ffc900ff', '#ffc800ff', '#ffc700ff', '#ffc600ff', '#ffc500ff', '#ffc300ff', '#ffc200ff', '#ffc100ff', '#ffc000ff', '#ffbf00ff', '#ffbe00ff', '#ffbd00ff', '#ffbc00ff', '#ffbb00ff', '#ffba00ff', '#ffb900ff', '#ffb800ff', '#ffb700ff', '#ffb600ff', '#ffb500ff', '#ffb400ff', '#ffb300ff', '#ffb200ff', '#ffb100ff', '#ffb000ff', '#ffaf00ff', '#ffae00ff', '#ffad00ff', '#ffac00ff', '#ffab00ff', '#ffaa00ff', '#ffa900ff', '#ffa800ff', '#ffa700ff', '#ffa600ff', '#ffa500ff', '#ffa400ff', '#ffa300ff', '#ffa200ff', '#ffa100ff', '#ffa000ff', '#ff9f00ff', '#ff9e00ff', '#ff9c00ff', '#ff9b00ff', '#ff9a00ff', '#ff9900ff', '#ff9800ff', '#ff9700ff', '#ff9600ff', '#ff9500ff', '#ff9400ff', '#ff9300ff', '#ff9200ff', '#ff9100ff', '#ff9000ff', '#ff8f00ff', '#ff8e00ff', '#ff8d00ff', '#ff8c00ff', '#ff8b00ff', '#ff8a00ff', '#ff8900ff', '#ff8800ff', '#ff8700ff', '#ff8600ff', '#ff8500ff', '#ff8400ff', '#ff8300ff', '#ff8200ff', '#ff8100ff', '#ff8000ff', '#ff7f00ff', '#ff7e00ff', '#ff7d00ff', '#ff7c00ff', '#ff7b00ff', '#ff7a00ff', '#ff7900ff', '#ff7800ff', '#ff7700ff', '#ff7500ff', '#ff7400ff', '#ff7300ff', '#ff7200ff', '#ff7100ff', '#ff7000ff', '#ff6f00ff', '#ff6e00ff', '#ff6d00ff', '#ff6c00ff', '#ff6b00ff', '#ff6a00ff', '#ff6900ff', '#ff6800ff', '#ff6700ff', '#ff6600ff', '#ff6500ff', '#ff6400ff', '#ff6300ff', '#ff6200ff', '#ff6100ff', '#ff6000ff', '#ff5f00ff', '#ff5e00ff', '#ff5d00ff', '#ff5c00ff', '#ff5b00ff', '#ff5a00ff', '#ff5900ff', '#ff5800ff', '#ff5700ff', '#ff5600ff', '#ff5500ff', '#ff5400ff', '#ff5300ff', '#ff5200ff', '#ff5100ff', '#ff5000ff', '#ff4f00ff', '#ff4d00ff', '#ff4c00ff', '#ff4b00ff', '#ff4a00ff', '#ff4900ff', '#ff4800ff', '#ff4700ff', '#ff4600ff', '#ff4500ff', '#ff4400ff', '#ff4300ff', '#ff4200ff', '#ff4100ff', '#ff4000ff', '#ff3f00ff', '#ff3e00ff', '#ff3d00ff', '#ff3c00ff', '#ff3b00ff', '#ff3a00ff', '#ff3900ff', '#ff3800ff', '#ff3700ff', '#ff3600ff', '#ff3500ff', '#ff3400ff', '#ff3300ff', '#ff3200ff', '#ff3100ff', '#ff3000ff', '#ff2f00ff', '#ff2e00ff', '#ff2d00ff', '#ff2c00ff', '#ff2b00ff', '#ff2a00ff', '#ff2900ff', '#ff2800ff', '#ff2600ff', '#ff2500ff', '#ff2400ff', '#ff2300ff', '#ff2200ff', '#ff2100ff', '#ff2000ff', '#ff1f00ff', '#ff1e00ff', '#ff1d00ff', '#ff1c00ff', '#ff1b00ff', '#ff1a00ff', '#ff1900ff', '#ff1800ff', '#ff1700ff', '#ff1600ff', '#ff1500ff', '#ff1400ff', '#ff1300ff', '#ff1200ff', '#ff1100ff', '#ff1000ff', '#ff0f00ff', '#ff0e00ff', '#ff0d00ff', '#ff0c00ff', '#ff0b00ff', '#ff0a00ff', '#ff0900ff', '#ff0800ff', '#ff0700ff', '#ff0600ff', '#ff0500ff', '#ff0400ff', '#ff0300ff', '#ff0200ff', '#ff0100ff', '#ff0000ff']);
+    
+
+    color_map_166afaa206aaa5c8d0dc8b7909e254dc.x = d3.scale.linear()
+              .domain([9.175302245250432, 85.825])
+              .range([0, 450 - 50]);
+
+    color_map_166afaa206aaa5c8d0dc8b7909e254dc.legend = L.control({position: 'topright'});
+    color_map_166afaa206aaa5c8d0dc8b7909e254dc.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_166afaa206aaa5c8d0dc8b7909e254dc.legend.addTo(map_7ea9c5825785015e5dfffceb5cf7d6a9);
+
+    color_map_166afaa206aaa5c8d0dc8b7909e254dc.xAxis = d3.svg.axis()
+        .scale(color_map_166afaa206aaa5c8d0dc8b7909e254dc.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([9.175302245250432, 47.50015112262521, 85.825]);
+
+    color_map_166afaa206aaa5c8d0dc8b7909e254dc.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_166afaa206aaa5c8d0dc8b7909e254dc.g = color_map_166afaa206aaa5c8d0dc8b7909e254dc.svg.append("g")
+        .attr("class", "key")
+        .attr("transform", "translate(25,16)");
+
+    color_map_166afaa206aaa5c8d0dc8b7909e254dc.g.selectAll("rect")
+        .data(color_map_166afaa206aaa5c8d0dc8b7909e254dc.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_166afaa206aaa5c8d0dc8b7909e254dc.x(color_map_166afaa206aaa5c8d0dc8b7909e254dc.color.domain()[i - 1]) : color_map_166afaa206aaa5c8d0dc8b7909e254dc.x.range()[0],
+            x1: i < color_map_166afaa206aaa5c8d0dc8b7909e254dc.color.domain().length ? color_map_166afaa206aaa5c8d0dc8b7909e254dc.x(color_map_166afaa206aaa5c8d0dc8b7909e254dc.color.domain()[i]) : color_map_166afaa206aaa5c8d0dc8b7909e254dc.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 40 - 30)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_166afaa206aaa5c8d0dc8b7909e254dc.g.call(color_map_166afaa206aaa5c8d0dc8b7909e254dc.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .text("Monthly Rent per m\u00b2");
+</script>
+</html>

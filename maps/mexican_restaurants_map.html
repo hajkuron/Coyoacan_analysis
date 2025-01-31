@@ -1,0 +1,2575 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8b0a0fca734c58a86f86bcba66d9e8f4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8b0a0fca734c58a86f86bcba66d9e8f4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8b0a0fca734c58a86f86bcba66d9e8f4 = L.map(
+                "map_8b0a0fca734c58a86f86bcba66d9e8f4",
+                {
+                    center: [52.3676, 4.9041],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 13,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b698f0e393a48462ad1c5b69995bc8fe = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+            var circle_marker_9e9e3ff86202f74933e459b1fe4a98b4 = L.circleMarker(
+                [52.3757472, 4.8854076],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_31268447d61df004f91caf25dfd5d491 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d4ce20201d5d2fda6f656f84e593f1f0 = $(`<div id="html_d4ce20201d5d2fda6f656f84e593f1f0" style="width: 100.0%; height: 100.0%;">                     <b>Black and Blue</b><br>                     Rating: 4.3<br>                     Address: Leliegracht 46, 1015 DH Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_31268447d61df004f91caf25dfd5d491.setContent(html_d4ce20201d5d2fda6f656f84e593f1f0);
+            
+        
+
+        circle_marker_9e9e3ff86202f74933e459b1fe4a98b4.bindPopup(popup_31268447d61df004f91caf25dfd5d491)
+        ;
+
+        
+    
+    
+            var circle_marker_b5d8e5a56eacecba2d7df69ee6cad252 = L.circleMarker(
+                [52.3772252, 4.8890475],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_146fb576e5f680bb7a13057d996eb303 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_de3d5664324393d14a8cc00fab576fb9 = $(`<div id="html_de3d5664324393d14a8cc00fab576fb9" style="width: 100.0%; height: 100.0%;">                     <b>Seasons Restaurant</b><br>                     Rating: 4.5<br>                     Address: Herenstraat 16, 1015 CA Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_146fb576e5f680bb7a13057d996eb303.setContent(html_de3d5664324393d14a8cc00fab576fb9);
+            
+        
+
+        circle_marker_b5d8e5a56eacecba2d7df69ee6cad252.bindPopup(popup_146fb576e5f680bb7a13057d996eb303)
+        ;
+
+        
+    
+    
+            var circle_marker_d34ee92d11fbc81bbbc7c108b678d192 = L.circleMarker(
+                [52.3794184, 4.8920452999999995],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_b36e7ab44d8adb49b0ae3b6bddcefc60 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4c0a7b62659f3dfd2f7a51a3b9afb386 = $(`<div id="html_4c0a7b62659f3dfd2f7a51a3b9afb386" style="width: 100.0%; height: 100.0%;">                     <b>Restaurant De Belhamel</b><br>                     Rating: 4.5<br>                     Address: Brouwersgracht 60, 1013 GX Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_b36e7ab44d8adb49b0ae3b6bddcefc60.setContent(html_4c0a7b62659f3dfd2f7a51a3b9afb386);
+            
+        
+
+        circle_marker_d34ee92d11fbc81bbbc7c108b678d192.bindPopup(popup_b36e7ab44d8adb49b0ae3b6bddcefc60)
+        ;
+
+        
+    
+    
+            var circle_marker_7c08fef7edca15535bd827e3364b2655 = L.circleMarker(
+                [52.376143799999994, 4.8942438],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_84e54a4727926ffb75ae4f86c648cd2e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ffd9ecdb0a3162bfa6968ce712635833 = $(`<div id="html_ffd9ecdb0a3162bfa6968ce712635833" style="width: 100.0%; height: 100.0%;">                     <b>Humphrey's</b><br>                     Rating: 4.3<br>                     Address: Nieuwezijds Kolk 23, 1012 PV Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_84e54a4727926ffb75ae4f86c648cd2e.setContent(html_ffd9ecdb0a3162bfa6968ce712635833);
+            
+        
+
+        circle_marker_7c08fef7edca15535bd827e3364b2655.bindPopup(popup_84e54a4727926ffb75ae4f86c648cd2e)
+        ;
+
+        
+    
+    
+            var circle_marker_6947de1ce5c86efe46dc8827f4fc35c5 = L.circleMarker(
+                [52.365904099999995, 4.8932993],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_a08f3fde85bec2b08b65e8aa751e4450 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_23fef3c973e1338d40070dfef0ae8fb5 = $(`<div id="html_23fef3c973e1338d40070dfef0ae8fb5" style="width: 100.0%; height: 100.0%;">                     <b>Senses Restaurant</b><br>                     Rating: 4.6<br>                     Address: Vijzelstraat 45, 1017 HE Amsterdam<br>                     Price Range: $$$$$<br>                     </div>`)[0];
+                popup_a08f3fde85bec2b08b65e8aa751e4450.setContent(html_23fef3c973e1338d40070dfef0ae8fb5);
+            
+        
+
+        circle_marker_6947de1ce5c86efe46dc8827f4fc35c5.bindPopup(popup_a08f3fde85bec2b08b65e8aa751e4450)
+        ;
+
+        
+    
+    
+            var circle_marker_69ea51201b095c823a8f742bc0b66203 = L.circleMarker(
+                [52.35623, 4.892197299999999],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_850eae12569f0836d665015a6b15d076 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_35044d88a2d5164df06aea53c777835c = $(`<div id="html_35044d88a2d5164df06aea53c777835c" style="width: 100.0%; height: 100.0%;">                     <b>Restaurant Zaza's</b><br>                     Rating: 4.7<br>                     Address: Daniel Stalpertstraat 103, 1072 XD Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_850eae12569f0836d665015a6b15d076.setContent(html_35044d88a2d5164df06aea53c777835c);
+            
+        
+
+        circle_marker_69ea51201b095c823a8f742bc0b66203.bindPopup(popup_850eae12569f0836d665015a6b15d076)
+        ;
+
+        
+    
+    
+            var circle_marker_f783209ba4b1a3c9ed3601cbc00d2127 = L.circleMarker(
+                [52.3738661, 4.8838628],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_a33a31acfe12d726feb1b791a902e1fc = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_01dbe619bbae4e14de74f9a6b77c7161 = $(`<div id="html_01dbe619bbae4e14de74f9a6b77c7161" style="width: 100.0%; height: 100.0%;">                     <b>Mendoza Restaurant</b><br>                     Rating: 4.5<br>                     Address: Westermarkt 23, 1016 DJ Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_a33a31acfe12d726feb1b791a902e1fc.setContent(html_01dbe619bbae4e14de74f9a6b77c7161);
+            
+        
+
+        circle_marker_f783209ba4b1a3c9ed3601cbc00d2127.bindPopup(popup_a33a31acfe12d726feb1b791a902e1fc)
+        ;
+
+        
+    
+    
+            var circle_marker_9d1dc4c5e92a69c0e129ddb8857313d1 = L.circleMarker(
+                [52.377110599999995, 4.8940586],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_e5b1a5a4e8676cabc2110ffa68bf2ffa = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_98a2a19692c1425f33e64829d8f2472e = $(`<div id="html_98a2a19692c1425f33e64829d8f2472e" style="width: 100.0%; height: 100.0%;">                     <b>Ashoka</b><br>                     Rating: 4.6<br>                     Address: Spuistraat 3G, 1012 SP Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_e5b1a5a4e8676cabc2110ffa68bf2ffa.setContent(html_98a2a19692c1425f33e64829d8f2472e);
+            
+        
+
+        circle_marker_9d1dc4c5e92a69c0e129ddb8857313d1.bindPopup(popup_e5b1a5a4e8676cabc2110ffa68bf2ffa)
+        ;
+
+        
+    
+    
+            var circle_marker_17f2689e27fe502ffce76af9ffd33b17 = L.circleMarker(
+                [52.3793325, 4.8936765],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_0357683e6ca56a4159a248dc4cb35d80 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a113141ea326440173e7a5595362e53b = $(`<div id="html_a113141ea326440173e7a5595362e53b" style="width: 100.0%; height: 100.0%;">                     <b>Bistrot Neuf</b><br>                     Rating: 4.5<br>                     Address: Haarlemmerstraat 9, 1013 EH Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_0357683e6ca56a4159a248dc4cb35d80.setContent(html_a113141ea326440173e7a5595362e53b);
+            
+        
+
+        circle_marker_17f2689e27fe502ffce76af9ffd33b17.bindPopup(popup_0357683e6ca56a4159a248dc4cb35d80)
+        ;
+
+        
+    
+    
+            var circle_marker_656f966cdcdb89444dc0666d2f516c1d = L.circleMarker(
+                [52.365702, 4.89553],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_6b37e767cf726dcf3d8ad7a0ec1d94d2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3a9a953e4557d94063868efaef195ff4 = $(`<div id="html_3a9a953e4557d94063868efaef195ff4" style="width: 100.0%; height: 100.0%;">                     <b>De Nachtwacht</b><br>                     Rating: 4.4<br>                     Address: Thorbeckeplein 2, 1017 CS Amsterdam<br>                     Price Range: $$$<br>                     </div>`)[0];
+                popup_6b37e767cf726dcf3d8ad7a0ec1d94d2.setContent(html_3a9a953e4557d94063868efaef195ff4);
+            
+        
+
+        circle_marker_656f966cdcdb89444dc0666d2f516c1d.bindPopup(popup_6b37e767cf726dcf3d8ad7a0ec1d94d2)
+        ;
+
+        
+    
+    
+            var circle_marker_704c6948f1a4864f42188f6200dbe346 = L.circleMarker(
+                [52.3717696, 4.8750294],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_606cbf25668b6a72baa6bf303d592803 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0974c6d0364b4df559e85dc5f5d7fc89 = $(`<div id="html_0974c6d0364b4df559e85dc5f5d7fc89" style="width: 100.0%; height: 100.0%;">                     <b>Moeders</b><br>                     Rating: 4.5<br>                     Address: Rozengracht 251, 1016 SX Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_606cbf25668b6a72baa6bf303d592803.setContent(html_0974c6d0364b4df559e85dc5f5d7fc89);
+            
+        
+
+        circle_marker_704c6948f1a4864f42188f6200dbe346.bindPopup(popup_606cbf25668b6a72baa6bf303d592803)
+        ;
+
+        
+    
+    
+            var circle_marker_17b4c7f0c178c608323c678b649e6a0f = L.circleMarker(
+                [52.3687767, 4.9054562],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_d13e671fca902c852d2630088cad0a9c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_66622b36a40ad2871f9efb3458fc117b = $(`<div id="html_66622b36a40ad2871f9efb3458fc117b" style="width: 100.0%; height: 100.0%;">                     <b>Restaurant Olijfje</b><br>                     Rating: 4.6<br>                     Address: Valkenburgerstraat 223D, 1011 MJ Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_d13e671fca902c852d2630088cad0a9c.setContent(html_66622b36a40ad2871f9efb3458fc117b);
+            
+        
+
+        circle_marker_17b4c7f0c178c608323c678b649e6a0f.bindPopup(popup_d13e671fca902c852d2630088cad0a9c)
+        ;
+
+        
+    
+    
+            var circle_marker_15ced12b62c9f33f0d2282c357e0539e = L.circleMarker(
+                [52.3610249, 4.8873337],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_9844d966ad77dc60b4cc6a028742321e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b6f1b042bd7a014db5ad0bbeeeb0b5a6 = $(`<div id="html_b6f1b042bd7a014db5ad0bbeeeb0b5a6" style="width: 100.0%; height: 100.0%;">                     <b>Levant Restaurant</b><br>                     Rating: 4.6<br>                     Address: Weteringschans 93, 1017 RZ Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_9844d966ad77dc60b4cc6a028742321e.setContent(html_b6f1b042bd7a014db5ad0bbeeeb0b5a6);
+            
+        
+
+        circle_marker_15ced12b62c9f33f0d2282c357e0539e.bindPopup(popup_9844d966ad77dc60b4cc6a028742321e)
+        ;
+
+        
+    
+    
+            var circle_marker_7bee12430154ff40ad03ae01e47de128 = L.circleMarker(
+                [52.3634845, 4.8849427],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_feb4cc81cd52670c5d14aaa26d35211b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3b8f33a293ae2e0ee0a7f62a25360c36 = $(`<div id="html_3b8f33a293ae2e0ee0a7f62a25360c36" style="width: 100.0%; height: 100.0%;">                     <b>The Pantry</b><br>                     Rating: 4.7<br>                     Address: Leidsekruisstraat 21, 1017 RE Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_feb4cc81cd52670c5d14aaa26d35211b.setContent(html_3b8f33a293ae2e0ee0a7f62a25360c36);
+            
+        
+
+        circle_marker_7bee12430154ff40ad03ae01e47de128.bindPopup(popup_feb4cc81cd52670c5d14aaa26d35211b)
+        ;
+
+        
+    
+    
+            var circle_marker_da84672909304db783a17ce564f4ce2f = L.circleMarker(
+                [52.3841384, 4.8683342],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_3e5bd2ac77608e7ed6666bb5e117f97b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d08cfd8da0dd3f85bb343ae030384555 = $(`<div id="html_d08cfd8da0dd3f85bb343ae030384555" style="width: 100.0%; height: 100.0%;">                     <b>Cafe-Restaurant Amsterdam</b><br>                     Rating: 4.2<br>                     Address: Watertorenplein 6, 1051 PA Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_3e5bd2ac77608e7ed6666bb5e117f97b.setContent(html_d08cfd8da0dd3f85bb343ae030384555);
+            
+        
+
+        circle_marker_da84672909304db783a17ce564f4ce2f.bindPopup(popup_3e5bd2ac77608e7ed6666bb5e117f97b)
+        ;
+
+        
+    
+    
+            var circle_marker_b7d615c1ea053d08685fe176cb10748a = L.circleMarker(
+                [52.3738276, 4.8886278],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_f43f87eb7d269d8b942e65597961910c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f067cec48c863914c8214998106cb893 = $(`<div id="html_f067cec48c863914c8214998106cb893" style="width: 100.0%; height: 100.0%;">                     <b>BREDA</b><br>                     Rating: 4.4<br>                     Address: Singel 210, 1016 AB Amsterdam<br>                     Price Range: $$$$$<br>                     </div>`)[0];
+                popup_f43f87eb7d269d8b942e65597961910c.setContent(html_f067cec48c863914c8214998106cb893);
+            
+        
+
+        circle_marker_b7d615c1ea053d08685fe176cb10748a.bindPopup(popup_f43f87eb7d269d8b942e65597961910c)
+        ;
+
+        
+    
+    
+            var circle_marker_7fa02f6a8496b980ed29e074b5a12964 = L.circleMarker(
+                [52.3624697, 4.8802175],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_0ddfa649a8d7b4200871b689332ecc06 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_eb3b1c6333255b809d89ae3f23e73285 = $(`<div id="html_eb3b1c6333255b809d89ae3f23e73285" style="width: 100.0%; height: 100.0%;">                     <b>Midtown Grill</b><br>                     Rating: 4.4<br>                     Address: Stadhouderskade 12, 1054 ES Amsterdam<br>                     Price Range: $$$<br>                     </div>`)[0];
+                popup_0ddfa649a8d7b4200871b689332ecc06.setContent(html_eb3b1c6333255b809d89ae3f23e73285);
+            
+        
+
+        circle_marker_7fa02f6a8496b980ed29e074b5a12964.bindPopup(popup_0ddfa649a8d7b4200871b689332ecc06)
+        ;
+
+        
+    
+    
+            var circle_marker_55f39d5acf109a6764f2338e664859b3 = L.circleMarker(
+                [52.364054599999996, 4.889094399999999],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_8ece3a37e50c8ecc7ac3037c34a0f90b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7cf638d907b6ce9d3d9bf12de511104b = $(`<div id="html_7cf638d907b6ce9d3d9bf12de511104b" style="width: 100.0%; height: 100.0%;">                     <b>Restaurant Red</b><br>                     Rating: 4.1<br>                     Address: Keizersgracht 594, 1017 EN Amsterdam<br>                     Price Range: $$$<br>                     </div>`)[0];
+                popup_8ece3a37e50c8ecc7ac3037c34a0f90b.setContent(html_7cf638d907b6ce9d3d9bf12de511104b);
+            
+        
+
+        circle_marker_55f39d5acf109a6764f2338e664859b3.bindPopup(popup_8ece3a37e50c8ecc7ac3037c34a0f90b)
+        ;
+
+        
+    
+    
+            var circle_marker_ee815f98a3d7c879f1dc333eec0f098b = L.circleMarker(
+                [52.365591699999996, 4.8973832999999996],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_6b95fb44a5d88012c25d24e8dc4e7a85 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fe3f32268fd08fd8e616507ae8672552 = $(`<div id="html_fe3f32268fd08fd8e616507ae8672552" style="width: 100.0%; height: 100.0%;">                     <b>Restaurant Klein BREDA</b><br>                     Rating: 4.4<br>                     Address: Utrechtsestraat 6, 1017 VN Amsterdam<br>                     Price Range: $$$<br>                     </div>`)[0];
+                popup_6b95fb44a5d88012c25d24e8dc4e7a85.setContent(html_fe3f32268fd08fd8e616507ae8672552);
+            
+        
+
+        circle_marker_ee815f98a3d7c879f1dc333eec0f098b.bindPopup(popup_6b95fb44a5d88012c25d24e8dc4e7a85)
+        ;
+
+        
+    
+    
+            var circle_marker_a13d0f9e5de8c0d391cc4d36b25cb8d8 = L.circleMarker(
+                [52.366864799999995, 4.8952452],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_a7b7dc2d4454709b6397c02d76449240 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3d40d16c5f4b18923c174a447ecde1a7 = $(`<div id="html_3d40d16c5f4b18923c174a447ecde1a7" style="width: 100.0%; height: 100.0%;">                     <b>Lumbini Restaurant</b><br>                     Rating: 4.8<br>                     Address: Amstel 32H, 1017 AB Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_a7b7dc2d4454709b6397c02d76449240.setContent(html_3d40d16c5f4b18923c174a447ecde1a7);
+            
+        
+
+        circle_marker_a13d0f9e5de8c0d391cc4d36b25cb8d8.bindPopup(popup_a7b7dc2d4454709b6397c02d76449240)
+        ;
+
+        
+    
+    
+            var circle_marker_6787d73e4446d67e68ac7f6fbaa760f2 = L.circleMarker(
+                [52.3756579, 4.8959075],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_2e7ea10e0eb77a36d6e263391f58225d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2be415db58f464dd237fb190693c58d2 = $(`<div id="html_2be415db58f464dd237fb190693c58d2" style="width: 100.0%; height: 100.0%;">                     <b>Dutch Pancake Masters</b><br>                     Rating: 4.3<br>                     Address: Damrak 44, 1012 LK Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_2e7ea10e0eb77a36d6e263391f58225d.setContent(html_2be415db58f464dd237fb190693c58d2);
+            
+        
+
+        circle_marker_6787d73e4446d67e68ac7f6fbaa760f2.bindPopup(popup_2e7ea10e0eb77a36d6e263391f58225d)
+        ;
+
+        
+    
+    
+            var circle_marker_a46ef9db7cbceea6f82dfd61a95039fe = L.circleMarker(
+                [52.3723167, 4.8984764],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_df1c0702327428dbdc6ac4e0ddaf22d1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b9c2bc20f196d2ce646642e33299aca3 = $(`<div id="html_b9c2bc20f196d2ce646642e33299aca3" style="width: 100.0%; height: 100.0%;">                     <b>Restaurant Bellezza</b><br>                     Rating: 4.7<br>                     Address: Oudezijds Achterburgwal 99, 1012 DD Amsterdam<br>                     Price Range: $$$$$<br>                     </div>`)[0];
+                popup_df1c0702327428dbdc6ac4e0ddaf22d1.setContent(html_b9c2bc20f196d2ce646642e33299aca3);
+            
+        
+
+        circle_marker_a46ef9db7cbceea6f82dfd61a95039fe.bindPopup(popup_df1c0702327428dbdc6ac4e0ddaf22d1)
+        ;
+
+        
+    
+    
+            var circle_marker_2afc0a4adb4cec9a9be9518b5aa3a6d8 = L.circleMarker(
+                [52.3631173, 4.8848588],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_6ae501ad7564a4b6e405e7c91d143918 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_15bfd64906401ff75a6e3d4486955313 = $(`<div id="html_15bfd64906401ff75a6e3d4486955313" style="width: 100.0%; height: 100.0%;">                     <b>Sherpa Restaurant</b><br>                     Rating: 4.7<br>                     Address: Korte Leidsedwarsstraat 58 - 62, 1017 RD Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_6ae501ad7564a4b6e405e7c91d143918.setContent(html_15bfd64906401ff75a6e3d4486955313);
+            
+        
+
+        circle_marker_2afc0a4adb4cec9a9be9518b5aa3a6d8.bindPopup(popup_6ae501ad7564a4b6e405e7c91d143918)
+        ;
+
+        
+    
+    
+            var circle_marker_dce83264da92a81f9ea8b74995bbd7ba = L.circleMarker(
+                [52.3729686, 4.899867599999999],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_36e3647d7c43c54209a62a13b51dc7c4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_012341ef61004bc60b6850a83d7b94eb = $(`<div id="html_012341ef61004bc60b6850a83d7b94eb" style="width: 100.0%; height: 100.0%;">                     <b>Deyacos Restaurant & Bar</b><br>                     Rating: 4.2<br>                     Address: Nieuwmarkt 8-10, 1012 CR Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_36e3647d7c43c54209a62a13b51dc7c4.setContent(html_012341ef61004bc60b6850a83d7b94eb);
+            
+        
+
+        circle_marker_dce83264da92a81f9ea8b74995bbd7ba.bindPopup(popup_36e3647d7c43c54209a62a13b51dc7c4)
+        ;
+
+        
+    
+    
+            var circle_marker_4d5e8be9b0d8beade77bba2074dda023 = L.circleMarker(
+                [52.359966899999996, 4.8774826],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_7e4a891feed74e12178690838061a18c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_94f3b6e4cdfd7b42a69b133bb4b32016 = $(`<div id="html_94f3b6e4cdfd7b42a69b133bb4b32016" style="width: 100.0%; height: 100.0%;">                     <b>The Seafood Bar</b><br>                     Rating: 4.6<br>                     Address: Van Baerlestraat 5h, 1071 AL Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_7e4a891feed74e12178690838061a18c.setContent(html_94f3b6e4cdfd7b42a69b133bb4b32016);
+            
+        
+
+        circle_marker_4d5e8be9b0d8beade77bba2074dda023.bindPopup(popup_7e4a891feed74e12178690838061a18c)
+        ;
+
+        
+    
+    
+            var circle_marker_d29fba40becdad8bda1ea0edbfef1304 = L.circleMarker(
+                [52.369372999999996, 4.888304499999999],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_4391bcd1a7954999f90795b761f569df = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bad860911149e7839650701069b28956 = $(`<div id="html_bad860911149e7839650701069b28956" style="width: 100.0%; height: 100.0%;">                     <b>d'Vijff Vlieghen</b><br>                     Rating: 4.3<br>                     Address: Spuistraat 294-302, 1012 VX Amsterdam<br>                     Price Range: $$$<br>                     </div>`)[0];
+                popup_4391bcd1a7954999f90795b761f569df.setContent(html_bad860911149e7839650701069b28956);
+            
+        
+
+        circle_marker_d29fba40becdad8bda1ea0edbfef1304.bindPopup(popup_4391bcd1a7954999f90795b761f569df)
+        ;
+
+        
+    
+    
+            var circle_marker_58090dfaa458469013b380490b9d3d6e = L.circleMarker(
+                [52.3771712, 4.8943658],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_e46ecdf516eba193f5842471502842c5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4a9e1ff0afa4b09e839c690d527784ff = $(`<div id="html_4a9e1ff0afa4b09e839c690d527784ff" style="width: 100.0%; height: 100.0%;">                     <b>Gauchos Grill Restaurant Amsterdam- Spuistraat</b><br>                     Rating: 4.3<br>                     Address: Spuistraat 3E, 1012 SP Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_e46ecdf516eba193f5842471502842c5.setContent(html_4a9e1ff0afa4b09e839c690d527784ff);
+            
+        
+
+        circle_marker_58090dfaa458469013b380490b9d3d6e.bindPopup(popup_e46ecdf516eba193f5842471502842c5)
+        ;
+
+        
+    
+    
+            var circle_marker_b83a601949b4778d9bb33390a3dbb42b = L.circleMarker(
+                [52.3653534, 4.884468099999999],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_bdfaa432e9e7763747663318562ef1cc = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9b420073f7bcd71017003b4af964c424 = $(`<div id="html_9b420073f7bcd71017003b4af964c424" style="width: 100.0%; height: 100.0%;">                     <b>Restaurant Black</b><br>                     Rating: 4.2<br>                     Address: Prinsengracht 703, 1017 JV Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_bdfaa432e9e7763747663318562ef1cc.setContent(html_9b420073f7bcd71017003b4af964c424);
+            
+        
+
+        circle_marker_b83a601949b4778d9bb33390a3dbb42b.bindPopup(popup_bdfaa432e9e7763747663318562ef1cc)
+        ;
+
+        
+    
+    
+            var circle_marker_7e816b31c7afc8f30ad9dd7b5f985aee = L.circleMarker(
+                [52.3753041, 4.8911693],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_0c7b164822b8a17eac1b5d79a7a05d2b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_36702b03aab3641e1b38398a65032586 = $(`<div id="html_36702b03aab3641e1b38398a65032586" style="width: 100.0%; height: 100.0%;">                     <b>Maenaam Thai Restaurant</b><br>                     Rating: 4.6<br>                     Address: Spuistraat 90A, 1012 TZ Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_0c7b164822b8a17eac1b5d79a7a05d2b.setContent(html_36702b03aab3641e1b38398a65032586);
+            
+        
+
+        circle_marker_7e816b31c7afc8f30ad9dd7b5f985aee.bindPopup(popup_0c7b164822b8a17eac1b5d79a7a05d2b)
+        ;
+
+        
+    
+    
+            var circle_marker_b45c1352f5347b165ba1eef769ff2d86 = L.circleMarker(
+                [52.375250699999995, 4.8868501],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_e35a5dd999d1f0b2173b5ad64fab6090 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c86e9f7d902c5558fc502e0600165aac = $(`<div id="html_c86e9f7d902c5558fc502e0600165aac" style="width: 100.0%; height: 100.0%;">                     <b>De Luwte</b><br>                     Rating: 4.0<br>                     Address: Leliegracht 26-28, 1015 DG Amsterdam<br>                     Price Range: $$$<br>                     </div>`)[0];
+                popup_e35a5dd999d1f0b2173b5ad64fab6090.setContent(html_c86e9f7d902c5558fc502e0600165aac);
+            
+        
+
+        circle_marker_b45c1352f5347b165ba1eef769ff2d86.bindPopup(popup_e35a5dd999d1f0b2173b5ad64fab6090)
+        ;
+
+        
+    
+    
+            var circle_marker_c610d143170a682da61ea407b5850ba5 = L.circleMarker(
+                [52.383910199999995, 4.902474],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_bdf8e5f4007e725cf98423ae06c6a0f7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3aa562e453b7f6534aab33e97be43dca = $(`<div id="html_3aa562e453b7f6534aab33e97be43dca" style="width: 100.0%; height: 100.0%;">                     <b>MOON</b><br>                     Rating: 4.3<br>                     Address: Overhoeksplein 3, 1031 KS Amsterdam<br>                     Price Range: $$$$$<br>                     </div>`)[0];
+                popup_bdf8e5f4007e725cf98423ae06c6a0f7.setContent(html_3aa562e453b7f6534aab33e97be43dca);
+            
+        
+
+        circle_marker_c610d143170a682da61ea407b5850ba5.bindPopup(popup_bdf8e5f4007e725cf98423ae06c6a0f7)
+        ;
+
+        
+    
+    
+            var circle_marker_2098309f3f080d0577a89885a6132334 = L.circleMarker(
+                [52.371693699999994, 4.8925949],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_14ec1f47dc32d8e8ee5113b73f961718 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_344f97db9daa2add3ea2387d6e976090 = $(`<div id="html_344f97db9daa2add3ea2387d6e976090" style="width: 100.0%; height: 100.0%;">                     <b>FuLu</b><br>                     Rating: 4.4<br>                     Address: Rokin 26, 1012 KS Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_14ec1f47dc32d8e8ee5113b73f961718.setContent(html_344f97db9daa2add3ea2387d6e976090);
+            
+        
+
+        circle_marker_2098309f3f080d0577a89885a6132334.bindPopup(popup_14ec1f47dc32d8e8ee5113b73f961718)
+        ;
+
+        
+    
+    
+            var circle_marker_e34f400d4d8327ab5c82753e93ecffbd = L.circleMarker(
+                [52.3731918, 4.9034486],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_9fc8860598c7643dcdb390c814c2cf33 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2f4205d108c99a339dad5886537361aa = $(`<div id="html_2f4205d108c99a339dad5886537361aa" style="width: 100.0%; height: 100.0%;">                     <b>Hemelse Modder</b><br>                     Rating: 4.4<br>                     Address: Oude Waal 11, 1011 BZ Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_9fc8860598c7643dcdb390c814c2cf33.setContent(html_2f4205d108c99a339dad5886537361aa);
+            
+        
+
+        circle_marker_e34f400d4d8327ab5c82753e93ecffbd.bindPopup(popup_9fc8860598c7643dcdb390c814c2cf33)
+        ;
+
+        
+    
+    
+            var circle_marker_17506d977569ae1ff67956bd914fb602 = L.circleMarker(
+                [52.3715348, 4.8937231],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_2beaf9798a7af12601b5b0cd7fafd733 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d879f98f9859f18797b3a1fc76d6c229 = $(`<div id="html_d879f98f9859f18797b3a1fc76d6c229" style="width: 100.0%; height: 100.0%;">                     <b>Cafe restaurant van Kerkwijk</b><br>                     Rating: 4.6<br>                     Address: Nes 41, 1012 KC Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_2beaf9798a7af12601b5b0cd7fafd733.setContent(html_d879f98f9859f18797b3a1fc76d6c229);
+            
+        
+
+        circle_marker_17506d977569ae1ff67956bd914fb602.bindPopup(popup_2beaf9798a7af12601b5b0cd7fafd733)
+        ;
+
+        
+    
+    
+            var circle_marker_01933ce21c44a9be46b9db10accd7d30 = L.circleMarker(
+                [52.372376599999996, 4.8946455],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_cf6a7eeb80e31683f6b7008286252e10 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3818084e6f2fa1aaa44a1f02a1093563 = $(`<div id="html_3818084e6f2fa1aaa44a1f02a1093563" style="width: 100.0%; height: 100.0%;">                     <b>CAU Steak Restaurant</b><br>                     Rating: 4.3<br>                     Address: Damstraat 5, 1012 JL Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_cf6a7eeb80e31683f6b7008286252e10.setContent(html_3818084e6f2fa1aaa44a1f02a1093563);
+            
+        
+
+        circle_marker_01933ce21c44a9be46b9db10accd7d30.bindPopup(popup_cf6a7eeb80e31683f6b7008286252e10)
+        ;
+
+        
+    
+    
+            var circle_marker_77854d4c4f50f611b5333220e5e962d1 = L.circleMarker(
+                [52.370449199999996, 4.8842989],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_5513714994efab1a281b325cfc8f1158 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e72941c28bd61a280e0a37ad50fc9cbd = $(`<div id="html_e72941c28bd61a280e0a37ad50fc9cbd" style="width: 100.0%; height: 100.0%;">                     <b>Restaurant de Struisvogel</b><br>                     Rating: 4.7<br>                     Address: Keizersgracht 312, 1016 EX Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_5513714994efab1a281b325cfc8f1158.setContent(html_e72941c28bd61a280e0a37ad50fc9cbd);
+            
+        
+
+        circle_marker_77854d4c4f50f611b5333220e5e962d1.bindPopup(popup_5513714994efab1a281b325cfc8f1158)
+        ;
+
+        
+    
+    
+            var circle_marker_6346e05d92eafc31858a5ea5ce077aa8 = L.circleMarker(
+                [52.3801403, 4.8853789],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_668cb21b090076e617009bf2d9ef3af9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b026ddedf74e3f7e67e4ae40b2272c02 = $(`<div id="html_b026ddedf74e3f7e67e4ae40b2272c02" style="width: 100.0%; height: 100.0%;">                     <b>Toscanini</b><br>                     Rating: 4.4<br>                     Address: Lindengracht 75, 1015 KD Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_668cb21b090076e617009bf2d9ef3af9.setContent(html_b026ddedf74e3f7e67e4ae40b2272c02);
+            
+        
+
+        circle_marker_6346e05d92eafc31858a5ea5ce077aa8.bindPopup(popup_668cb21b090076e617009bf2d9ef3af9)
+        ;
+
+        
+    
+    
+            var circle_marker_8eec78f340f51497745790759fb7f088 = L.circleMarker(
+                [52.3662857, 4.8910769],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_30c821e6452abe476d4bd65f99d64d71 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c89198e6cc358b73fb3298cbbf606bf8 = $(`<div id="html_c89198e6cc358b73fb3298cbbf606bf8" style="width: 100.0%; height: 100.0%;">                     <b>Secret Garden</b><br>                     Rating: 4.4<br>                     Address: Reguliersdwarsstraat 38, 1017 BM Amsterdam<br>                     Price Range: nan<br>                     </div>`)[0];
+                popup_30c821e6452abe476d4bd65f99d64d71.setContent(html_c89198e6cc358b73fb3298cbbf606bf8);
+            
+        
+
+        circle_marker_8eec78f340f51497745790759fb7f088.bindPopup(popup_30c821e6452abe476d4bd65f99d64d71)
+        ;
+
+        
+    
+    
+            var circle_marker_5c2c1cec5c9e952f7a79d43a7c17a79a = L.circleMarker(
+                [52.3776017, 4.9001974],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_27030faf9d7e85987e7e200927cc24e8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5d266d68b335586211f336e5dd21769d = $(`<div id="html_5d266d68b335586211f336e5dd21769d" style="width: 100.0%; height: 100.0%;">                     <b>Loetje</b><br>                     Rating: 4.1<br>                     Address: Stationsplein 10, 1012 AB Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_27030faf9d7e85987e7e200927cc24e8.setContent(html_5d266d68b335586211f336e5dd21769d);
+            
+        
+
+        circle_marker_5c2c1cec5c9e952f7a79d43a7c17a79a.bindPopup(popup_27030faf9d7e85987e7e200927cc24e8)
+        ;
+
+        
+    
+    
+            var circle_marker_45febbec93f3b25b796765413b518d59 = L.circleMarker(
+                [52.3636729, 4.876325],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_5dd53d51a45d40e4dd109a468b3939dd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_165487b123b6421abc7ecbe780dfcce6 = $(`<div id="html_165487b123b6421abc7ecbe780dfcce6" style="width: 100.0%; height: 100.0%;">                     <b>Hollands Hap Hmm Restaurant</b><br>                     Rating: 4.6<br>                     Address: Eerste Helmersstraat 33, 1054 CZ Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_5dd53d51a45d40e4dd109a468b3939dd.setContent(html_165487b123b6421abc7ecbe780dfcce6);
+            
+        
+
+        circle_marker_45febbec93f3b25b796765413b518d59.bindPopup(popup_5dd53d51a45d40e4dd109a468b3939dd)
+        ;
+
+        
+    
+    
+            var circle_marker_b53eb80637cabf5df5d2411817ea2e02 = L.circleMarker(
+                [52.3732492, 4.900118],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_d0ecd1b5680d81302ab76c6b556da723 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2f74c46696a52514a6429fa27b2f9945 = $(`<div id="html_2f74c46696a52514a6429fa27b2f9945" style="width: 100.0%; height: 100.0%;">                     <b>A-Fusion Food & Drinks</b><br>                     Rating: 4.5<br>                     Address: Zeedijk 130, 1012 BC Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_d0ecd1b5680d81302ab76c6b556da723.setContent(html_2f74c46696a52514a6429fa27b2f9945);
+            
+        
+
+        circle_marker_b53eb80637cabf5df5d2411817ea2e02.bindPopup(popup_d0ecd1b5680d81302ab76c6b556da723)
+        ;
+
+        
+    
+    
+            var circle_marker_aa1dcdcfca28dd817a24a691baaeaf95 = L.circleMarker(
+                [52.370025999999996, 4.87071],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_0ff2dfe7670e7ce38d70c179b466816a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_67ba9293ad4c7caaa68b43f664993329 = $(`<div id="html_67ba9293ad4c7caaa68b43f664993329" style="width: 100.0%; height: 100.0%;">                     <b>Meatless District</b><br>                     Rating: 4.5<br>                     Address: Bilderdijkstraat 65-67, 1053 KM Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_0ff2dfe7670e7ce38d70c179b466816a.setContent(html_67ba9293ad4c7caaa68b43f664993329);
+            
+        
+
+        circle_marker_aa1dcdcfca28dd817a24a691baaeaf95.bindPopup(popup_0ff2dfe7670e7ce38d70c179b466816a)
+        ;
+
+        
+    
+    
+            var circle_marker_fe0c41a0be3574ec364683cfbf007adc = L.circleMarker(
+                [52.367426599999995, 4.8914922],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_9ef560b76a7a83bae4b9e87d5cdef1dd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4208689470d63a5d72edc5c214392b92 = $(`<div id="html_4208689470d63a5d72edc5c214392b92" style="width: 100.0%; height: 100.0%;">                     <b>Blue Amsterdam</b><br>                     Rating: 4.5<br>                     Address: Winkelcentrum Kalverpassage, Singel 457, 1012 WP Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_9ef560b76a7a83bae4b9e87d5cdef1dd.setContent(html_4208689470d63a5d72edc5c214392b92);
+            
+        
+
+        circle_marker_fe0c41a0be3574ec364683cfbf007adc.bindPopup(popup_9ef560b76a7a83bae4b9e87d5cdef1dd)
+        ;
+
+        
+    
+    
+            var circle_marker_e892f49132e099950b74acbee6c425e0 = L.circleMarker(
+                [52.363487299999996, 4.8847619],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_a96c62793a30480122bad937d980dcc9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_352b91a5a47f57dee4befac57ed4b5ed = $(`<div id="html_352b91a5a47f57dee4befac57ed4b5ed" style="width: 100.0%; height: 100.0%;">                     <b>De Blauwe Hollander</b><br>                     Rating: 4.4<br>                     Address: Leidsekruisstraat 28, 1017 RJ Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_a96c62793a30480122bad937d980dcc9.setContent(html_352b91a5a47f57dee4befac57ed4b5ed);
+            
+        
+
+        circle_marker_e892f49132e099950b74acbee6c425e0.bindPopup(popup_a96c62793a30480122bad937d980dcc9)
+        ;
+
+        
+    
+    
+            var circle_marker_c8a3253fedfebd3f2cbc6442c0ae2f08 = L.circleMarker(
+                [52.378461699999995, 4.8827603],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_89190d649fc954332c520318331183b5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7dbffb38edc244d15740d90a0af35c39 = $(`<div id="html_7dbffb38edc244d15740d90a0af35c39" style="width: 100.0%; height: 100.0%;">                     <b>Roux Amsterdam</b><br>                     Rating: 4.9<br>                     Address: Westerstraat 132, 1015 MP Amsterdam<br>                     Price Range: nan<br>                     </div>`)[0];
+                popup_89190d649fc954332c520318331183b5.setContent(html_7dbffb38edc244d15740d90a0af35c39);
+            
+        
+
+        circle_marker_c8a3253fedfebd3f2cbc6442c0ae2f08.bindPopup(popup_89190d649fc954332c520318331183b5)
+        ;
+
+        
+    
+    
+            var circle_marker_e93f11f2a7bd30efa4f04d0007ffc21c = L.circleMarker(
+                [52.361700199999994, 4.8989934],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_fed268ed9d44c442d8ed816c90fd623a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_13792f8c21b33bb207a7dcb3df5a405b = $(`<div id="html_13792f8c21b33bb207a7dcb3df5a405b" style="width: 100.0%; height: 100.0%;">                     <b>Ku Kitchen & Bar</b><br>                     Rating: 4.6<br>                     Address: Utrechtsestraat 114, 1017 VT Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_fed268ed9d44c442d8ed816c90fd623a.setContent(html_13792f8c21b33bb207a7dcb3df5a405b);
+            
+        
+
+        circle_marker_e93f11f2a7bd30efa4f04d0007ffc21c.bindPopup(popup_fed268ed9d44c442d8ed816c90fd623a)
+        ;
+
+        
+    
+    
+            var circle_marker_6ea78bc1709a0c6b61ecf5511529afbc = L.circleMarker(
+                [52.366323699999995, 4.890756],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_4a8bc7ec156be1bf410540a6f5556f0e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a683d44cb2f99212f424908f66ad9e09 = $(`<div id="html_a683d44cb2f99212f424908f66ad9e09" style="width: 100.0%; height: 100.0%;">                     <b>Restaurant Black and Blue - Reguliersdwarsstraat</b><br>                     Rating: 4.0<br>                     Address: Reguliersdwarsstraat 32, 1017 BM Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_4a8bc7ec156be1bf410540a6f5556f0e.setContent(html_a683d44cb2f99212f424908f66ad9e09);
+            
+        
+
+        circle_marker_6ea78bc1709a0c6b61ecf5511529afbc.bindPopup(popup_4a8bc7ec156be1bf410540a6f5556f0e)
+        ;
+
+        
+    
+    
+            var circle_marker_12ec16459f569f012dd69e54f1e5a41e = L.circleMarker(
+                [52.354667799999994, 4.8892432],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_70ab9d9ea9d53b970bba4d9220d1d32b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3901508534bff3c7188a9528aeeadae5 = $(`<div id="html_3901508534bff3c7188a9528aeeadae5" style="width: 100.0%; height: 100.0%;">                     <b>Auberge cuisine Francaise</b><br>                     Rating: 4.6<br>                     Address: Albert Cuypstraat 58-60, 1072 CV Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_70ab9d9ea9d53b970bba4d9220d1d32b.setContent(html_3901508534bff3c7188a9528aeeadae5);
+            
+        
+
+        circle_marker_12ec16459f569f012dd69e54f1e5a41e.bindPopup(popup_70ab9d9ea9d53b970bba4d9220d1d32b)
+        ;
+
+        
+    
+    
+            var circle_marker_40da4a7f5af22cb42efe34dd9fa22590 = L.circleMarker(
+                [52.3536429, 4.8872304],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_167039ffdf8b6b554fbcbd88aa03d898 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ce0fd47ca08497fc3e8c91cb5d63558a = $(`<div id="html_ce0fd47ca08497fc3e8c91cb5d63558a" style="width: 100.0%; height: 100.0%;">                     <b>Cannibale Royale Ruysdael</b><br>                     Rating: 4.4<br>                     Address: Ruysdaelkade 149, 1072 AR Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_167039ffdf8b6b554fbcbd88aa03d898.setContent(html_ce0fd47ca08497fc3e8c91cb5d63558a);
+            
+        
+
+        circle_marker_40da4a7f5af22cb42efe34dd9fa22590.bindPopup(popup_167039ffdf8b6b554fbcbd88aa03d898)
+        ;
+
+        
+    
+    
+            var circle_marker_3ad008e22a13e6a68eaf4a39b7d0de75 = L.circleMarker(
+                [52.3704694, 4.8838778],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_c2da0ade6eccbea8cc9a033df0b41068 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_98da0fa6db742ecbb63a10c5da0ca244 = $(`<div id="html_98da0fa6db742ecbb63a10c5da0ca244" style="width: 100.0%; height: 100.0%;">                     <b>Restaurant 't Zwaantje</b><br>                     Rating: 4.5<br>                     Address: Berenstraat 12, 1016 GH Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_c2da0ade6eccbea8cc9a033df0b41068.setContent(html_98da0fa6db742ecbb63a10c5da0ca244);
+            
+        
+
+        circle_marker_3ad008e22a13e6a68eaf4a39b7d0de75.bindPopup(popup_c2da0ade6eccbea8cc9a033df0b41068)
+        ;
+
+        
+    
+    
+            var circle_marker_98334f8c6b81429ef4d2f55dd9abdaf3 = L.circleMarker(
+                [52.3736532, 4.8826525],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_bb8820c3dc617692daec2c61c5a52905 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_009f42dbc8904b49cebe7f06cb9702d6 = $(`<div id="html_009f42dbc8904b49cebe7f06cb9702d6" style="width: 100.0%; height: 100.0%;">                     <b>Amigo Grill Restaurant</b><br>                     Rating: 4.4<br>                     Address: Prinsengracht 188, H, 1016 HC Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_bb8820c3dc617692daec2c61c5a52905.setContent(html_009f42dbc8904b49cebe7f06cb9702d6);
+            
+        
+
+        circle_marker_98334f8c6b81429ef4d2f55dd9abdaf3.bindPopup(popup_bb8820c3dc617692daec2c61c5a52905)
+        ;
+
+        
+    
+    
+            var circle_marker_3913c1791ebc5b2a85cdad8ea81f348e = L.circleMarker(
+                [52.3721058, 4.8965026],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_7b0da6c57f58eb5cf620fa0dace3d867 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_714c04db3b1c5c77f8943be94aa1f18d = $(`<div id="html_714c04db3b1c5c77f8943be94aa1f18d" style="width: 100.0%; height: 100.0%;">                     <b>Saint Morris Argentinian Restaurant</b><br>                     Rating: 4.6<br>                     Address: Oudezijds Voorburgwal 163, 1012 ET Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_7b0da6c57f58eb5cf620fa0dace3d867.setContent(html_714c04db3b1c5c77f8943be94aa1f18d);
+            
+        
+
+        circle_marker_3913c1791ebc5b2a85cdad8ea81f348e.bindPopup(popup_7b0da6c57f58eb5cf620fa0dace3d867)
+        ;
+
+        
+    
+    
+            var circle_marker_3cb8d5252df991625dbd5bd34550c12d = L.circleMarker(
+                [52.3759417, 4.8990444],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_ed36235d2bd6519c2189da9bd0cde228 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_dc3c60a7d8de0d43eb4a54b62f831d17 = $(`<div id="html_dc3c60a7d8de0d43eb4a54b62f831d17" style="width: 100.0%; height: 100.0%;">                     <b>China Sichuan Restaurant / Warmoesstraat</b><br>                     Rating: 4.1<br>                     Address: Warmoesstraat 17, 1012 HT Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_ed36235d2bd6519c2189da9bd0cde228.setContent(html_dc3c60a7d8de0d43eb4a54b62f831d17);
+            
+        
+
+        circle_marker_3cb8d5252df991625dbd5bd34550c12d.bindPopup(popup_ed36235d2bd6519c2189da9bd0cde228)
+        ;
+
+        
+    
+    
+            var circle_marker_2b777b004ebd8280cc5795642a38ceb8 = L.circleMarker(
+                [52.377940599999995, 4.8868202],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_c78ffe7497fada0246578ed76949a53d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a6a9169e9fc216d090966b883a9fb441 = $(`<div id="html_a6a9169e9fc216d090966b883a9fb441" style="width: 100.0%; height: 100.0%;">                     <b>Cafe De Klepel</b><br>                     Rating: 4.7<br>                     Address: Prinsenstraat 22, 1015 DD Amsterdam<br>                     Price Range: nan<br>                     </div>`)[0];
+                popup_c78ffe7497fada0246578ed76949a53d.setContent(html_a6a9169e9fc216d090966b883a9fb441);
+            
+        
+
+        circle_marker_2b777b004ebd8280cc5795642a38ceb8.bindPopup(popup_c78ffe7497fada0246578ed76949a53d)
+        ;
+
+        
+    
+    
+            var circle_marker_22eac569cc053cfe193a48061b859d04 = L.circleMarker(
+                [52.367379799999995, 4.8944063],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_71beb8299c4e7c8f03cda4d4e5983207 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bfa2f6e6e138c6125ed5b222dce7e7f0 = $(`<div id="html_bfa2f6e6e138c6125ed5b222dce7e7f0" style="width: 100.0%; height: 100.0%;">                     <b>Brasserie Marie</b><br>                     Rating: 4.4<br>                     Address: Nieuwe Doelenstraat 2-14, 1012 AC Amsterdam<br>                     Price Range: $$$<br>                     </div>`)[0];
+                popup_71beb8299c4e7c8f03cda4d4e5983207.setContent(html_bfa2f6e6e138c6125ed5b222dce7e7f0);
+            
+        
+
+        circle_marker_22eac569cc053cfe193a48061b859d04.bindPopup(popup_71beb8299c4e7c8f03cda4d4e5983207)
+        ;
+
+        
+    
+    
+            var circle_marker_60bb2e08fbb7675f122bba79ec50636a = L.circleMarker(
+                [52.3640146, 4.8846737],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_4da5ebb7ed9f622f5f798fa58e21ff51 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bcda428aedc9ea60f0d2038bdcc2bf5d = $(`<div id="html_bcda428aedc9ea60f0d2038bdcc2bf5d" style="width: 100.0%; height: 100.0%;">                     <b>Villa Maria Steakhouse</b><br>                     Rating: 4.5<br>                     Address: Lange Leidsedwarsstraat 45, 1017 NG Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_4da5ebb7ed9f622f5f798fa58e21ff51.setContent(html_bcda428aedc9ea60f0d2038bdcc2bf5d);
+            
+        
+
+        circle_marker_60bb2e08fbb7675f122bba79ec50636a.bindPopup(popup_4da5ebb7ed9f622f5f798fa58e21ff51)
+        ;
+
+        
+    
+    
+            var circle_marker_bb776134e3d839a239aa022821f77c79 = L.circleMarker(
+                [52.3694869, 4.8906469999999995],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_cead66c709c605acdfc8dee20569a75d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ada9a87951d2a0a07656c49f08b8ce22 = $(`<div id="html_ada9a87951d2a0a07656c49f08b8ce22" style="width: 100.0%; height: 100.0%;">                     <b>Onze Zaak - Italiaans Restaurant</b><br>                     Rating: 4.6<br>                     Address: Begijnensteeg 8A, 1012 PN Amsterdam<br>                     Price Range: nan<br>                     </div>`)[0];
+                popup_cead66c709c605acdfc8dee20569a75d.setContent(html_ada9a87951d2a0a07656c49f08b8ce22);
+            
+        
+
+        circle_marker_bb776134e3d839a239aa022821f77c79.bindPopup(popup_cead66c709c605acdfc8dee20569a75d)
+        ;
+
+        
+    
+    
+            var circle_marker_4ff41c7c0441a16dfaf0c662b87da4e6 = L.circleMarker(
+                [52.370953099999994, 4.8936747],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_16df109c2d915878d7001e38b58429ef = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6948e2b4b6a49e627f132d62668a8521 = $(`<div id="html_6948e2b4b6a49e627f132d62668a8521" style="width: 100.0%; height: 100.0%;">                     <b>The Lobby Nesplein</b><br>                     Rating: 4.5<br>                     Address: Nes 49, 1012 KD Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_16df109c2d915878d7001e38b58429ef.setContent(html_6948e2b4b6a49e627f132d62668a8521);
+            
+        
+
+        circle_marker_4ff41c7c0441a16dfaf0c662b87da4e6.bindPopup(popup_16df109c2d915878d7001e38b58429ef)
+        ;
+
+        
+    
+    
+            var circle_marker_2288527f46ad9994cc8af48ccd16809e = L.circleMarker(
+                [52.3534442, 4.8556758],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_047976128d4fdb8ecc959cde2f56c5be = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ce855bb312c77fbaf4b7fdb7b3beb768 = $(`<div id="html_ce855bb312c77fbaf4b7fdb7b3beb768" style="width: 100.0%; height: 100.0%;">                     <b>Restaurant Blauw Amsterdam</b><br>                     Rating: 4.4<br>                     Address: Amstelveenseweg 158-160, 1075 XN Amsterdam<br>                     Price Range: $$$<br>                     </div>`)[0];
+                popup_047976128d4fdb8ecc959cde2f56c5be.setContent(html_ce855bb312c77fbaf4b7fdb7b3beb768);
+            
+        
+
+        circle_marker_2288527f46ad9994cc8af48ccd16809e.bindPopup(popup_047976128d4fdb8ecc959cde2f56c5be)
+        ;
+
+        
+    
+    
+            var circle_marker_d1374130e2b303248078b3f07096ba85 = L.circleMarker(
+                [52.3633466, 4.884734],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_33e3fe13d503da43e983298d09f1cb28 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3991977f4775aa59dea6ee89e68020ee = $(`<div id="html_3991977f4775aa59dea6ee89e68020ee" style="width: 100.0%; height: 100.0%;">                     <b>Restaurant Lavash</b><br>                     Rating: 4.4<br>                     Address: Korte Leidsedwarsstraat 119, 1017 PZ Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_33e3fe13d503da43e983298d09f1cb28.setContent(html_3991977f4775aa59dea6ee89e68020ee);
+            
+        
+
+        circle_marker_d1374130e2b303248078b3f07096ba85.bindPopup(popup_33e3fe13d503da43e983298d09f1cb28)
+        ;
+
+        
+    
+    
+            var circle_marker_0eea840f067b10827337a0b9fd3d5eac = L.circleMarker(
+                [52.377946099999996, 4.8957761],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_1894ff7d85affa01e6dfe85fc3fccd77 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7263d4f93cf92cb52f14c4f78f67a8ff = $(`<div id="html_7263d4f93cf92cb52f14c4f78f67a8ff" style="width: 100.0%; height: 100.0%;">                     <b>Restaurant Ava Cyril</b><br>                     Rating: 4.2<br>                     Address: Nieuwendijk 46, 1012 MN Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_1894ff7d85affa01e6dfe85fc3fccd77.setContent(html_7263d4f93cf92cb52f14c4f78f67a8ff);
+            
+        
+
+        circle_marker_0eea840f067b10827337a0b9fd3d5eac.bindPopup(popup_1894ff7d85affa01e6dfe85fc3fccd77)
+        ;
+
+        
+    
+    
+            var circle_marker_314f4d5eed5783ffec51296fdcbc187d = L.circleMarker(
+                [52.3545026, 4.855207099999999],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_8e06e816e04821e6e97750e49caf886e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_23d5cad9a4f9d84317c71497290a3cbe = $(`<div id="html_23d5cad9a4f9d84317c71497290a3cbe" style="width: 100.0%; height: 100.0%;">                     <b>De Royal Chop House - Beste Steakhouse & BBQ Grill Restaurant in Amsterdam</b><br>                     Rating: 4.6<br>                     Address: Amstelveenseweg 128, 1075 XL Amsterdam<br>                     Price Range: $$$<br>                     </div>`)[0];
+                popup_8e06e816e04821e6e97750e49caf886e.setContent(html_23d5cad9a4f9d84317c71497290a3cbe);
+            
+        
+
+        circle_marker_314f4d5eed5783ffec51296fdcbc187d.bindPopup(popup_8e06e816e04821e6e97750e49caf886e)
+        ;
+
+        
+    
+    
+            var circle_marker_1703bc1e1611711bae5f496a3a8732e2 = L.circleMarker(
+                [52.3643025, 4.8962809],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_2d54b4d4d5a38827912d57e1c84b0d97 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_47a8457cb1ad875d11c3d1aa20030ab6 = $(`<div id="html_47a8457cb1ad875d11c3d1aa20030ab6" style="width: 100.0%; height: 100.0%;">                     <b>Tapas Amsterdam Tia Rosa</b><br>                     Rating: 4.4<br>                     Address: Reguliersgracht 11, 1017 LJ Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_2d54b4d4d5a38827912d57e1c84b0d97.setContent(html_47a8457cb1ad875d11c3d1aa20030ab6);
+            
+        
+
+        circle_marker_1703bc1e1611711bae5f496a3a8732e2.bindPopup(popup_2d54b4d4d5a38827912d57e1c84b0d97)
+        ;
+
+        
+    
+    
+            var circle_marker_016bf185508a440c037bbf4a9062af29 = L.circleMarker(
+                [52.354382, 4.884167],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_0efd7537120e0a9b9bd3e2092f53ff84 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_08d55fc3990dd9ac8b4ac62fe204043d = $(`<div id="html_08d55fc3990dd9ac8b4ac62fe204043d" style="width: 100.0%; height: 100.0%;">                     <b>Cafe Loetje</b><br>                     Rating: 4.3<br>                     Address: Johannes Vermeerstraat 52, 1071 DT Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_0efd7537120e0a9b9bd3e2092f53ff84.setContent(html_08d55fc3990dd9ac8b4ac62fe204043d);
+            
+        
+
+        circle_marker_016bf185508a440c037bbf4a9062af29.bindPopup(popup_0efd7537120e0a9b9bd3e2092f53ff84)
+        ;
+
+        
+    
+    
+            var circle_marker_808fa274385e00b2e37a08d3d41d45f9 = L.circleMarker(
+                [52.370788999999995, 4.895245],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_7198dc1b083087ee48b4be3e7e837725 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a1fa3347502bba4334516f35c6ba488e = $(`<div id="html_a1fa3347502bba4334516f35c6ba488e" style="width: 100.0%; height: 100.0%;">                     <b>Oriole</b><br>                     Rating: 4.3<br>                     Address: Oudezijds Voorburgwal 197, 1012 EX Amsterdam<br>                     Price Range: nan<br>                     </div>`)[0];
+                popup_7198dc1b083087ee48b4be3e7e837725.setContent(html_a1fa3347502bba4334516f35c6ba488e);
+            
+        
+
+        circle_marker_808fa274385e00b2e37a08d3d41d45f9.bindPopup(popup_7198dc1b083087ee48b4be3e7e837725)
+        ;
+
+        
+    
+    
+            var circle_marker_58f9c089379fe16bdf90b5bea0da37cd = L.circleMarker(
+                [52.362355, 4.8861609999999995],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_c756575d2560b88b67bdfadc98fab4f2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5eeda6b9f7d273a57feef6d3c630c4b4 = $(`<div id="html_5eeda6b9f7d273a57feef6d3c630c4b4" style="width: 100.0%; height: 100.0%;">                     <b>Mayur Indian/Indiaas Restaurant</b><br>                     Rating: 4.2<br>                     Address: Between Rijksmuseum and Leidseplein, Korte Leidsedwarsstraat 203, 1017 RB Amsterdam<br>                     Price Range: $$$<br>                     </div>`)[0];
+                popup_c756575d2560b88b67bdfadc98fab4f2.setContent(html_5eeda6b9f7d273a57feef6d3c630c4b4);
+            
+        
+
+        circle_marker_58f9c089379fe16bdf90b5bea0da37cd.bindPopup(popup_c756575d2560b88b67bdfadc98fab4f2)
+        ;
+
+        
+    
+    
+            var circle_marker_592f2ac33668353c5059025635a915e0 = L.circleMarker(
+                [52.3773182, 4.8939946],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_3ddff9cecbe29515fbaa143b759db2fe = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1a1f235116b6737a5589bbcb64b65ef9 = $(`<div id="html_1a1f235116b6737a5589bbcb64b65ef9" style="width: 100.0%; height: 100.0%;">                     <b>Day's StoneGrill 1870 | Foodbar</b><br>                     Rating: 4.4<br>                     Address: Spuistraat 4, 1012 TS Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_3ddff9cecbe29515fbaa143b759db2fe.setContent(html_1a1f235116b6737a5589bbcb64b65ef9);
+            
+        
+
+        circle_marker_592f2ac33668353c5059025635a915e0.bindPopup(popup_3ddff9cecbe29515fbaa143b759db2fe)
+        ;
+
+        
+    
+    
+            var circle_marker_8092c5e73e04819853015ebbc783f184 = L.circleMarker(
+                [52.3515689, 4.912939199999999],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_e908a4f6af7f2c9b174c499b526e4b7f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ea44f638d5054ab53a0dbfbedb4f7822 = $(`<div id="html_ea44f638d5054ab53a0dbfbedb4f7822" style="width: 100.0%; height: 100.0%;">                     <b>Rijsel</b><br>                     Rating: 4.6<br>                     Address: Marcusstraat 52, 1091 TK Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_e908a4f6af7f2c9b174c499b526e4b7f.setContent(html_ea44f638d5054ab53a0dbfbedb4f7822);
+            
+        
+
+        circle_marker_8092c5e73e04819853015ebbc783f184.bindPopup(popup_e908a4f6af7f2c9b174c499b526e4b7f)
+        ;
+
+        
+    
+    
+            var circle_marker_50ba5792fbeb539dbef2949f8aa1fc24 = L.circleMarker(
+                [52.3682794, 4.8906084],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_a93daa40ff32dbae3aa6e43f12ecef5a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_638f595633c0fab773b720c17076abe2 = $(`<div id="html_638f595633c0fab773b720c17076abe2" style="width: 100.0%; height: 100.0%;">                     <b>The Chicken Bar</b><br>                     Rating: 4.4<br>                     Address: Voetboogstraat 6, 1012 XL Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_a93daa40ff32dbae3aa6e43f12ecef5a.setContent(html_638f595633c0fab773b720c17076abe2);
+            
+        
+
+        circle_marker_50ba5792fbeb539dbef2949f8aa1fc24.bindPopup(popup_a93daa40ff32dbae3aa6e43f12ecef5a)
+        ;
+
+        
+    
+    
+            var circle_marker_406e739d048dccab180d8796db471753 = L.circleMarker(
+                [52.3611021, 4.8648323],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_8b7f118f72a56bcef97325acabad58f9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bd0739d2c65cec8e8d0b1ca7b19edefb = $(`<div id="html_bd0739d2c65cec8e8d0b1ca7b19edefb" style="width: 100.0%; height: 100.0%;">                     <b>Night Kitchen Amsterdam</b><br>                     Rating: 4.7<br>                     Address: Jan Pieter Heijestraat 172H, 1054 ML Amsterdam<br>                     Price Range: nan<br>                     </div>`)[0];
+                popup_8b7f118f72a56bcef97325acabad58f9.setContent(html_bd0739d2c65cec8e8d0b1ca7b19edefb);
+            
+        
+
+        circle_marker_406e739d048dccab180d8796db471753.bindPopup(popup_8b7f118f72a56bcef97325acabad58f9)
+        ;
+
+        
+    
+    
+            var circle_marker_6ab3aafa02432700642687ab993eb2cc = L.circleMarker(
+                [52.3756024, 4.8959041],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_21cae9e8db57543e0924ea8a21fc4961 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_92083396ac4f9b42257c6589741d9aac = $(`<div id="html_92083396ac4f9b42257c6589741d9aac" style="width: 100.0%; height: 100.0%;">                     <b>Restaurant At James</b><br>                     Rating: 3.9<br>                     Address: Damrak 45, 1012 LK Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_21cae9e8db57543e0924ea8a21fc4961.setContent(html_92083396ac4f9b42257c6589741d9aac);
+            
+        
+
+        circle_marker_6ab3aafa02432700642687ab993eb2cc.bindPopup(popup_21cae9e8db57543e0924ea8a21fc4961)
+        ;
+
+        
+    
+    
+            var circle_marker_497e561a278eceb3b34de0ee856bf2f9 = L.circleMarker(
+                [52.361045999999995, 4.8887463],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_68818471fbb623c02c1bf873984ef2bb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ef657347548b371926b9f3980e84d8f1 = $(`<div id="html_ef657347548b371926b9f3980e84d8f1" style="width: 100.0%; height: 100.0%;">                     <b>Restaurant Watergang</b><br>                     Rating: 4.9<br>                     Address: Weteringstraat 41, 1017 SM Amsterdam<br>                     Price Range: nan<br>                     </div>`)[0];
+                popup_68818471fbb623c02c1bf873984ef2bb.setContent(html_ef657347548b371926b9f3980e84d8f1);
+            
+        
+
+        circle_marker_497e561a278eceb3b34de0ee856bf2f9.bindPopup(popup_68818471fbb623c02c1bf873984ef2bb)
+        ;
+
+        
+    
+    
+            var circle_marker_a15ff417f3ac13aa15b0d0775d57ee0e = L.circleMarker(
+                [52.377538799999996, 4.8959671],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_29c3338a79a34c9c6be665b037d3441e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a0c72b1fd741afc3215720b1cf0707a8 = $(`<div id="html_a0c72b1fd741afc3215720b1cf0707a8" style="width: 100.0%; height: 100.0%;">                     <b>Celia at Kimpton De Witt</b><br>                     Rating: 4.3<br>                     Address: Nieuwendijk 60, 1012 MB Amsterdam<br>                     Price Range: nan<br>                     </div>`)[0];
+                popup_29c3338a79a34c9c6be665b037d3441e.setContent(html_a0c72b1fd741afc3215720b1cf0707a8);
+            
+        
+
+        circle_marker_a15ff417f3ac13aa15b0d0775d57ee0e.bindPopup(popup_29c3338a79a34c9c6be665b037d3441e)
+        ;
+
+        
+    
+    
+            var circle_marker_26aacfb91f908c4ed346add922345701 = L.circleMarker(
+                [52.3713208, 4.8597144],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_b3ba40fd54e5baa097dbb9be0d231a98 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8e2fb93ed86c0680fd2a0c7bd41d8a7b = $(`<div id="html_8e2fb93ed86c0680fd2a0c7bd41d8a7b" style="width: 100.0%; height: 100.0%;">                     <b>Volare</b><br>                     Rating: 4.2<br>                     Address: Admiraal de Ruijterweg 79, 1057 JZ Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_b3ba40fd54e5baa097dbb9be0d231a98.setContent(html_8e2fb93ed86c0680fd2a0c7bd41d8a7b);
+            
+        
+
+        circle_marker_26aacfb91f908c4ed346add922345701.bindPopup(popup_b3ba40fd54e5baa097dbb9be0d231a98)
+        ;
+
+        
+    
+    
+            var circle_marker_5442f68e8674aaf8a5038f35a1de3f11 = L.circleMarker(
+                [52.368479699999995, 4.9057376999999995],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_08ca8d34552204959643430b715abb3b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a5c7f60c8ba72a009f915f5b23a3855f = $(`<div id="html_a5c7f60c8ba72a009f915f5b23a3855f" style="width: 100.0%; height: 100.0%;">                     <b>Restaurant Black Olive</b><br>                     Rating: 4.7<br>                     Address: Markenplein 30 A, 1011 MV Amsterdam<br>                     Price Range: nan<br>                     </div>`)[0];
+                popup_08ca8d34552204959643430b715abb3b.setContent(html_a5c7f60c8ba72a009f915f5b23a3855f);
+            
+        
+
+        circle_marker_5442f68e8674aaf8a5038f35a1de3f11.bindPopup(popup_08ca8d34552204959643430b715abb3b)
+        ;
+
+        
+    
+    
+            var circle_marker_2a8d5a1164cdfb13f54e434582f4cb93 = L.circleMarker(
+                [52.3759157, 4.9105392],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_1102a83c2d8eaaae3b6cb8ada730d382 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2f25022491314f9a681bd1085e624286 = $(`<div id="html_2f25022491314f9a681bd1085e624286" style="width: 100.0%; height: 100.0%;">                     <b>A Beautiful Mess - Amsterdam</b><br>                     Rating: 4.6<br>                     Address: Oosterdokskade 227, 1011 DL Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_1102a83c2d8eaaae3b6cb8ada730d382.setContent(html_2f25022491314f9a681bd1085e624286);
+            
+        
+
+        circle_marker_2a8d5a1164cdfb13f54e434582f4cb93.bindPopup(popup_1102a83c2d8eaaae3b6cb8ada730d382)
+        ;
+
+        
+    
+    
+            var circle_marker_cfa28a0d99e132cd5b202718efc8405b = L.circleMarker(
+                [52.3753308, 4.897691099999999],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_e6b45309c19dcb916bf2471a2970708a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ba7a9b8d05e471f411fb310bdea6e1b7 = $(`<div id="html_ba7a9b8d05e471f411fb310bdea6e1b7" style="width: 100.0%; height: 100.0%;">                     <b>Dal Pagliaccio</b><br>                     Rating: 4.5<br>                     Address: Oudebrugsteeg 8, 1012 JP Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_e6b45309c19dcb916bf2471a2970708a.setContent(html_ba7a9b8d05e471f411fb310bdea6e1b7);
+            
+        
+
+        circle_marker_cfa28a0d99e132cd5b202718efc8405b.bindPopup(popup_e6b45309c19dcb916bf2471a2970708a)
+        ;
+
+        
+    
+    
+            var circle_marker_3af84833d5680b3e24901cba7b4e641b = L.circleMarker(
+                [52.3819052, 4.888831199999999],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_3c686c236921df3d216d4d0a9c0ed6e8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_18fb2f558a67a493027d6c89ea4759c7 = $(`<div id="html_18fb2f558a67a493027d6c89ea4759c7" style="width: 100.0%; height: 100.0%;">                     <b>Restaurant La Brasa amsterdam</b><br>                     Rating: 4.5<br>                     Address: Haarlemmerdijk 16, 1013 JC Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_3c686c236921df3d216d4d0a9c0ed6e8.setContent(html_18fb2f558a67a493027d6c89ea4759c7);
+            
+        
+
+        circle_marker_3af84833d5680b3e24901cba7b4e641b.bindPopup(popup_3c686c236921df3d216d4d0a9c0ed6e8)
+        ;
+
+        
+    
+    
+            var circle_marker_edb33212fb302e20da4d0bdeab909525 = L.circleMarker(
+                [52.383940599999995, 4.9219912],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_0e4ee02c9fdb4f9dce33eea6fcccf458 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_24579889f9b8afdf54895aa1c91459f8 = $(`<div id="html_24579889f9b8afdf54895aa1c91459f8" style="width: 100.0%; height: 100.0%;">                     <b>Euro Pizza Restaurant</b><br>                     Rating: 4.1<br>                     Address: Gedempt Hamerkanaal 79, 1021 KP Amsterdam<br>                     Price Range: nan<br>                     </div>`)[0];
+                popup_0e4ee02c9fdb4f9dce33eea6fcccf458.setContent(html_24579889f9b8afdf54895aa1c91459f8);
+            
+        
+
+        circle_marker_edb33212fb302e20da4d0bdeab909525.bindPopup(popup_0e4ee02c9fdb4f9dce33eea6fcccf458)
+        ;
+
+        
+    
+    
+            var circle_marker_197410130bd9ef2cdd21b9ba42823040 = L.circleMarker(
+                [52.363915399999996, 4.8845212],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_78ac45d177050ed6877b3a7ba31c467b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_604bc9d0340f53bf2def55ef11edf1ef = $(`<div id="html_604bc9d0340f53bf2def55ef11edf1ef" style="width: 100.0%; height: 100.0%;">                     <b>Bollywood Indian Restaurant</b><br>                     Rating: 4.2<br>                     Address: Lange Leidsedwarsstraat 108, 1017 NN Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_78ac45d177050ed6877b3a7ba31c467b.setContent(html_604bc9d0340f53bf2def55ef11edf1ef);
+            
+        
+
+        circle_marker_197410130bd9ef2cdd21b9ba42823040.bindPopup(popup_78ac45d177050ed6877b3a7ba31c467b)
+        ;
+
+        
+    
+    
+            var circle_marker_a4bfe29834e732c5c52cd4f5b89bd62c = L.circleMarker(
+                [52.366666699999996, 4.8899815],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_364966a7c795c51af9a7612f9b607ad4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_76ee66611c636d44904a75dd4a53142b = $(`<div id="html_76ee66611c636d44904a75dd4a53142b" style="width: 100.0%; height: 100.0%;">                     <b>middleat</b><br>                     Rating: 4.4<br>                     Address: Reguliersdwarsstraat 21, 1017 BJ Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_364966a7c795c51af9a7612f9b607ad4.setContent(html_76ee66611c636d44904a75dd4a53142b);
+            
+        
+
+        circle_marker_a4bfe29834e732c5c52cd4f5b89bd62c.bindPopup(popup_364966a7c795c51af9a7612f9b607ad4)
+        ;
+
+        
+    
+    
+            var circle_marker_df597ff4cbd747ea77c8a7250ca92883 = L.circleMarker(
+                [52.374562999999995, 4.904024],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_3814d119381d1451f086bccadab0da90 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_afc5da809b222852141cb3296ab20ef7 = $(`<div id="html_afc5da809b222852141cb3296ab20ef7" style="width: 100.0%; height: 100.0%;">                     <b>Restaurant Seven Seas</b><br>                     Rating: 3.6<br>                     Address: Prins Hendrikkade 108, 1011 AK Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_3814d119381d1451f086bccadab0da90.setContent(html_afc5da809b222852141cb3296ab20ef7);
+            
+        
+
+        circle_marker_df597ff4cbd747ea77c8a7250ca92883.bindPopup(popup_3814d119381d1451f086bccadab0da90)
+        ;
+
+        
+    
+    
+            var circle_marker_baa1c34e9891acc52c241417db9e3173 = L.circleMarker(
+                [52.3631792, 4.8858868],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_dc631b04c87e73c8b343676fb9a51a96 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0eda5ca6d8b17e43af541bac23e2555e = $(`<div id="html_0eda5ca6d8b17e43af541bac23e2555e" style="width: 100.0%; height: 100.0%;">                     <b>Namche Amsterdam</b><br>                     Rating: 4.8<br>                     Address: Lange Leidsedwarsstraat 91, 1017 NH Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_dc631b04c87e73c8b343676fb9a51a96.setContent(html_0eda5ca6d8b17e43af541bac23e2555e);
+            
+        
+
+        circle_marker_baa1c34e9891acc52c241417db9e3173.bindPopup(popup_dc631b04c87e73c8b343676fb9a51a96)
+        ;
+
+        
+    
+    
+            var circle_marker_3e0cb22402c9996b68c985234670cf4d = L.circleMarker(
+                [52.3649528, 4.8744035],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_bfea38410bdae595c57946bea173c52e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_03db85b4208d4bbffbd3dfdca1554eeb = $(`<div id="html_03db85b4208d4bbffbd3dfdca1554eeb" style="width: 100.0%; height: 100.0%;">                     <b>Pastis</b><br>                     Rating: 4.5<br>                     Address: Eerste Constantijn Huygensstraat 15, 1054 BP Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_bfea38410bdae595c57946bea173c52e.setContent(html_03db85b4208d4bbffbd3dfdca1554eeb);
+            
+        
+
+        circle_marker_3e0cb22402c9996b68c985234670cf4d.bindPopup(popup_bfea38410bdae595c57946bea173c52e)
+        ;
+
+        
+    
+    
+            var circle_marker_add72b6d6310e24e4d42c02def87b247 = L.circleMarker(
+                [52.362638, 4.8352803],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_098d57da8107237b69ef996bbe000306 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2af112bc45d3bd152dcf59a117d4bb4a = $(`<div id="html_2af112bc45d3bd152dcf59a117d4bb4a" style="width: 100.0%; height: 100.0%;">                     <b>Met Restaurant Amsterdam</b><br>                     Rating: 4.6<br>                     Address: Marius Bauerstraat 401, 1062 AP Amsterdam<br>                     Price Range: nan<br>                     </div>`)[0];
+                popup_098d57da8107237b69ef996bbe000306.setContent(html_2af112bc45d3bd152dcf59a117d4bb4a);
+            
+        
+
+        circle_marker_add72b6d6310e24e4d42c02def87b247.bindPopup(popup_098d57da8107237b69ef996bbe000306)
+        ;
+
+        
+    
+    
+            var circle_marker_0f795eafccbfeaad7a2581cd8c3ef491 = L.circleMarker(
+                [52.375486099999996, 4.898427799999999],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_1c8ebbe45a0bc1aa9dc410b483f15391 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5cfee3717c35f03be45e5a352d27502e = $(`<div id="html_5cfee3717c35f03be45e5a352d27502e" style="width: 100.0%; height: 100.0%;">                     <b>Seafood Bistro</b><br>                     Rating: 4.4<br>                     Address: Warmoesstraat 45, 1012 HV Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_1c8ebbe45a0bc1aa9dc410b483f15391.setContent(html_5cfee3717c35f03be45e5a352d27502e);
+            
+        
+
+        circle_marker_0f795eafccbfeaad7a2581cd8c3ef491.bindPopup(popup_1c8ebbe45a0bc1aa9dc410b483f15391)
+        ;
+
+        
+    
+    
+            var circle_marker_2e9a53ad8d478f2e06fa995e8d004593 = L.circleMarker(
+                [52.3571788, 4.9083116],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_fe19e01ccfeae5b7a5cfce642edd5576 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_eb0335cf0d27cb36d6387141fd6e2086 = $(`<div id="html_eb0335cf0d27cb36d6387141fd6e2086" style="width: 100.0%; height: 100.0%;">                     <b>Loetje Oost / Amsterdam Restaurant</b><br>                     Rating: 4.3<br>                     Address: Ruyschstraat 15, 1091 BS Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_fe19e01ccfeae5b7a5cfce642edd5576.setContent(html_eb0335cf0d27cb36d6387141fd6e2086);
+            
+        
+
+        circle_marker_2e9a53ad8d478f2e06fa995e8d004593.bindPopup(popup_fe19e01ccfeae5b7a5cfce642edd5576)
+        ;
+
+        
+    
+    
+            var circle_marker_2076fedda7226ef17c22d29224a0e629 = L.circleMarker(
+                [52.358497899999996, 4.9129986],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_0ad32ced88734b079612f48f9f90a667 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bc8ffba25f7cbf9eaf3018ea81ad7552 = $(`<div id="html_bc8ffba25f7cbf9eaf3018ea81ad7552" style="width: 100.0%; height: 100.0%;">                     <b>Hearth</b><br>                     Rating: 4.9<br>                     Address: Camperstraat 26H, 1091 AG Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_0ad32ced88734b079612f48f9f90a667.setContent(html_bc8ffba25f7cbf9eaf3018ea81ad7552);
+            
+        
+
+        circle_marker_2076fedda7226ef17c22d29224a0e629.bindPopup(popup_0ad32ced88734b079612f48f9f90a667)
+        ;
+
+        
+    
+    
+            var circle_marker_59cc1c1b4a9cc08efbcffcd2cf16f984 = L.circleMarker(
+                [52.3518366, 4.8595016],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_7b581b688bdb126ba647934836894515 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_76e07ce786c92b09236c2030b457ffff = $(`<div id="html_76e07ce786c92b09236c2030b457ffff" style="width: 100.0%; height: 100.0%;">                     <b>Chef Adrienne | Private Dining Amsterdam</b><br>                     Rating: 5.0<br>                     Address: Valeriusstraat 250 H, 1075 GL Amsterdam<br>                     Price Range: nan<br>                     </div>`)[0];
+                popup_7b581b688bdb126ba647934836894515.setContent(html_76e07ce786c92b09236c2030b457ffff);
+            
+        
+
+        circle_marker_59cc1c1b4a9cc08efbcffcd2cf16f984.bindPopup(popup_7b581b688bdb126ba647934836894515)
+        ;
+
+        
+    
+    
+            var circle_marker_994973da6e7cb7607f5e05c557c779f5 = L.circleMarker(
+                [52.363584599999996, 4.9404468],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_542b63d3eeaccddcd89dc38b16fd1cec = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_64cdec9aafbb2e2c9f2bb2c48cef63b3 = $(`<div id="html_64cdec9aafbb2e2c9f2bb2c48cef63b3" style="width: 100.0%; height: 100.0%;">                     <b>Wilde Zwijnen</b><br>                     Rating: 4.4<br>                     Address: Javaplein 23, 1095 CJ Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_542b63d3eeaccddcd89dc38b16fd1cec.setContent(html_64cdec9aafbb2e2c9f2bb2c48cef63b3);
+            
+        
+
+        circle_marker_994973da6e7cb7607f5e05c557c779f5.bindPopup(popup_542b63d3eeaccddcd89dc38b16fd1cec)
+        ;
+
+        
+    
+    
+            var circle_marker_6f6f707415b993d065602c8f5578e144 = L.circleMarker(
+                [52.351458, 4.871446],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_2f6488c8bb3595838b30612c77dc9b3f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1ac425c2ac6b8b3e6a108d0b6a437913 = $(`<div id="html_1ac425c2ac6b8b3e6a108d0b6a437913" style="width: 100.0%; height: 100.0%;">                     <b>Roberto's Restaurant Amsterdam</b><br>                     Rating: 4.3<br>                     Address: Apollolaan 138, 1077 BG Amsterdam<br>                     Price Range: nan<br>                     </div>`)[0];
+                popup_2f6488c8bb3595838b30612c77dc9b3f.setContent(html_1ac425c2ac6b8b3e6a108d0b6a437913);
+            
+        
+
+        circle_marker_6f6f707415b993d065602c8f5578e144.bindPopup(popup_2f6488c8bb3595838b30612c77dc9b3f)
+        ;
+
+        
+    
+    
+            var circle_marker_b65c57701d3bba69162007a6e98fcb98 = L.circleMarker(
+                [52.388099399999994, 4.9144029],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_165747c339f9344f5c794e40b8647fac = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a161f4badef3e72941fe58d103ad6baa = $(`<div id="html_a161f4badef3e72941fe58d103ad6baa" style="width: 100.0%; height: 100.0%;">                     <b>Bunk Restaurant Amsterdam</b><br>                     Rating: 4.6<br>                     Address: Hagedoornplein 2, 1031 BV Amsterdam<br>                     Price Range: nan<br>                     </div>`)[0];
+                popup_165747c339f9344f5c794e40b8647fac.setContent(html_a161f4badef3e72941fe58d103ad6baa);
+            
+        
+
+        circle_marker_b65c57701d3bba69162007a6e98fcb98.bindPopup(popup_165747c339f9344f5c794e40b8647fac)
+        ;
+
+        
+    
+    
+            var circle_marker_e529f4ea8b790425e184a86b0888487e = L.circleMarker(
+                [52.356120399999995, 4.9272931],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_b777efbd8e7627c65db7f445c0b54193 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8c54fd5b4f7de628b1445ac72151a6ec = $(`<div id="html_8c54fd5b4f7de628b1445ac72151a6ec" style="width: 100.0%; height: 100.0%;">                     <b>The Cottage</b><br>                     Rating: 4.8<br>                     Address: Linnaeusstraat 88, 1092 CP Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_b777efbd8e7627c65db7f445c0b54193.setContent(html_8c54fd5b4f7de628b1445ac72151a6ec);
+            
+        
+
+        circle_marker_e529f4ea8b790425e184a86b0888487e.bindPopup(popup_b777efbd8e7627c65db7f445c0b54193)
+        ;
+
+        
+    
+    
+            var circle_marker_15820a419ce5438b602a668f0a767f92 = L.circleMarker(
+                [52.364256999999995, 4.8983493],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_b694cbde0777b4ba16134d901d8ac704 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_13bd0aefdfd34ec5b0aa5352111761ea = $(`<div id="html_13bd0aefdfd34ec5b0aa5352111761ea" style="width: 100.0%; height: 100.0%;">                     <b>De Juwelier</b><br>                     Rating: 4.0<br>                     Address: Utrechtsestraat 51, 1017 VJ Amsterdam<br>                     Price Range: $$$$$<br>                     </div>`)[0];
+                popup_b694cbde0777b4ba16134d901d8ac704.setContent(html_13bd0aefdfd34ec5b0aa5352111761ea);
+            
+        
+
+        circle_marker_15820a419ce5438b602a668f0a767f92.bindPopup(popup_b694cbde0777b4ba16134d901d8ac704)
+        ;
+
+        
+    
+    
+            var circle_marker_e0d869d4335df492b828d290e5970aae = L.circleMarker(
+                [52.3682008, 4.8906417],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_be2a181ef1d481207eee89cc7f9f92a0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d7e39ff9949d39bda5f33ad9df66f3df = $(`<div id="html_d7e39ff9949d39bda5f33ad9df66f3df" style="width: 100.0%; height: 100.0%;">                     <b>Eetcafe 't Pakhuis</b><br>                     Rating: 4.4<br>                     Address: Voetboogstraat 10, 1012 XL Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_be2a181ef1d481207eee89cc7f9f92a0.setContent(html_d7e39ff9949d39bda5f33ad9df66f3df);
+            
+        
+
+        circle_marker_e0d869d4335df492b828d290e5970aae.bindPopup(popup_be2a181ef1d481207eee89cc7f9f92a0)
+        ;
+
+        
+    
+    
+            var circle_marker_fd6ba8ce0de4769d5036159246f03f53 = L.circleMarker(
+                [52.3663868, 4.8968538],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_e8d8eb406379fa944afc00a2538dfd90 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_21f122f0d0bb1929170eb762d03d5be8 = $(`<div id="html_21f122f0d0bb1929170eb762d03d5be8" style="width: 100.0%; height: 100.0%;">                     <b>Kitchen & Bar Van Rijn B.V.</b><br>                     Rating: 4.1<br>                     Address: Rembrandtplein 17, 1017 CT Amsterdam<br>                     Price Range: $$$<br>                     </div>`)[0];
+                popup_e8d8eb406379fa944afc00a2538dfd90.setContent(html_21f122f0d0bb1929170eb762d03d5be8);
+            
+        
+
+        circle_marker_fd6ba8ce0de4769d5036159246f03f53.bindPopup(popup_e8d8eb406379fa944afc00a2538dfd90)
+        ;
+
+        
+    
+    
+            var circle_marker_0a3da6a8d151990b0c9704ec5dd5a0d4 = L.circleMarker(
+                [52.3741377, 4.897149199999999],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_ab49383e9ee6b3f81caa70acd767950a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5f8530cdea88256a930c73a5d0dd0371 = $(`<div id="html_5f8530cdea88256a930c73a5d0dd0371" style="width: 100.0%; height: 100.0%;">                     <b>Lolo Amsterdam</b><br>                     Rating: 3.9<br>                     Address: Oudekerksplein 48, 1012 GZ Amsterdam<br>                     Price Range: nan<br>                     </div>`)[0];
+                popup_ab49383e9ee6b3f81caa70acd767950a.setContent(html_5f8530cdea88256a930c73a5d0dd0371);
+            
+        
+
+        circle_marker_0a3da6a8d151990b0c9704ec5dd5a0d4.bindPopup(popup_ab49383e9ee6b3f81caa70acd767950a)
+        ;
+
+        
+    
+    
+            var circle_marker_3aac4d3c7f623585508c53f592939f9e = L.circleMarker(
+                [52.372304199999995, 4.8891365],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_5ba964a977bd82dff4f4ca5073f0260c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_120df3d983578f192bf70ab63bd1365f = $(`<div id="html_120df3d983578f192bf70ab63bd1365f" style="width: 100.0%; height: 100.0%;">                     <b>THE BUTCHER Nine Streets</b><br>                     Rating: 4.3<br>                     Address: Paleisstraat 14, 1012 RB Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_5ba964a977bd82dff4f4ca5073f0260c.setContent(html_120df3d983578f192bf70ab63bd1365f);
+            
+        
+
+        circle_marker_3aac4d3c7f623585508c53f592939f9e.bindPopup(popup_5ba964a977bd82dff4f4ca5073f0260c)
+        ;
+
+        
+    
+    
+            var circle_marker_5d4cd56874e3c6b34d2c4591fee5165e = L.circleMarker(
+                [52.3636869, 4.8854340999999994],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_c0327d50d92e2d9d98cae9f025136aa2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d2e6f76b789b0a5885b4f02702684190 = $(`<div id="html_d2e6f76b789b0a5885b4f02702684190" style="width: 100.0%; height: 100.0%;">                     <b>Stamppot Amsterdam</b><br>                     Rating: 4.9<br>                     Address: Leidsekruisstraat 11, 1017 RE Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_c0327d50d92e2d9d98cae9f025136aa2.setContent(html_d2e6f76b789b0a5885b4f02702684190);
+            
+        
+
+        circle_marker_5d4cd56874e3c6b34d2c4591fee5165e.bindPopup(popup_c0327d50d92e2d9d98cae9f025136aa2)
+        ;
+
+        
+    
+    
+            var circle_marker_cb8a135b41f3191424a48fdffbad8784 = L.circleMarker(
+                [52.361880299999996, 4.8920827],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_3ba67d70978da90fc61da23face41257 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d42411545896291ee5e7fcfa6ae92b02 = $(`<div id="html_d42411545896291ee5e7fcfa6ae92b02" style="width: 100.0%; height: 100.0%;">                     <b>Restaurant Dinner Cruise Amsterdam - Rondvaart met eten</b><br>                     Rating: 0.0<br>                     Address: Prinsengracht 648, 1017 KV Amsterdam<br>                     Price Range: nan<br>                     </div>`)[0];
+                popup_3ba67d70978da90fc61da23face41257.setContent(html_d42411545896291ee5e7fcfa6ae92b02);
+            
+        
+
+        circle_marker_cb8a135b41f3191424a48fdffbad8784.bindPopup(popup_3ba67d70978da90fc61da23face41257)
+        ;
+
+        
+    
+    
+            var circle_marker_33b719204130bc8ed85519c8723b7f54 = L.circleMarker(
+                [52.3694444, 4.8872222],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_1a20289ae9d1ec97fef44082da5f949b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3f672f0030389aa45a4afd1bad6e3576 = $(`<div id="html_3f672f0030389aa45a4afd1bad6e3576" style="width: 100.0%; height: 100.0%;">                     <b>Brasserie Ambassade</b><br>                     Rating: 4.7<br>                     Address: Herengracht 339, 1016 AZ Amsterdam<br>                     Price Range: $$$<br>                     </div>`)[0];
+                popup_1a20289ae9d1ec97fef44082da5f949b.setContent(html_3f672f0030389aa45a4afd1bad6e3576);
+            
+        
+
+        circle_marker_33b719204130bc8ed85519c8723b7f54.bindPopup(popup_1a20289ae9d1ec97fef44082da5f949b)
+        ;
+
+        
+    
+    
+            var circle_marker_1dcffbb701d2678f33d3c940ce78ab95 = L.circleMarker(
+                [52.371671199999994, 4.9075709],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_3e3e942206bfea4c6db2abdd2aaccc90 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d172a3f1087baed2ebc61aefbcae6df5 = $(`<div id="html_d172a3f1087baed2ebc61aefbcae6df5" style="width: 100.0%; height: 100.0%;">                     <b>Brothers Hartering</b><br>                     Rating: 4.6<br>                     Address: Peperstraat 10, 1011 TL Amsterdam<br>                     Price Range: $$$$$<br>                     </div>`)[0];
+                popup_3e3e942206bfea4c6db2abdd2aaccc90.setContent(html_d172a3f1087baed2ebc61aefbcae6df5);
+            
+        
+
+        circle_marker_1dcffbb701d2678f33d3c940ce78ab95.bindPopup(popup_3e3e942206bfea4c6db2abdd2aaccc90)
+        ;
+
+        
+    
+    
+            var circle_marker_49d7f4be63130607318ea2180618604a = L.circleMarker(
+                [52.3722646, 4.8943848999999995],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_38aa6aab2747b988fae98409eabdb57a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ec064ae084ad1c3bee6df08e7205bbe1 = $(`<div id="html_ec064ae084ad1c3bee6df08e7205bbe1" style="width: 100.0%; height: 100.0%;">                     <b>The Mexican</b><br>                     Rating: 3.9<br>                     Address: Damstraat 36, 1012 JM Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_38aa6aab2747b988fae98409eabdb57a.setContent(html_ec064ae084ad1c3bee6df08e7205bbe1);
+            
+        
+
+        circle_marker_49d7f4be63130607318ea2180618604a.bindPopup(popup_38aa6aab2747b988fae98409eabdb57a)
+        ;
+
+        
+    
+    
+            var circle_marker_95edaf97f48dad176ea7f408c8b5f5b7 = L.circleMarker(
+                [52.378199699999996, 4.9009163],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_1b06808913d1f13ee406672926cce543 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_82b444da23cff662a4bc48e245e387b8 = $(`<div id="html_82b444da23cff662a4bc48e245e387b8" style="width: 100.0%; height: 100.0%;">                     <b>Grand Cafe Restaurant 1e klas</b><br>                     Rating: 3.9<br>                     Address: Stationsplein 15, 1012 AB Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_1b06808913d1f13ee406672926cce543.setContent(html_82b444da23cff662a4bc48e245e387b8);
+            
+        
+
+        circle_marker_95edaf97f48dad176ea7f408c8b5f5b7.bindPopup(popup_1b06808913d1f13ee406672926cce543)
+        ;
+
+        
+    
+    
+            var circle_marker_dfa5eff4dac768fef339054e7708f0bf = L.circleMarker(
+                [52.3756196, 4.8986092999999995],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_3300c21dfd0f1644df803a79e7b77f64 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_87b4570a686661bf110af4ad9cf24ef6 = $(`<div id="html_87b4570a686661bf110af4ad9cf24ef6" style="width: 100.0%; height: 100.0%;">                     <b>Restaurant Argentalia Amsterdam</b><br>                     Rating: 4.3<br>                     Address: Warmoesstraat 35, 1012 HV Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_3300c21dfd0f1644df803a79e7b77f64.setContent(html_87b4570a686661bf110af4ad9cf24ef6);
+            
+        
+
+        circle_marker_dfa5eff4dac768fef339054e7708f0bf.bindPopup(popup_3300c21dfd0f1644df803a79e7b77f64)
+        ;
+
+        
+    
+    
+            var circle_marker_5c52156635d9cdd71856158483dd91c0 = L.circleMarker(
+                [52.373902, 4.883795999999999],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_bd7a4ed440731d946274943e58d68d72 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_109221491442059e1971fe4db3957fca = $(`<div id="html_109221491442059e1971fe4db3957fca" style="width: 100.0%; height: 100.0%;">                     <b>Sefa Restaurant BBQ & Grill-Room</b><br>                     Rating: 4.6<br>                     Address: Westermarkt 25, 1016 DJ Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_bd7a4ed440731d946274943e58d68d72.setContent(html_109221491442059e1971fe4db3957fca);
+            
+        
+
+        circle_marker_5c52156635d9cdd71856158483dd91c0.bindPopup(popup_bd7a4ed440731d946274943e58d68d72)
+        ;
+
+        
+    
+    
+            var circle_marker_0323c31e60ac3ede20400abc225cf98c = L.circleMarker(
+                [52.368703599999996, 4.8873204],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_5e1badb0c1fdffc62499cc067dab03e7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ebfb3e345d49e62077692c2c2accf035 = $(`<div id="html_ebfb3e345d49e62077692c2c2accf035" style="width: 100.0%; height: 100.0%;">                     <b>The Lebanese Sajeria</b><br>                     Rating: 4.6<br>                     Address: Wijde Heisteeg 1, 1016 AS Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_5e1badb0c1fdffc62499cc067dab03e7.setContent(html_ebfb3e345d49e62077692c2c2accf035);
+            
+        
+
+        circle_marker_0323c31e60ac3ede20400abc225cf98c.bindPopup(popup_5e1badb0c1fdffc62499cc067dab03e7)
+        ;
+
+        
+    
+    
+            var circle_marker_dbf894885b877f2e93a6beca2516e557 = L.circleMarker(
+                [52.3784317, 4.8826728],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_6bd350253635ba9ef8f0fb1a7a03475f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bbc547fe543d5cbab8c86cf6ffc43270 = $(`<div id="html_bbc547fe543d5cbab8c86cf6ffc43270" style="width: 100.0%; height: 100.0%;">                     <b>d&a hummus bistro</b><br>                     Rating: 4.6<br>                     Address: Westerstraat 136, 1015 MP Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_6bd350253635ba9ef8f0fb1a7a03475f.setContent(html_bbc547fe543d5cbab8c86cf6ffc43270);
+            
+        
+
+        circle_marker_dbf894885b877f2e93a6beca2516e557.bindPopup(popup_6bd350253635ba9ef8f0fb1a7a03475f)
+        ;
+
+        
+    
+    
+            var circle_marker_5249995a8994130629fe871292976545 = L.circleMarker(
+                [52.3791221, 4.8861650999999995],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_cc2567ba29c6e35d2e325af2baca8973 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e6fa4d954ddbf54372f1c5df9bb4d29e = $(`<div id="html_e6fa4d954ddbf54372f1c5df9bb4d29e" style="width: 100.0%; height: 100.0%;">                     <b>PEQU</b><br>                     Rating: 4.5<br>                     Address: Noordermarkt 42, 1015 NA Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_cc2567ba29c6e35d2e325af2baca8973.setContent(html_e6fa4d954ddbf54372f1c5df9bb4d29e);
+            
+        
+
+        circle_marker_5249995a8994130629fe871292976545.bindPopup(popup_cc2567ba29c6e35d2e325af2baca8973)
+        ;
+
+        
+    
+    
+            var circle_marker_deef196d8de9edb5fbf98db4b7675c32 = L.circleMarker(
+                [52.366112099999995, 4.895055],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_54fd3be5a28d87ba143cf2d1e4d8280d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4490ce3d13f7599f3e12e5e1d5784e0e = $(`<div id="html_4490ce3d13f7599f3e12e5e1d5784e0e" style="width: 100.0%; height: 100.0%;">                     <b>Demetra - Italian Kitchen and Pizza</b><br>                     Rating: 4.5<br>                     Address: Korte Reguliersdwarsstraat 8, 1017 BH Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_54fd3be5a28d87ba143cf2d1e4d8280d.setContent(html_4490ce3d13f7599f3e12e5e1d5784e0e);
+            
+        
+
+        circle_marker_deef196d8de9edb5fbf98db4b7675c32.bindPopup(popup_54fd3be5a28d87ba143cf2d1e4d8280d)
+        ;
+
+        
+    
+    
+            var circle_marker_75700f106101214be5a8f6a3a9498528 = L.circleMarker(
+                [52.3699677, 4.8872316],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_a2082d15d9a27cb6fc3a1cdb9107c57a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e95dd23beefd89a48d316bb9309228f2 = $(`<div id="html_e95dd23beefd89a48d316bb9309228f2" style="width: 100.0%; height: 100.0%;">                     <b>A. van Wees Tasting Locality</b><br>                     Rating: 4.6<br>                     Address: Herengracht 319, 1016 AV Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_a2082d15d9a27cb6fc3a1cdb9107c57a.setContent(html_e95dd23beefd89a48d316bb9309228f2);
+            
+        
+
+        circle_marker_75700f106101214be5a8f6a3a9498528.bindPopup(popup_a2082d15d9a27cb6fc3a1cdb9107c57a)
+        ;
+
+        
+    
+    
+            var circle_marker_a30d497497e74c162f0f25aed6ac6a74 = L.circleMarker(
+                [52.3725154, 4.8982301999999995],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_a3f6c83819a96081e7b4caa9879a03e8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f2a148f90ddb85bc7ab3b237c00205e8 = $(`<div id="html_f2a148f90ddb85bc7ab3b237c00205e8" style="width: 100.0%; height: 100.0%;">                     <b>Thai food</b><br>                     Rating: 4.8<br>                     Address: Souterrain / basement, Oudezijds Achterburgwal 93, 1012 DD Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_a3f6c83819a96081e7b4caa9879a03e8.setContent(html_f2a148f90ddb85bc7ab3b237c00205e8);
+            
+        
+
+        circle_marker_a30d497497e74c162f0f25aed6ac6a74.bindPopup(popup_a3f6c83819a96081e7b4caa9879a03e8)
+        ;
+
+        
+    
+    
+            var circle_marker_4b192c07d635925c8985057ecf2c2f69 = L.circleMarker(
+                [52.3753712, 4.893129399999999],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_48008570868e3e2307c5556600558b64 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_56426821470980c4179ff33c5d4e07fe = $(`<div id="html_56426821470980c4179ff33c5d4e07fe" style="width: 100.0%; height: 100.0%;">                     <b>PRESSROOM Amsterdam</b><br>                     Rating: 4.2<br>                     Address: Nieuwezijds Voorburgwal 67, 1012 RE Amsterdam<br>                     Price Range: nan<br>                     </div>`)[0];
+                popup_48008570868e3e2307c5556600558b64.setContent(html_56426821470980c4179ff33c5d4e07fe);
+            
+        
+
+        circle_marker_4b192c07d635925c8985057ecf2c2f69.bindPopup(popup_48008570868e3e2307c5556600558b64)
+        ;
+
+        
+    
+    
+            var circle_marker_5a92901f9ed782db43de59630ac087e9 = L.circleMarker(
+                [52.3564206, 4.8923475],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_d9ccfd34f19a7ec82b18123c9cc0e91f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_03d9e1d5b8820436727db487bca1cd5f = $(`<div id="html_03d9e1d5b8820436727db487bca1cd5f" style="width: 100.0%; height: 100.0%;">                     <b>Venster 33</b><br>                     Rating: 4.5<br>                     Address: Eerste van der Helststraat 42, 1072 NV Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_d9ccfd34f19a7ec82b18123c9cc0e91f.setContent(html_03d9e1d5b8820436727db487bca1cd5f);
+            
+        
+
+        circle_marker_5a92901f9ed782db43de59630ac087e9.bindPopup(popup_d9ccfd34f19a7ec82b18123c9cc0e91f)
+        ;
+
+        
+    
+    
+            var circle_marker_07ea99edd6441edd51b19f7f7437bed2 = L.circleMarker(
+                [52.3642781, 4.883984],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_c3f28bc26080c012524d2f2a8801ea18 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f0ea84bf78d0be7e83c8762ce684c3ce = $(`<div id="html_f0ea84bf78d0be7e83c8762ce684c3ce" style="width: 100.0%; height: 100.0%;">                     <b>Stoop & Stoop eetcafe</b><br>                     Rating: 4.6<br>                     Address: Lange Leidsedwarsstraat 82, 1017 NM Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_c3f28bc26080c012524d2f2a8801ea18.setContent(html_f0ea84bf78d0be7e83c8762ce684c3ce);
+            
+        
+
+        circle_marker_07ea99edd6441edd51b19f7f7437bed2.bindPopup(popup_c3f28bc26080c012524d2f2a8801ea18)
+        ;
+
+        
+    
+    
+            var circle_marker_6f9bfb2662af7e2265dfab505d666214 = L.circleMarker(
+                [52.370260699999996, 4.888545199999999],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_95cc201475b29339c2b486074992b7d2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_94a9ef9bddf3b123636c9f607ec849ff = $(`<div id="html_94a9ef9bddf3b123636c9f607ec849ff" style="width: 100.0%; height: 100.0%;">                     <b>Huiskamerrestaurant Kookerij het Singel</b><br>                     Rating: 4.4<br>                     Address: Singel 317, 1012 WH Amsterdam<br>                     Price Range: nan<br>                     </div>`)[0];
+                popup_95cc201475b29339c2b486074992b7d2.setContent(html_94a9ef9bddf3b123636c9f607ec849ff);
+            
+        
+
+        circle_marker_6f9bfb2662af7e2265dfab505d666214.bindPopup(popup_95cc201475b29339c2b486074992b7d2)
+        ;
+
+        
+    
+    
+            var circle_marker_418e0c539a47ca131e4e97c3932294c0 = L.circleMarker(
+                [52.3557893, 4.8704417],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_4707a392813976549619e9f5e152c6e2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_817f8399c3fa580b25664a42d98f8678 = $(`<div id="html_817f8399c3fa580b25664a42d98f8678" style="width: 100.0%; height: 100.0%;">                     <b>Batoni Khinkali</b><br>                     Rating: 4.4<br>                     Address: Willemsparkweg 177, 1071 GZ Amsterdam<br>                     Price Range: $$$$$$<br>                     </div>`)[0];
+                popup_4707a392813976549619e9f5e152c6e2.setContent(html_817f8399c3fa580b25664a42d98f8678);
+            
+        
+
+        circle_marker_418e0c539a47ca131e4e97c3932294c0.bindPopup(popup_4707a392813976549619e9f5e152c6e2)
+        ;
+
+        
+    
+    
+            var circle_marker_39bb6ae02b6c8256972ea9168126378c = L.circleMarker(
+                [52.3715741, 4.8832417999999995],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_5ba2b0a81888c4fcdad50a5524e34b9a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_22ef24bb3e0be3f51b7a24387485992d = $(`<div id="html_22ef24bb3e0be3f51b7a24387485992d" style="width: 100.0%; height: 100.0%;">                     <b>Cafe Restaurant Verlan</b><br>                     Rating: 4.6<br>                     Address: Prinsengracht 381HS, 1016 HL Amsterdam<br>                     Price Range: nan<br>                     </div>`)[0];
+                popup_5ba2b0a81888c4fcdad50a5524e34b9a.setContent(html_22ef24bb3e0be3f51b7a24387485992d);
+            
+        
+
+        circle_marker_39bb6ae02b6c8256972ea9168126378c.bindPopup(popup_5ba2b0a81888c4fcdad50a5524e34b9a)
+        ;
+
+        
+    
+    
+            var circle_marker_c7ef255efa948c4744750a1b19182d76 = L.circleMarker(
+                [52.356299, 4.897117],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+    
+        var popup_46939a6f816540b211179ca6d40bfc49 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3f117e82ecb95f80cb5aeb38b89469fd = $(`<div id="html_3f117e82ecb95f80cb5aeb38b89469fd" style="width: 100.0%; height: 100.0%;">                     <b>De Japanner</b><br>                     Rating: 4.5<br>                     Address: Albert Cuypstraat 228, 1073 BN Amsterdam<br>                     Price Range: $$<br>                     </div>`)[0];
+                popup_46939a6f816540b211179ca6d40bfc49.setContent(html_3f117e82ecb95f80cb5aeb38b89469fd);
+            
+        
+
+        circle_marker_c7ef255efa948c4744750a1b19182d76.bindPopup(popup_46939a6f816540b211179ca6d40bfc49)
+        ;
+
+        
+    
+    
+            var heat_map_0e7f4a5a325503f1055f57bdfca33e90 = L.heatLayer(
+                [[52.3757472, 4.8854076], [52.3772252, 4.8890475], [52.3794184, 4.8920452999999995], [52.376143799999994, 4.8942438], [52.365904099999995, 4.8932993], [52.35623, 4.892197299999999], [52.3738661, 4.8838628], [52.377110599999995, 4.8940586], [52.3793325, 4.8936765], [52.365702, 4.89553], [52.3717696, 4.8750294], [52.3687767, 4.9054562], [52.3610249, 4.8873337], [52.3634845, 4.8849427], [52.3841384, 4.8683342], [52.3738276, 4.8886278], [52.3624697, 4.8802175], [52.364054599999996, 4.889094399999999], [52.365591699999996, 4.8973832999999996], [52.366864799999995, 4.8952452], [52.3756579, 4.8959075], [52.3723167, 4.8984764], [52.3631173, 4.8848588], [52.3729686, 4.899867599999999], [52.359966899999996, 4.8774826], [52.369372999999996, 4.888304499999999], [52.3771712, 4.8943658], [52.3653534, 4.884468099999999], [52.3753041, 4.8911693], [52.375250699999995, 4.8868501], [52.383910199999995, 4.902474], [52.371693699999994, 4.8925949], [52.3731918, 4.9034486], [52.3715348, 4.8937231], [52.372376599999996, 4.8946455], [52.370449199999996, 4.8842989], [52.3801403, 4.8853789], [52.3662857, 4.8910769], [52.3776017, 4.9001974], [52.3636729, 4.876325], [52.3732492, 4.900118], [52.370025999999996, 4.87071], [52.367426599999995, 4.8914922], [52.363487299999996, 4.8847619], [52.378461699999995, 4.8827603], [52.361700199999994, 4.8989934], [52.366323699999995, 4.890756], [52.354667799999994, 4.8892432], [52.3536429, 4.8872304], [52.3704694, 4.8838778], [52.3736532, 4.8826525], [52.3721058, 4.8965026], [52.3759417, 4.8990444], [52.377940599999995, 4.8868202], [52.367379799999995, 4.8944063], [52.3640146, 4.8846737], [52.3694869, 4.8906469999999995], [52.370953099999994, 4.8936747], [52.3534442, 4.8556758], [52.3633466, 4.884734], [52.377946099999996, 4.8957761], [52.3545026, 4.855207099999999], [52.3643025, 4.8962809], [52.354382, 4.884167], [52.370788999999995, 4.895245], [52.362355, 4.8861609999999995], [52.3773182, 4.8939946], [52.3515689, 4.912939199999999], [52.3682794, 4.8906084], [52.3611021, 4.8648323], [52.3756024, 4.8959041], [52.361045999999995, 4.8887463], [52.377538799999996, 4.8959671], [52.3713208, 4.8597144], [52.368479699999995, 4.9057376999999995], [52.3759157, 4.9105392], [52.3753308, 4.897691099999999], [52.3819052, 4.888831199999999], [52.383940599999995, 4.9219912], [52.363915399999996, 4.8845212], [52.366666699999996, 4.8899815], [52.374562999999995, 4.904024], [52.3631792, 4.8858868], [52.3649528, 4.8744035], [52.362638, 4.8352803], [52.375486099999996, 4.898427799999999], [52.3571788, 4.9083116], [52.358497899999996, 4.9129986], [52.3518366, 4.8595016], [52.363584599999996, 4.9404468], [52.351458, 4.871446], [52.388099399999994, 4.9144029], [52.356120399999995, 4.9272931], [52.364256999999995, 4.8983493], [52.3682008, 4.8906417], [52.3663868, 4.8968538], [52.3741377, 4.897149199999999], [52.372304199999995, 4.8891365], [52.3636869, 4.8854340999999994], [52.361880299999996, 4.8920827], [52.3694444, 4.8872222], [52.371671199999994, 4.9075709], [52.3722646, 4.8943848999999995], [52.378199699999996, 4.9009163], [52.3756196, 4.8986092999999995], [52.373902, 4.883795999999999], [52.368703599999996, 4.8873204], [52.3784317, 4.8826728], [52.3791221, 4.8861650999999995], [52.366112099999995, 4.895055], [52.3699677, 4.8872316], [52.3725154, 4.8982301999999995], [52.3753712, 4.893129399999999], [52.3564206, 4.8923475], [52.3642781, 4.883984], [52.370260699999996, 4.888545199999999], [52.3557893, 4.8704417], [52.3715741, 4.8832417999999995], [52.356299, 4.897117]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 25}
+            ).addTo(map_8b0a0fca734c58a86f86bcba66d9e8f4);
+        
+</script>
+</html>
